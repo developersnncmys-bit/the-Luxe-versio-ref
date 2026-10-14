@@ -52,7 +52,12 @@ export function categorySlug(category: Product["category"]): string {
 }
 
 // Canonical product URL. All product-card call sites should use this.
+// Luxe Exclusive pieces live on their own route — detect them by handle and
+// return /exclusive/<slug> so cart links don't 404 against the catalogue.
 export function productHref(product: Product): string {
+  if (EXCLUSIVE_PIECES.some((e) => e.slug === product.handle)) {
+    return `/exclusive/${product.handle}`;
+  }
   return `/collections/${categorySlug(product.category)}/${product.handle}`;
 }
 
@@ -81,6 +86,222 @@ export function getRelatedProducts(current: Product, limit = 3): Product[] {
 // Do not reference stock imagery (Pexels/Unsplash) or root-level images from
 // this data — the folders are the single source of truth.
 export const PRODUCTS: Product[] = [
+  {
+    handle: "sculpture-monogramme",
+    name: "Sculpture — Monogramme",
+    category: "Sculptures",
+    description:
+      "An everyday object carried in Carrara marble. MONOGRAMME reinterprets the carriall as a sculpted form — quilted motifs worked by hand into the stone, handles doubling into a single relaxed knot. Luxury rendered as study.",
+    price: { inr: 184000, usd: 2260 },
+    image: "/Edit/Bag/Bag1.png",
+    aspect: "portrait",
+    material: "Hand-carved Carrara marble",
+    body:
+      "MONOGRAMME is a sculptural meditation on the everyday object. A carriall, pulled out of leather and into stone — the quilted repeats, the stitched seam, the looped handles all carved from a single block of white Carrara. Scaled for the console, the mantel, the shelf that asks for one considered object rather than many.",
+    gallery: [
+      "/Edit/Bag/Bag1.png",
+      "/Edit/Bag/Bag2.png",
+      "/Edit/Bag/Bag3.png",
+      "/Edit/Bag/Bag4.png",
+      "/Edit/Bag/Bag5.png"
+    ],
+    details: [
+      {
+        label: "Material",
+        body:
+          "Hand-carved Carrara marble, finished to a soft silk polish. Dimensions: 28 × 14 × 36 cm (11 × 5.5 × 14.2 in). Weight: 6.8 kg / 15 lb.",
+        image: "/images/materials/marble.png"
+      },
+      {
+        label: "Craft",
+        body:
+          "Carved from a single block of Carrara by hand. The quilted motif is incised into the surface rather than applied; the handles are shaped from the same stone and knotted in a single uninterrupted gesture. Each piece bears its own pattern of veining — no two Monogramme are alike.",
+        image: "/Edit/Bag/Bag-craft.png"
+      }
+    ],
+    pullQuote: "The everyday object, elevated to study — a carriall carved in marble.",
+    lifestyleImage: "/Edit/Bag/Bag-presence.png",
+    inspiration: {
+      title: "An ordinary object, elevated to sculpture",
+      reasons: [
+        {
+          label: "The familiar in stone",
+          body:
+            "A carriall rendered in marble — the softest everyday object translated into its most permanent material. The piece asks the room to look twice at what it already knew."
+        },
+        {
+          label: "Carved as one",
+          body:
+            "Body, quilted motif and knotted handles are shaped from a single block of Carrara. The seam and the stitch are incised into the stone — no applied parts, no joinery."
+        },
+        {
+          label: "Veined by the quarry",
+          body:
+            "Natural grey veining travels across each piece in its own pattern. The quarry writes the finish; no two Monogramme carry the same drift of grey through the stone."
+        }
+      ]
+    }
+  },
+  {
+    handle: "sculpture-couronne",
+    name: "Sculpture — Couronne",
+    category: "Sculptures",
+    description:
+      "A sculpted bodice crowned by rising peaks, carved in warm bronze-toned stone. The gathered folds hold light like a figure caught turning. Set on a block of dark marble as plinth.",
+    price: { inr: 212000, usd: 2600 },
+    image: "/Edit/Dress/dress1.png",
+    aspect: "portrait",
+    material: "Carved stone with aged bronze patina, dark marble plinth",
+    body:
+      "COURONNE translates a draped garment into carved stone — the deep vertical folds pulled upward into a sculpted collar, the surface finished in a warm aged bronze. A figure present and absent at once; the piece reads as a torso gathered, a presence held in the moment before it moves.",
+    gallery: ["/Edit/Dress/dress1.png"],
+    details: [
+      {
+        label: "Material",
+        body:
+          "Carved stone with an aged bronze patina, mounted directly onto a block of dark marble as plinth. Dimensions: 36 × 24 × 54 cm (14.2 × 9.4 × 21.3 in). Weight: 12.4 kg / 27.3 lb.",
+        image: "/images/materials/metal.png"
+      },
+      {
+        label: "Craft",
+        body:
+          "The folds are worked into the stone by hand, each pleat carried from the base of the skirt up into the crowned collar. The bronze patina is layered by hand — warm gold through to deep umber — so each piece carries its own weathered character.",
+        image: "/Edit/Dress/Dress-presence.png"
+      }
+    ],
+    pullQuote: "A figure held in the moment before it turns.",
+    lifestyleImage: "/Edit/Dress/Dress-presence.png",
+    inspiration: {
+      title: "A garment in stone, a figure in gesture",
+      reasons: [
+        {
+          label: "Drapery, carved",
+          body:
+            "Deep vertical folds carried from the hem to the crowned collar — every pleat worked by hand into solid stone. The piece holds the gesture of fabric in a material that cannot move."
+        },
+        {
+          label: "Warmth through patina",
+          body:
+            "The bronze finish is layered by hand through warm gold and deep umber. The surface warms in evening light; no two Couronne catch a lamp the same way."
+        },
+        {
+          label: "Weight of a figure",
+          body:
+            "At over twelve kilos on a block of dark marble, Couronne commands a mantel or an entry console. Present when the room is empty — the first thing a visitor meets."
+        }
+      ]
+    }
+  },
+  {
+    handle: "sculpture-silhouette",
+    name: "Sculpture — Silhouette",
+    category: "Sculptures",
+    description:
+      "A dress form carried in dark marble — the fluted skirt opening below the bodice, raised on a brass stem into a block of veined charcoal stone. Composed, present, deliberately faceless.",
+    price: { inr: 196000, usd: 2410 },
+    image: "/Edit/Girl/girl.png",
+    aspect: "portrait",
+    material: "Hand-carved dark marble, brass stem, marble plinth",
+    body:
+      "SILHOUETTE is a figure reduced to its clearest line — a torso, a cinched waist, a petalled skirt opening below. Carved in dark marble and raised on a slim brass stem. The piece is quiet, but a room reorganises itself around it; the absence of a face lets the viewer bring their own.",
+    gallery: ["/Edit/Girl/girl.png"],
+    details: [
+      {
+        label: "Material",
+        body:
+          "Hand-carved dark marble with brass stem, mounted on a veined charcoal marble plinth. Dimensions: 18 × 18 × 56 cm (7.1 × 7.1 × 22 in). Weight: 8.6 kg / 19 lb.",
+        image: "/images/materials/marble.png"
+      },
+      {
+        label: "Craft",
+        body:
+          "The torso is carved from a single block of dark marble; the fluted skirt is worked petal by petal into the lower form. A single brass stem raises the figure above the plinth — a quiet lift that gives the piece its sense of poise.",
+        image: "/Edit/Girl/girl-presence.png"
+      }
+    ],
+    pullQuote: "A figure present, a figure absent — the room completes the face.",
+    lifestyleImage: "/Edit/Girl/girl-presence.png",
+    inspiration: {
+      title: "The figure, reduced to its clearest line",
+      reasons: [
+        {
+          label: "Faceless on purpose",
+          body:
+            "No portrait, no gaze, no gesture. The absence is the invitation — the viewer brings the face. Every room reads Silhouette slightly differently."
+        },
+        {
+          label: "Petalled skirt",
+          body:
+            "The fluted lower form is carved petal by petal into the dark stone. From across the room it reads as a single bell; up close, each petal takes the light on its own curve."
+        },
+        {
+          label: "Lifted, not planted",
+          body:
+            "A single brass stem raises the torso above the plinth. The piece hovers rather than sits — a quiet composure that lets the figure feel almost weightless."
+        }
+      ]
+    }
+  },
+  {
+    handle: "sculpture-feline",
+    name: "Sculpture — Féline",
+    category: "Sculptures",
+    description:
+      "An abstracted feline in white Carrara marble — ears carried high, body curling into a single stem. Mounted on a block of veined marble. Ancient in reference, modern in gesture.",
+    price: { inr: 224000, usd: 2740 },
+    image: "/Edit/Horse/Horse-front.png",
+    aspect: "portrait",
+    material: "Hand-carved Carrara marble, brass mount, marble plinth",
+    body:
+      "FÉLINE carries the watchful quiet of an animal held still. Carved from a single block of Carrara, the body is pared back to its essential curve — the head alert, the ears tipped forward, the lower form resolving into a single sinuous line that meets the brass. Reads as a modern piece from one angle, as a temple cat from another.",
+    gallery: [
+      "/Edit/Horse/Horse-front.png",
+      "/Edit/Horse/Horse-left.png",
+      "/Edit/Horse/Horse4.png",
+      "/Edit/Horse/Horse-45l.png",
+      "/Edit/Horse/Horse5.png",
+      "/Edit/Horse/Horse-back.png",
+      "/Edit/Horse/Horse6.png",
+      "/Edit/Horse/Horse7.png"
+     
+    ],
+    details: [
+      {
+        label: "Material",
+        body:
+          "Hand-carved Carrara marble, brass mount, veined marble plinth. Dimensions: 16 × 16 × 58 cm (6.3 × 6.3 × 22.8 in). Weight: 9.2 kg / 20.3 lb.",
+        image: "/images/materials/marble.png"
+      },
+      {
+        label: "Craft",
+        body:
+          "Carved from a single block of Carrara by hand. The ears, the brow and the sweep of the body are the maker's decisions in the moment — no model, no cast. Each piece bears its own fall of veining through the stone.",
+        image: "/Edit/Horse/Horse-craft.png"
+      }
+    ],
+    pullQuote: "The watchful quiet of a carved animal — temple in reference, modern in gesture.",
+    lifestyleImage: "/Edit/Horse/Horse-presence.png",
+    inspiration: {
+      title: "Ancient in reference, modern in gesture",
+      reasons: [
+        {
+          label: "A single line",
+          body:
+            "The body resolves into one uninterrupted curve from the ears to the brass — the whole animal expressed as a gesture rather than a figure. A silhouette the eye follows in one pass."
+        },
+        {
+          label: "Different from every side",
+          body:
+            "From the front, the gaze. From the back, the arch of the shoulder. From the side, the silhouette of a seated cat. The piece reads differently from each angle — a true study in the round."
+        },
+        {
+          label: "Carrara, not polished away",
+          body:
+            "The marble is finished to a soft silk — the grey veining left visible, not sanded flat. The quarry writes the final character of each piece."
+        }
+      ]
+    }
+  },
   {
     handle: "chandelier-verre",
     name: "Chandelier — Verre",
@@ -1601,7 +1822,10 @@ export type EditSelection = {
   number: string;
   title: string;
   intro: string;
-  categories: Product["category"][];
+  // Explicit curation — each edit features a specific in-house piece by
+  // handle. Resolved against PRODUCTS at render time; order below is the
+  // order shown on /edit.
+  handles: string[];
 };
 
 export const EDITS: EditSelection[] = [
@@ -1610,32 +1834,32 @@ export const EDITS: EditSelection[] = [
     number: "01",
     title: "Statement pieces",
     intro:
-      "The pieces that command a room — a chandelier, a mirror, a sculpted form scaled to be seen.",
-    categories: ["Lighting", "Sculptures"]
+      "An everyday object pulled out of leather and into Carrara — a carriall carved by hand, the quilted motif worked into the stone. The piece a room turns toward first.",
+    handles: ["sculpture-monogramme"]
   },
   {
     slug: "new",
     number: "02",
     title: "New pieces",
     intro:
-      "This season's new work — recent arrivals from the studio floor.",
-    categories: ["Lighting", "Sculptures", "Vases"]
+      "This season's new work — a bodice gathered into carved stone, crowned, and set on dark marble. A figure held in the moment before it moves.",
+    handles: ["sculpture-couronne"]
   },
   {
     slug: "limited",
     number: "03",
     title: "Limited pieces",
     intro:
-      "Small editions and one-of-one commissions — signed, numbered, brief.",
-    categories: ["Lighting", "Sculptures"]
+      "A figure reduced to its clearest line — torso, cinched waist, petalled skirt. Carved in dark marble and lifted on brass. Numbered, signed, brief.",
+    handles: ["sculpture-silhouette"]
   },
   {
     slug: "designer",
     number: "04",
     title: "Designer pieces",
     intro:
-      "Signature works from the studio — the pieces the house is known for.",
-    categories: ["Sculptures", "Lighting"]
+      "The piece the house is known for — an abstracted feline in Carrara, carried in a single uninterrupted line. Ancient in reference, modern in gesture.",
+    handles: ["sculpture-feline"]
   }
 ];
 
@@ -1654,66 +1878,188 @@ export type ExclusivePiece = {
   leadTime: string;
   edition: string;
   image: string;
+  gallery?: string[];
+  price: { inr: number; usd: number };
+  inspiration?: ProductInspiration;
 };
 
 export const EXCLUSIVE_PIECES: ExclusivePiece[] = [
   {
-    slug: "monolithe",
+    slug: "aigle",
     number: "I",
-    name: "Monolithe",
-    discipline: "Floor sculpture",
-    intro: "A single carved form, standing.",
+    name: "Aigle",
+    discipline: "Mantel sculpture",
+    intro: "Wings held open, the moment before stillness.",
     body:
-      "Hand-shaped at the studio and finished in a slow, matte patina. Monolithe is sized to anchor a room — a quiet, upright presence meant to be lived with rather than looked at.",
-    material: "Burnished bronze, hand-patinated",
-    dimensions: "H 1420 · W 320 · D 280 mm",
-    leadTime: "14 – 18 weeks",
+      "Hand-carved from a single block of white marble and finished to a soft silk polish. Aigle is a study in arrested motion — the eagle set down, wings fully spread but not yet folded, each feather worked by hand across the full breadth of the bird. Set on a honed black granite plinth, cut to size.",
+    material: "White marble, hand-carved; granite plinth",
+    dimensions: "H 580 · W 1120 · D 280 mm",
+    leadTime: "18 – 24 weeks",
     edition: "Made to order · signed",
-    image: "/images/sculptures/scu3.png"
+    image: "/Exclusive/Eagle/Eagle.png",
+    gallery: [
+      "/Exclusive/Eagle/Eagle.png",
+      "/Exclusive/Eagle/Eagle3.png",
+      "/Exclusive/Eagle/Eagle2.png",
+      "/Exclusive/Eagle/Eagle4.png"
+
+    ],
+    price: { inr: 624000, usd: 7480 },
+    inspiration: {
+      eyebrow: "Why This Piece",
+      title: "A silence, with wings open",
+      reasons: [
+        {
+          label: "Carved from one block",
+          body:
+            "The bird and its base are drawn from a single piece of white marble. No seams, no joins — the mass of the stone carries through the body and into the stance."
+        },
+        {
+          label: "Feathered by hand",
+          body:
+            "Every feather is cut by chisel in sequence, pass by pass. The wings read differently as the light moves — slow in the morning, sharper by late afternoon."
+        },
+        {
+          label: "Stilled, not posed",
+          body:
+            "The eagle is caught at the end of a landing, not in the middle of a flight. Aigle holds weight downward, not forward — which is why it anchors a room instead of lunging through it."
+        }
+      ]
+    }
   },
   {
-    slug: "halo",
+    slug: "nautile",
     number: "II",
-    name: "Halo",
-    discipline: "Suspended lighting",
-    intro: "A ring of brass, suspended in air.",
+    name: "Nautile",
+    discipline: "Carved form",
+    intro: "A shell, held mid-furl.",
     body:
-      "A single machined ring, polished and then softly brushed by hand. Halo throws a warm, downward wash — a quiet circle of light above a table, a bed, a stair.",
-    material: "Solid brass, hand-brushed",
-    dimensions: "Ø 1100 · D 60 mm",
-    leadTime: "10 – 12 weeks",
+      "Hand-carved from a single block of travertine and finished to a soft matte. Nautile is a study in slow movement — a spiralled shell opening into a long, sail-like crest, the full silhouette worked by hand over several weeks.",
+    material: "Travertine, hand-carved",
+    dimensions: "H 580 · W 1120 · D 220 mm",
+    leadTime: "14 – 18 weeks",
     edition: "Made to order · numbered",
-    image: "/images/lighting/light2.png"
+    image: "/Exclusive/star/Star1.png",
+    gallery: [
+      "/Exclusive/Star/Star1.png",
+      "/Exclusive/Star/Star2.png",
+      "/Exclusive/Star/Star3.png"
+
+
+    ],
+    price: { inr: 384000, usd: 4600 },
+    inspiration: {
+      eyebrow: "Why This Piece",
+      title: "A spiral, held open",
+      reasons: [
+        {
+          label: "Worked in travertine",
+          body:
+            "A stone with its own quiet weather — the warmth of the colour and the fine veining both carry through the carving. Nothing is applied; the finish is only polish."
+        },
+        {
+          label: "A single line",
+          body:
+            "The shell and the sail-like crest are read as one gesture. The eye follows the spiral out, lifts along the crest, and resolves at the trailing edge — the composition rewards slow looking."
+        },
+        {
+          label: "Scaled for a mantel",
+          body:
+            "Wider than tall, shallow in depth. Nautile sits on a mantel, a long console, or the top of a credenza without reaching for the room."
+        }
+      ]
+    }
   },
   {
-    slug: "veille",
+    slug: "cygne",
     number: "III",
-    name: "Veille",
-    discipline: "Tabletop vessel",
-    intro: "A vessel the shape of a long evening.",
+    name: "Cygne",
+    discipline: "Carved figure",
+    intro: "A pair, held in white stone.",
     body:
-      "Thrown in a single pour and finished in a soft, chalk-white glaze. Veille is intended for the table — flowers, dried branches, or nothing at all.",
-    material: "Stoneware, chalk glaze",
-    dimensions: "H 480 · Ø 220 mm",
-    leadTime: "8 – 10 weeks",
+      "Hand-carved from a single block of white marble and finished to a soft silk polish. Cygne is a quiet study in grace — two swans held in a single, unbroken line, feathering worked by hand across the full of the form.",
+    material: "White marble, hand-carved",
+    dimensions: "H 520 · W 420 · D 180 mm",
+    leadTime: "16 – 20 weeks",
     edition: "Made to order · signed",
-    image: "/images/vases/vase2.png"
-  },
-  {
-    slug: "silence",
-    number: "IV",
-    name: "Silence",
-    discipline: "Wall relief",
-    intro: "A low relief, carved in a single pass.",
-    body:
-      "A hand-carved panel in cast plaster, finished to a soft matte. Silence hangs flush to the wall and shifts entirely with the hour of the day — read it in morning light, then again at dusk.",
-    material: "Cast plaster, hand-finished",
-    dimensions: "H 900 · W 1200 · D 45 mm",
-    leadTime: "12 – 16 weeks",
-    edition: "Made to order · one of one",
-    image: "/images/sculptures/scu6.png"
+    image: "/Exclusive/Swan/Swan1.png",
+    gallery: [
+      "/Exclusive/Swan/Swan4.png",
+      "/Exclusive/Swan/Swan1.png",
+      "/Exclusive/Swan/Swan2.png",
+      "/Exclusive/Swan/Swan3.png"
+
+    ],
+    price: { inr: 288000, usd: 3460 },
+    inspiration: {
+      eyebrow: "Why This Piece",
+      title: "Two forms, one line",
+      reasons: [
+        {
+          label: "A single block",
+          body:
+            "Both birds and the frame they share are drawn from one piece of white marble. The composition is held together by the stone itself — nothing is attached."
+        },
+        {
+          label: "Feathered precisely",
+          body:
+            "The scaled plumage along the arch is cut by hand, overlapping cleanly from top to tail. The density of the carving changes along the curve so the eye can follow it."
+        },
+        {
+          label: "A pair, unbroken",
+          body:
+            "The two swans meet without touching — a small negative shape between them is deliberately left. Cygne reads as a pair from any angle, but neither bird is the primary figure."
+        }
+      ]
+    }
   }
+  // {
+  //   slug: "silence",
+  //   number: "IV",
+  //   name: "Silence",
+  //   discipline: "Wall relief",
+  //   intro: "A low relief, carved in a single pass.",
+  //   body:
+  //     "A hand-carved panel in cast plaster, finished to a soft matte. Silence hangs flush to the wall and shifts entirely with the hour of the day — read it in morning light, then again at dusk.",
+  //   material: "Cast plaster, hand-finished",
+  //   dimensions: "H 900 · W 1200 · D 45 mm",
+  //   leadTime: "12 – 16 weeks",
+  //   edition: "Made to order · one of one",
+  //   image: "/images/sculptures/scu6.png",
+  //   price: { inr: 574000, usd: 6880 }
+  // }
 ];
+
+// Lookup an exclusive piece by handle (slug). Used by the store to make the
+// cart work with pieces that live outside the main PRODUCTS catalogue.
+export function exclusiveByHandle(handle: string): ExclusivePiece | undefined {
+  return EXCLUSIVE_PIECES.find((p) => p.slug === handle);
+}
+
+// Adapter — reshapes an ExclusivePiece into the Product contract the detail
+// page components (ProductHero / ProductInfo / ProductDiscoverAlso / etc.)
+// consume. Category is a sentinel used by productHref + ProductBreadcrumb
+// to route back to /exclusive.
+export function exclusiveToProduct(piece: ExclusivePiece): Product {
+  return {
+    handle: piece.slug,
+    name: piece.name,
+    category: "Sculptures",
+    description: `${piece.body} Material: ${piece.material}. Dimensions: ${piece.dimensions}. Lead time: ${piece.leadTime}. ${piece.edition}.`,
+    body: piece.body,
+    price: piece.price,
+    image: piece.image,
+    gallery: piece.gallery?.length ? piece.gallery : [piece.image],
+    aspect: "portrait",
+    material: piece.material,
+    pullQuote: piece.intro,
+    inspiration: piece.inspiration
+  };
+}
+
+export function isExclusiveHandle(handle: string): boolean {
+  return EXCLUSIVE_PIECES.some((p) => p.slug === handle);
+}
 
 export const JOURNAL_ENTRIES = [
   {

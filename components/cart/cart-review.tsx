@@ -40,10 +40,12 @@ export function CartReview() {
     updateCartQty,
     toggleWishlist,
     cartExtras,
-    setCartExtras
+    setCartExtras,
+    orders
   } = useStore();
 
   const isEmpty = cart.length === 0;
+  const hasOrders = orders.length > 0;
 
   // Indian GST — pieces are MRP-inclusive. Back-calculate the tax component
   // so we can display "GST included" without changing the final total.
@@ -57,7 +59,7 @@ export function CartReview() {
       <CheckoutChrome />
 
       {isEmpty ? (
-        <EmptyBag />
+        <EmptyBag hasOrders={hasOrders} orderCount={orders.length} />
       ) : (
         <main className="mx-auto max-w-6xl px-6 pb-32 pt-10 md:px-12 md:pt-16">
           <header className="text-center">
@@ -284,7 +286,13 @@ export function CartReview() {
   );
 }
 
-function EmptyBag() {
+function EmptyBag({
+  hasOrders,
+  orderCount
+}: {
+  hasOrders: boolean;
+  orderCount: number;
+}) {
   return (
     <main className="mx-auto flex min-h-[60svh] max-w-xl flex-col items-center justify-center px-6 text-center">
       <p className="text-[11px] uppercase tracking-[0.3em] text-ink/55">
@@ -300,6 +308,14 @@ function EmptyBag() {
       >
         Browse the collection
       </Link>
+      {hasOrders && (
+        <Link
+          href="/account#orders"
+          className="mt-6 text-[11px] uppercase tracking-[0.3em] text-ink/70 underline underline-offset-[6px] decoration-ink/25 transition-colors hover:text-ink hover:decoration-ink/60"
+        >
+          View your orders ({orderCount})
+        </Link>
+      )}
     </main>
   );
 }

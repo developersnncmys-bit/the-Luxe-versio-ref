@@ -162,13 +162,15 @@ export function CheckoutForm() {
     }));
   }, [selectedAddressId, addresses]);
 
-  // Guard: no items → bounce back to the bag. The empty-state copy there is
-  // kinder than an empty checkout form.
+  // Guard: no items → bounce back to the bag. Skip while `submitting` is
+  // true: Place Order calls `clearCart()` then `router.push(...)`, and React's
+  // batched re-render would otherwise fire this effect first and redirect to
+  // /cart before the push to the success page lands.
   useEffect(() => {
-    if (cart.length === 0) {
+    if (cart.length === 0 && !submitting) {
       router.replace("/cart");
     }
-  }, [cart.length, router]);
+  }, [cart.length, router, submitting]);
 
   const deliveryCost = delivery === "express" ? 2400 : 0;
   const codFee = paymentMethod === "cod" ? COD_FEE : 0;
@@ -266,7 +268,10 @@ export function CheckoutForm() {
     }
 
     clearCart();
-    router.push("/checkout/confirmation");
+    // Route to the brief "payment received" page, which handles its own
+    // countdown redirect to the full confirmation. Doing the one-two step
+    // matches the Tridhavarnam / most Indian checkout flow visitors expect.
+    router.push("/checkout/payment-success");
   };
 
   if (cart.length === 0) {

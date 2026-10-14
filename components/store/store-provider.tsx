@@ -9,7 +9,21 @@ import {
   useState,
   type ReactNode
 } from "react";
-import { PRODUCTS, type Product } from "@/lib/content";
+import {
+  PRODUCTS,
+  EXCLUSIVE_PIECES,
+  exclusiveToProduct,
+  type Product
+} from "@/lib/content";
+
+// Resolve a handle against both the main catalogue and the Luxe Exclusive
+// line, returning the Product-shaped record the cart drawer expects.
+function findAny(handle: string): Product | undefined {
+  const p = PRODUCTS.find((x) => x.handle === handle);
+  if (p) return p;
+  const e = EXCLUSIVE_PIECES.find((x) => x.slug === handle);
+  return e ? exclusiveToProduct(e) : undefined;
+}
 
 export type DrawerKind = "cart" | "wishlist" | "search" | "account" | null;
 
@@ -278,7 +292,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const productByHandle = useCallback(
-    (handle: string) => PRODUCTS.find((p) => p.handle === handle),
+    (handle: string) => findAny(handle),
     []
   );
 
@@ -338,7 +352,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const cartSubtotal = useMemo(
     () =>
       cart.reduce((acc, i) => {
-        const p = PRODUCTS.find((x) => x.handle === i.handle);
+        const p = findAny(i.handle);
         return acc + (p?.price.inr ?? 0) * i.qty;
       }, 0),
     [cart]

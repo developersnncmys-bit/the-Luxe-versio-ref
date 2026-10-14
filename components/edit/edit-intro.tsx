@@ -17,7 +17,7 @@ export function EditIntro() {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="mb-8 text-[10px] uppercase tracking-[0.32em] text-chalk/55"
         >
-          From the Studio
+          In-house · Made by the House
         </motion.p>
 
         <motion.p
@@ -25,11 +25,11 @@ export function EditIntro() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 1.2, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display text-[clamp(1.125rem,1.75vw,1.5rem)] font-light leading-[1.55] text-chalk/85 md:leading-[1.6]"
+          className="font-display text-[clamp(0.9rem,1.2vw,1.125rem)] font-light leading-[1.6] text-chalk/85 md:leading-[1.7]"
         >
-          Every season, the studio selects a handful of objects to sit at the front of the
-          collection. Some are new. Some are made in small numbers. Some are the pieces the
-          house was built on.
+          The Edit is not a curation of outside work. Every piece here is designed and
+          made in-house — carved by the studio, shaped by our hands, signed by the house.
+          Each season, a handful of these in-house pieces sit at the front of the collection.
         </motion.p>
       </div>
     </section>

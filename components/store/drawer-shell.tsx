@@ -33,6 +33,9 @@ export function DrawerShell({
       : "text-chalk/70 hover:text-chalk";
   useEffect(() => {
     if (!open) return;
+    // Lock body scroll while the drawer is open. The scrollable inner panel
+    // (<div data-lenis-prevent …>) opts out of Lenis so native wheel scrolling
+    // works inside the drawer even though Lenis is still running on the page.
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent) => {
@@ -105,7 +108,13 @@ export function DrawerShell({
               </button>
             </div>
 
-            <div className="flex-1 overflow-y-auto">{children}</div>
+            {/* data-lenis-prevent: opts this scroll container out of Lenis so
+                wheel scrolling inside the drawer uses the browser's native
+                behaviour. Without it, Lenis intercepts the wheel event and
+                tries to scroll the (locked) page body instead. */}
+            <div data-lenis-prevent className="flex-1 overflow-y-auto">
+              {children}
+            </div>
 
             {footer && (
               <div className={clsx("border-t", borderColor)}>{footer}</div>

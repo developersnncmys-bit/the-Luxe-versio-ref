@@ -11,10 +11,10 @@ export function ExclusiveClosing() {
     >
       <div className="mx-auto flex max-w-3xl flex-col items-center px-6 text-center md:px-14">
         <motion.p
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-20% 0px" }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="mb-8 text-[10px] uppercase tracking-[0.38em] text-chalk/55"
         >
           Private Commissions
@@ -22,20 +22,20 @@ export function ExclusiveClosing() {
 
         <motion.h2
           id="exclusive-closing-heading"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-20% 0px" }}
-          transition={{ duration: 1.1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
           className="font-display text-display-md font-semibold uppercase leading-[1.05] tracking-[0.005em]"
         >
           A piece of your own
         </motion.h2>
 
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-20% 0px" }}
-          transition={{ duration: 1.2, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           className="mt-10 max-w-md text-[13px] leading-[1.9] text-chalk/70 md:text-[14px]"
         >
           Beyond the pieces above, the studio accepts a small number of private
@@ -44,10 +44,10 @@ export function ExclusiveClosing() {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 14 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-20% 0px" }}
-          transition={{ duration: 1.2, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
           className="mt-14"
         >
           <Link href="/studio/appointment" className="cta-outline text-chalk">

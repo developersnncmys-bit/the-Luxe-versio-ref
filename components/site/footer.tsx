@@ -31,7 +31,8 @@ const COLUMNS = [
     links: [
       { href: "/studio/appointment", label: "Book an appointment" },
       { href: "/studio/bespoke", label: "Bespoke commissions" },
-      { href: "/studio/interior", label: "Interior consultation" }
+      { href: "/studio/interior", label: "Interior consultation" },
+      { href: "/contact", label: "Contact" }
     ]
   },
   {

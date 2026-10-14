@@ -55,6 +55,9 @@ export function Nav() {
   const isSignedIn = !!user;
   const isProductPage = pathname.startsWith("/collections/");
   const isExclusivePage = pathname.startsWith("/exclusive");
+  // /exclusive/<slug> → the detail page. Treated like a product detail page:
+  // no auto-opened floating dropdown over the hero.
+  const isExclusiveDetailPage = pathname.startsWith("/exclusive/");
   // Cart + checkout flow: nav flips to white (like product pages) and the
   // secondary row of page links is suppressed so the page is a bare brand
   // bar + breadcrumb.
@@ -144,7 +147,8 @@ export function Nav() {
     };
   }, [pathname]);
 
-  // Lock body scroll and support Escape while the menu is open
+  // Lock body scroll + Escape while the menu is open. The menu panel below is
+  // marked `data-lenis-prevent` so native wheel scrolling works inside it.
   useEffect(() => {
     if (!menuOpen) return;
     const prevOverflow = document.body.style.overflow;
@@ -381,7 +385,7 @@ export function Nav() {
         {/* Floating dark dropdown panel — appears below the navbar on hover.
             Only over the hero (before the compact panel takes over). */}
         <AnimatePresence>
-          {(navHovered || pathname.startsWith("/collections/") || isExclusivePage) && !menuOpen && !pastHero && !isProductDetailPage && !isCheckoutPage && (
+          {(navHovered || pathname.startsWith("/collections/") || isExclusivePage) && !menuOpen && !pastHero && !isProductDetailPage && !isCheckoutPage && !isExclusiveDetailPage && (
             <motion.div
               key="nav-dropdown"
               initial={{ opacity: 0, y: -8 }}
@@ -430,10 +434,11 @@ export function Nav() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-[45] bg-ink text-chalk"
+            className="fixed inset-0 z-[45] overflow-y-auto bg-ink text-chalk"
             role="dialog"
             aria-modal="true"
             aria-label="Site menu"
+            data-lenis-prevent
           >
             <div className="mx-auto flex h-full max-w-editorial flex-col justify-between px-6 pb-10 pt-28 md:px-10 md:pt-32">
               <motion.ul

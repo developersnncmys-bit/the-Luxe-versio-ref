@@ -14,6 +14,8 @@ export function SearchOverlay() {
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Reset the query on close, focus on open, lock scroll + Escape while open.
+  // The overlay panel below is `data-lenis-prevent` so native wheel scrolling
+  // works inside it without the page sliding beneath.
   useEffect(() => {
     if (!open) {
       setQuery("");
@@ -73,6 +75,7 @@ export function SearchOverlay() {
             role="dialog"
             aria-modal="true"
             aria-label="Search"
+            data-lenis-prevent
           >
             <div className="mx-auto max-w-editorial px-6 pb-10 pt-10 md:px-14 md:pb-16 md:pt-14">
               <div className="flex items-center justify-between gap-6 border-b border-chalk/20 pb-4">

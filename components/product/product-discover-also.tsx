@@ -7,8 +7,15 @@ import { productHref, type Product } from "@/lib/content";
 
 // "Discover Also" — related pieces rail. Kept minimal: image + name only,
 // no visible price (matches Chanel's editorial restraint).
-export function ProductDiscoverAlso({ products }: { products: Product[] }) {
+export function ProductDiscoverAlso({
+  products,
+  aspect = "portrait"
+}: {
+  products: Product[];
+  aspect?: "portrait" | "square";
+}) {
   if (products.length === 0) return null;
+  const aspectClass = aspect === "square" ? "aspect-square" : "aspect-[4/5]";
 
   return (
     <section className="relative bg-ink py-24 text-chalk md:py-32">
@@ -25,7 +32,7 @@ export function ProductDiscoverAlso({ products }: { products: Product[] }) {
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 md:grid-cols-3 md:gap-x-14 lg:gap-x-20">
           {products.map((product, i) => (
-            <RelatedCard key={product.handle} product={product} index={i} />
+            <RelatedCard key={product.handle} product={product} index={i} aspectClass={aspectClass} />
           ))}
         </div>
       </div>
@@ -33,7 +40,15 @@ export function ProductDiscoverAlso({ products }: { products: Product[] }) {
   );
 }
 
-function RelatedCard({ product, index }: { product: Product; index: number }) {
+function RelatedCard({
+  product,
+  index,
+  aspectClass
+}: {
+  product: Product;
+  index: number;
+  aspectClass: string;
+}) {
   return (
     <motion.article
       initial={{ opacity: 0, y: 30 }}
@@ -47,7 +62,7 @@ function RelatedCard({ product, index }: { product: Product; index: number }) {
       className="group"
     >
       <Link href={productHref(product)} className="block text-center">
-        <div className="relative mb-8 aspect-[4/5] w-full overflow-hidden bg-onyx">
+        <div className={`relative mb-8 w-full overflow-hidden bg-onyx ${aspectClass}`}>
           <SafeImage
             src={product.image}
             alt={product.name}

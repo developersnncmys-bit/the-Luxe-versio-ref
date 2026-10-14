@@ -11,21 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function EditPage() {
-  // Per-category rotation: each time a category is picked (across all edits)
-  // we advance to the next product in that category, wrapping at the end.
-  // Result: chandelier-verre appears in the first edit that uses Lighting,
-  // table-lamp-alba in the second, pendant-lume in the third, etc. Different
-  // edits see different pieces even when they share categories.
-  const cursor = new Map<Product["category"], number>();
-  const resolveEdit = (categories: Product["category"][]) =>
-    categories
-      .map((cat) => {
-        const inCat = PRODUCTS.filter((p) => p.category === cat);
-        if (inCat.length === 0) return undefined;
-        const i = cursor.get(cat) ?? 0;
-        cursor.set(cat, i + 1);
-        return inCat[i % inCat.length];
-      })
+  const byHandle = new Map(PRODUCTS.map((p) => [p.handle, p]));
+  const resolveEdit = (handles: string[]): Product[] =>
+    handles
+      .map((h) => byHandle.get(h))
       .filter((p): p is Product => p !== undefined);
 
   return (
@@ -39,7 +28,7 @@ export default function EditPage() {
           number={edit.number}
           title={edit.title}
           intro={edit.intro}
-          products={resolveEdit(edit.categories)}
+          products={resolveEdit(edit.handles)}
           mirror={i % 2 === 1}
         />
       ))}

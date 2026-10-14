@@ -1,18 +1,25 @@
 import Link from "next/link";
-import { categorySlug, type Product } from "@/lib/content";
+import { categorySlug, isExclusiveHandle, type Product } from "@/lib/content";
 
 // Minimal breadcrumb that sits just above the site footer. Chanel places it
 // there — quiet reassurance of location, never announced at the top.
 export function ProductBreadcrumb({ product }: { product: Product }) {
-  const crumbs = [
-    { label: "The House", href: "/" },
-    { label: "The Collection", href: "/collections" },
-    {
-      label: product.category,
-      href: `/collections/${categorySlug(product.category)}`
-    },
-    { label: product.name, href: "" }
-  ];
+  const isExclusive = isExclusiveHandle(product.handle);
+  const crumbs = isExclusive
+    ? [
+        { label: "The House", href: "/" },
+        { label: "Luxe Exclusive", href: "/exclusive" },
+        { label: product.name, href: "" }
+      ]
+    : [
+        { label: "The House", href: "/" },
+        { label: "The Collection", href: "/collections" },
+        {
+          label: product.category,
+          href: `/collections/${categorySlug(product.category)}`
+        },
+        { label: product.name, href: "" }
+      ];
 
   return (
     <nav

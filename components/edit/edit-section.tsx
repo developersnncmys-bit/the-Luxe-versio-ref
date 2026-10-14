@@ -72,7 +72,8 @@ export function EditSection({
                 aria-hidden
                 className="text-[10px] uppercase tracking-[0.32em] text-chalk/40"
               >
-                {String(products.length).padStart(2, "0")} pieces in this edit
+                {String(products.length).padStart(2, "0")}{" "}
+                {products.length === 1 ? "piece" : "pieces"} in this edit
               </span>
             </motion.div>
           </div>
