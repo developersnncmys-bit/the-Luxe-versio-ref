@@ -1939,7 +1939,7 @@ export const EXCLUSIVE_PIECES: ExclusivePiece[] = [
     dimensions: "H 580 · W 1120 · D 220 mm",
     leadTime: "14 – 18 weeks",
     edition: "Made to order · numbered",
-    image: "/Exclusive/star/Star1.png",
+    image: "/Exclusive/Star/Star1.png",
     gallery: [
       "/Exclusive/Star/Star1.png",
       "/Exclusive/Star/Star2.png",
