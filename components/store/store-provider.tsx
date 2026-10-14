@@ -122,6 +122,10 @@ type StoreState = {
   preferences: Preferences;
   cartExtras: CartExtras;
   orders: Order[];
+  // Orders scoped to the signed-in visitor (by email on the order's contact).
+  // Empty while signed out, even if the global `orders` list has entries
+  // from a previous account on the same browser.
+  myOrders: Order[];
 
   openDrawer: (kind: DrawerKind) => void;
   closeDrawer: () => void;
@@ -349,6 +353,16 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     [cart]
   );
 
+  // Filter the globally-persisted orders down to the current signed-in
+  // visitor. Each order carries contact.email at the time it was placed —
+  // orders only "belong" to a visitor whose email matches, so switching
+  // accounts on the same browser doesn't leak previous orders.
+  const myOrders = useMemo(() => {
+    if (!user) return [];
+    const email = user.email.toLowerCase();
+    return orders.filter((o) => o.contact.email.toLowerCase() === email);
+  }, [orders, user]);
+
   const cartSubtotal = useMemo(
     () =>
       cart.reduce((acc, i) => {
@@ -367,6 +381,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     preferences,
     cartExtras,
     orders,
+    myOrders,
     openDrawer,
     closeDrawer,
     addToCart,

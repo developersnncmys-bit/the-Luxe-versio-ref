@@ -780,6 +780,11 @@ function CheckoutLoginGate({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const trimmed = email.trim();
+    const trimmedName = name.trim();
+    if (mode === "register" && !trimmedName) {
+      setError("Please enter your name.");
+      return;
+    }
     if (!trimmed || !trimmed.includes("@")) {
       setError("Please enter a valid email address.");
       return;
@@ -789,7 +794,9 @@ function CheckoutLoginGate({
       return;
     }
     setError("");
-    onSignIn(trimmed, mode === "register" ? name.trim() || undefined : undefined);
+    // signIn works for both modes — the user is immediately logged in and the
+    // checkout gate unmounts into the main form, which pre-fills the email.
+    onSignIn(trimmed, mode === "register" ? trimmedName : undefined);
   };
 
   return (

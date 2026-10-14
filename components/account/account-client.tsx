@@ -24,7 +24,7 @@ export function AccountClient() {
     updatePreferences,
     wishlist,
     cartCount,
-    orders,
+    myOrders,
     cancelOrder
   } = useStore();
 
@@ -88,7 +88,7 @@ export function AccountClient() {
         {/* Sections */}
         <div className="mt-16 space-y-24 md:col-span-9 md:mt-0 md:space-y-32 lg:col-span-9">
           <OrdersSection
-            orders={orders}
+            orders={myOrders}
             cartCount={cartCount}
             onCancel={cancelOrder}
           />
@@ -207,6 +207,8 @@ function OrderCard({
   });
   const itemCount = order.items.reduce((acc, i) => acc + i.qty, 0);
   const isCancellable = order.status === "placed";
+  const canTrack = order.status !== "cancelled";
+  const [tracking, setTracking] = useState(false);
 
   const handleCancel = () => {
     const confirmed = window.confirm(
@@ -255,17 +257,30 @@ function OrderCard({
         </p>
       </div>
 
-      {isCancellable && (
-        <div className="mt-6 text-[11px] uppercase tracking-[0.22em]">
-          <button
-            type="button"
-            onClick={handleCancel}
-            className="text-chalk/80 underline underline-offset-[6px] decoration-chalk/30 transition-colors hover:text-chalk hover:decoration-chalk/70"
-          >
-            Cancel order
-          </button>
+      {(isCancellable || canTrack) && (
+        <div className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 text-[11px] uppercase tracking-[0.22em]">
+          {canTrack && (
+            <button
+              type="button"
+              onClick={() => setTracking((v) => !v)}
+              aria-expanded={tracking}
+              className="text-chalk/80 underline underline-offset-[6px] decoration-chalk/30 transition-colors hover:text-chalk hover:decoration-chalk/70"
+            >
+              {tracking ? "Hide tracking" : "Track order"}
+            </button>
+          )}
+          {isCancellable && (
+            <button
+              type="button"
+              onClick={handleCancel}
+              className="text-chalk/80 underline underline-offset-[6px] decoration-chalk/30 transition-colors hover:text-chalk hover:decoration-chalk/70"
+            >
+              Cancel order
+            </button>
+          )}
         </div>
       )}
+      {canTrack && tracking && <TrackingTimeline order={order} />}
       {order.status === "cancelled" && order.cancelledAt && (
         <p className="mt-6 text-[11px] uppercase tracking-[0.22em] text-chalk/50">
           Cancelled on{" "}
@@ -278,6 +293,120 @@ function OrderCard({
       )}
     </li>
   );
+}
+
+// Four-stage editorial timeline. The current stage index is derived from the
+// order's status so adding a new status later is a one-line map update.
+// Dates for stages that haven't happened yet are shown as a quiet em-dash.
+const TRACKING_STAGES: { key: string; label: string; copy: string }[] = [
+  {
+    key: "placed",
+    label: "Order Placed",
+    copy: "Your order has been received by the studio."
+  },
+  {
+    key: "preparing",
+    label: "In the Studio",
+    copy: "Your piece is being prepared and packed by hand."
+  },
+  {
+    key: "shipped",
+    label: "Dispatched",
+    copy: "Your piece has left the studio and is on its way."
+  },
+  {
+    key: "delivered",
+    label: "Delivered",
+    copy: "Your piece has arrived."
+  }
+];
+
+function TrackingTimeline({ order }: { order: Order }) {
+  const stageIndex =
+    order.status === "delivered"
+      ? 3
+      : order.status === "shipped"
+        ? 2
+        : // "placed" and any transitional state sit at 0; stage 1
+          // (preparing) is treated as implicit progress once the order has
+          // been in the system more than a day.
+          hoursSince(order.placedAt) > 24
+          ? 1
+          : 0;
+
+  const formatDate = (iso: string) =>
+    new Date(iso).toLocaleDateString("en-IN", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric"
+    });
+
+  return (
+    <div className="mt-8 border-t border-chalk/10 pt-8">
+      <p className="mb-6 text-[10px] uppercase tracking-[0.3em] text-chalk/55">
+        Shipment Tracking
+      </p>
+
+      <ol className="relative grid grid-cols-1 gap-6 md:grid-cols-4 md:gap-4">
+        {/* The hairline connector sits behind the markers on desktop, drawn
+            as a background strip across the row. */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-[7px] hidden h-px bg-chalk/15 md:block"
+        />
+
+        {TRACKING_STAGES.map((stage, i) => {
+          const isDone = i < stageIndex;
+          const isCurrent = i === stageIndex;
+          const dateIso =
+            i === 0
+              ? order.placedAt
+              : i === stageIndex && order.status === "shipped"
+                ? order.placedAt
+                : null;
+          return (
+            <li key={stage.key} className="relative flex flex-col gap-3">
+              <span
+                aria-hidden
+                className={clsx(
+                  "relative z-10 block h-[15px] w-[15px] rounded-full border transition-colors",
+                  isDone && "border-champagne/70 bg-champagne/70",
+                  isCurrent && "border-champagne bg-ink ring-2 ring-champagne/40",
+                  !isDone && !isCurrent && "border-chalk/25 bg-ink"
+                )}
+              />
+              <div>
+                <p
+                  className={clsx(
+                    "text-[11px] font-semibold uppercase tracking-[0.22em]",
+                    isDone || isCurrent ? "text-chalk" : "text-chalk/50"
+                  )}
+                >
+                  {stage.label}
+                </p>
+                <p className="mt-2 text-[11px] leading-[1.65] text-chalk/60">
+                  {stage.copy}
+                </p>
+                <p className="mt-3 text-[10px] uppercase tracking-[0.22em] text-chalk/40">
+                  {dateIso ? formatDate(dateIso) : "—"}
+                </p>
+              </div>
+            </li>
+          );
+        })}
+      </ol>
+
+      <p className="mt-8 text-[10px] uppercase tracking-[0.22em] text-chalk/45">
+        For specific delivery queries, write to studio@theluxeversion.com with
+        order <span className="text-chalk/70">{order.id}</span>.
+      </p>
+    </div>
+  );
+}
+
+function hoursSince(iso: string): number {
+  const then = new Date(iso).getTime();
+  return (Date.now() - then) / (1000 * 60 * 60);
 }
 
 function AccountStatusBadge({ status }: { status: Order["status"] }) {

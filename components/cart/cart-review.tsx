@@ -41,11 +41,11 @@ export function CartReview() {
     toggleWishlist,
     cartExtras,
     setCartExtras,
-    orders
+    myOrders
   } = useStore();
 
   const isEmpty = cart.length === 0;
-  const hasOrders = orders.length > 0;
+  const hasOrders = myOrders.length > 0;
 
   // Indian GST — pieces are MRP-inclusive. Back-calculate the tax component
   // so we can display "GST included" without changing the final total.
@@ -59,7 +59,7 @@ export function CartReview() {
       <CheckoutChrome />
 
       {isEmpty ? (
-        <EmptyBag hasOrders={hasOrders} orderCount={orders.length} />
+        <EmptyBag hasOrders={hasOrders} orderCount={myOrders.length} />
       ) : (
         <main className="mx-auto max-w-6xl px-6 pb-32 pt-10 md:px-12 md:pt-16">
           <header className="text-center">

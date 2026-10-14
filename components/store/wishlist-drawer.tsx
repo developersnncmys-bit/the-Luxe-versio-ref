@@ -27,26 +27,26 @@ export function WishlistDrawer() {
   };
 
   return (
-    <DrawerShell open={open} onClose={closeDrawer} title="Wishlist">
+    <DrawerShell open={open} onClose={closeDrawer} title="Wishlist" tone="light">
       {isEmpty ? (
         <div className="flex h-full flex-col items-center justify-center px-8 py-16 text-center">
-          <p className="text-[11px] uppercase tracking-[0.28em] text-chalk/55">
+          <p className="text-[11px] uppercase tracking-[0.28em] text-ink/55">
             Your wishlist is empty
           </p>
-          <p className="mt-6 max-w-[26ch] text-[13px] leading-[1.7] text-chalk/70">
+          <p className="mt-6 max-w-[26ch] text-[13px] leading-[1.7] text-ink/70">
             Save the pieces you're considering. They'll stay here between
             visits.
           </p>
           <Link
             href="/collections/objects"
             onClick={closeDrawer}
-            className="mt-10 text-[11px] uppercase tracking-[0.28em] text-chalk underline underline-offset-[6px] decoration-chalk/50 transition-colors hover:decoration-chalk"
+            className="mt-10 text-[11px] uppercase tracking-[0.28em] text-ink underline underline-offset-[6px] decoration-ink/50 transition-colors hover:decoration-ink"
           >
             Browse the collection
           </Link>
         </div>
       ) : (
-        <ul className="divide-y divide-chalk/10">
+        <ul className="divide-y divide-ink/10">
           {wishlist.map((handle) => {
             const product = productByHandle(handle);
             if (!product) return null;
@@ -55,7 +55,7 @@ export function WishlistDrawer() {
                 <Link
                   href={productHref(product)}
                   onClick={closeDrawer}
-                  className="relative h-24 w-20 shrink-0 overflow-hidden bg-onyx"
+                  className="relative h-24 w-20 shrink-0 overflow-hidden bg-ink/5"
                 >
                   <SafeImage
                     src={product.image}
@@ -71,7 +71,7 @@ export function WishlistDrawer() {
                     <Link
                       href={productHref(product)}
                       onClick={closeDrawer}
-                      className="min-w-0 flex-1 text-[12px] font-semibold uppercase tracking-[0.16em] text-chalk transition-colors hover:text-chalk/80"
+                      className="min-w-0 flex-1 text-[12px] font-semibold uppercase tracking-[0.16em] text-ink transition-colors hover:text-ink/70"
                     >
                       {product.name}
                     </Link>
@@ -79,7 +79,7 @@ export function WishlistDrawer() {
                       type="button"
                       onClick={() => removeFromWishlist(handle)}
                       aria-label={`Remove ${product.name} from wishlist`}
-                      className="shrink-0 text-chalk/50 transition-colors hover:text-chalk"
+                      className="shrink-0 text-ink/50 transition-colors hover:text-ink"
                     >
                       <svg
                         width="12"
@@ -97,17 +97,17 @@ export function WishlistDrawer() {
                     </button>
                   </div>
                   {product.material && (
-                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-chalk/50">
+                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-ink/50">
                       {product.material}
                     </p>
                   )}
-                  <p className="mt-3 text-[13px] tracking-[0.02em] text-chalk">
+                  <p className="mt-3 text-[13px] tracking-[0.02em] text-ink">
                     ₹ {product.price.inr.toLocaleString("en-IN")}
                   </p>
                   <button
                     type="button"
                     onClick={() => moveToCart(handle)}
-                    className="mt-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-chalk underline underline-offset-[6px] decoration-chalk/50 transition-colors hover:decoration-chalk"
+                    className="mt-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-ink underline underline-offset-[6px] decoration-ink/50 transition-colors hover:decoration-ink"
                   >
                     Add to bag
                   </button>

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { PRODUCTS, type Product } from "@/lib/content";
+import { PRODUCTS, EDITS, type Product } from "@/lib/content";
 import { CategoryHero } from "@/components/collections/category/category-hero";
 import { CategoryFilterableGrid } from "@/components/collections/category/category-filterable-grid";
 import { CategorySavoirFaire } from "@/components/collections/category/category-savoir-faire";
@@ -232,9 +232,17 @@ export default function CategoryPage({
   const cfg = CATEGORIES[params.category];
   if (!cfg) notFound();
 
-  const products = PRODUCTS.filter(
-  (p) => p.category === cfg.filter && p.handle !== "sculpture-majeste"
-);
+  // Pieces featured on /edit are deliberately pushed to the end of the
+  // category grid so visitors land on the broader catalogue first and meet
+  // the Edit's curated picks as the closing beat.
+  const editHandles = new Set(EDITS.flatMap((e) => e.handles));
+  const inCategory = PRODUCTS.filter(
+    (p) => p.category === cfg.filter && p.handle !== "sculpture-majeste"
+  );
+  const products: Product[] = [
+    ...inCategory.filter((p) => !editHandles.has(p.handle)),
+    ...inCategory.filter((p) => editHandles.has(p.handle))
+  ];
 
   return (
     <>
