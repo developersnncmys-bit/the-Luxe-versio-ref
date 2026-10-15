@@ -154,9 +154,9 @@ export const PRODUCTS: Product[] = [
     body:
       "COURONNE translates a draped garment into carved stone — the deep vertical folds pulled upward into a sculpted collar, the surface finished in a warm aged bronze. A figure present and absent at once; the piece reads as a torso gathered, a presence held in the moment before it moves.",
     gallery: ["/Edit/Dress/dress1.png",
-              "/Edit/Dress/dress2.png",
-              "/Edit/Dress/dress4.png",
-              "/Edit/Dress/dress3.png"
+              "/Edit/Dress/Dress2.png",
+              "/Edit/Dress/Dress4.png",
+              "/Edit/Dress/Dress3.png"
     ],
     details: [
       {
