@@ -2081,6 +2081,15 @@ export type JournalEntry = {
   // Additional angles for the Studio portraits. Rendered as clickable
   // thumbnails below the text column; clicking swaps the hero in place.
   gallery?: string[];
+  // How the hero + thumbnails fit their frame. Default "cover" (fills the
+  // frame, may crop). Set to "contain" for landscape or environmental shots
+  // that would read as cropped under cover — e.g. the spiral form.
+  fit?: "cover" | "contain";
+  // Hero container aspect ratio as a Tailwind arbitrary value (e.g. "4/5",
+  // "16/9"). Default "4/5" (portrait). Set to match the source image's
+  // native ratio when you want the frame to hug the photo without any
+  // letterboxing.
+  aspect?: string;
 };
 
 export const JOURNAL_ENTRIES: JournalEntry[] = [
@@ -2103,7 +2112,6 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
       "/Studio2/Heart/H6.webp",
       "/Studio2/Heart/H7.webp",
       "/Studio2/Heart/H8.webp",
-      "/Studio2/Heart/H9.webp",
       "/Studio2/Heart/H10.webp"
     ]
   },
@@ -2165,7 +2173,6 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     image: "/Studio2/Guitar/Guitar-hero.webp",
     gallery: [
       "/Studio2/Guitar/G1.webp",
-      "/Studio2/Guitar/G2.webp",
       "/Studio2/Guitar/G3.webp",
       "/Studio2/Guitar/G4.webp"
     ]
@@ -2223,7 +2230,11 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
       "/Studio2/Star/St5.webp",
       "/Studio2/Star/St6.webp",
       "/Studio2/Star/St7.webp"
-    ]
+    ],
+    // All 8 Star images are native 16:9 (1280×720). Match the frame to the
+    // image so the container itself is the correct shape — nothing crops,
+    // nothing letterboxes.
+    aspect: "16/9"
   },
   {
     slug: "the-swan-feathered",
@@ -2233,7 +2244,7 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
       "A long neck held against a feathered wing — carved as a single, continuous line through the stone.",
     image: "/Studio2/Swan/Swan-hero.webp",
     gallery: [
-      "/Studio2/Swan/S1.webp",
+     
       "/Studio2/Swan/S2.webp",
       "/Studio2/Swan/S3.webp",
       "/Studio2/Swan/S4.webp",

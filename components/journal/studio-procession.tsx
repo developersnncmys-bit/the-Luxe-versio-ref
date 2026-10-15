@@ -21,10 +21,10 @@ export function StudioProcession({ entries }: { entries: JournalEntry[] }) {
       {/* Section header — matches the other collection pages. */}
       <div className="mx-auto mb-24 flex max-w-3xl flex-col items-center px-6 text-center md:mb-36 md:px-14">
         <motion.p
-          initial={{ opacity: 0, y: 14 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-15% 0px" }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="mb-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.32em] text-chalk/55"
         >
           <span className="inline-block h-px w-10 bg-chalk/50" />
@@ -34,20 +34,20 @@ export function StudioProcession({ entries }: { entries: JournalEntry[] }) {
 
         <motion.h2
           id="studio-procession-heading"
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-15% 0px" }}
-          transition={{ duration: 1.1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.45, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
           className="font-display text-display-md font-semibold uppercase leading-[1.02] tracking-[0.06em]"
         >
           The Studio
         </motion.h2>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-15% 0px" }}
-          transition={{ duration: 1.2, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           className="mt-8 max-w-md text-[11px] uppercase leading-[1.9] tracking-[0.18em] text-chalk/80 md:text-[12px]"
         >
           Portraits of the pieces as they leave the floor — hero and every
@@ -77,6 +77,13 @@ function StudioFeature({
   const allImages = [entry.image, ...(entry.gallery ?? [])];
   const [activeImage, setActiveImage] = useState(entry.image);
   const hasAngles = allImages.length > 1;
+  // Per-entry framing: most sculptures look best filled (cover). Entries
+  // flagged "contain" (environmental or landscape shots) get letterboxed so
+  // nothing is cropped out of frame.
+  const fitClass = entry.fit === "contain" ? "object-contain" : "object-cover";
+  // Hero container ratio — overrideable per entry when the source photos
+  // have a native aspect that would letterbox or crop against the default.
+  const heroAspect = entry.aspect ?? "4/5";
 
   // Alternate sides so the procession doesn't read as a column — odd rows
   // get the hero on the right, text on the left.
@@ -92,16 +99,19 @@ function StudioFeature({
             aspect to flatter tall sculpture photography. Cross-fade on
             thumbnail click via AnimatePresence. */}
         <motion.div
-          initial={{ opacity: 0, y: 48 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10% 0px" }}
-          transition={{ duration: 1.3, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className={clsx(
-            "md:col-span-7",
-            mirror ? "md:col-start-6" : "md:col-start-1"
+            "md:col-span-6",
+            mirror ? "md:col-start-7" : "md:col-start-1"
           )}
         >
-          <div className="relative aspect-[4/5] w-full overflow-hidden bg-onyx">
+          <div
+            className="relative w-full overflow-hidden bg-onyx"
+            style={{ aspectRatio: heroAspect }}
+          >
             <AnimatePresence>
               <motion.div
                 key={activeImage}
@@ -111,13 +121,16 @@ function StudioFeature({
                 transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
                 className="absolute inset-0"
               >
+                {/* Fit driven by entry.fit — cover by default (fills the
+                    portrait frame), contain for landscape/environmental
+                    sources (spiral form) so the full composition reads. */}
                 <SafeImage
                   src={activeImage}
                   alt={entry.title}
                   fallbackSeed={`${entry.slug}-${activeImage}`}
                   fill
                   sizes="(min-width: 768px) 58vw, 100vw"
-                  className="object-cover"
+                  className={fitClass}
                   priority={index < 2}
                 />
               </motion.div>
@@ -133,12 +146,12 @@ function StudioFeature({
           )}
         >
           <motion.p
-            initial={{ opacity: 0, y: 14 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
             transition={{
-              duration: 1,
-              delay: 0.15,
+              duration: 0.4,
+              delay: 0.05,
               ease: [0.22, 1, 0.36, 1]
             }}
             className="flex items-center gap-3 text-[10px] uppercase tracking-[0.32em] text-chalk/55"
@@ -149,12 +162,12 @@ function StudioFeature({
 
           <motion.h3
             id={`studio-feature-${entry.slug}`}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
             transition={{
-              duration: 1.1,
-              delay: 0.25,
+              duration: 0.45,
+              delay: 0.1,
               ease: [0.22, 1, 0.36, 1]
             }}
             className="mt-6 font-display text-[clamp(1.5rem,2.75vw,2.75rem)] font-semibold uppercase leading-[1.08] tracking-[0.04em] text-chalk"
@@ -163,12 +176,12 @@ function StudioFeature({
           </motion.h3>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
             transition={{
-              duration: 1.2,
-              delay: 0.35,
+              duration: 0.5,
+              delay: 0.15,
               ease: [0.22, 1, 0.36, 1]
             }}
             className="mt-6 max-w-md text-[13px] leading-[1.85] text-chalk/75 md:text-[14px]"
@@ -181,12 +194,12 @@ function StudioFeature({
               quieter editorial feature. */}
           {hasAngles && (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-10% 0px" }}
               transition={{
-                duration: 1.2,
-                delay: 0.45,
+                duration: 0.5,
+                delay: 0.2,
                 ease: [0.22, 1, 0.36, 1]
               }}
               className="mt-12"
@@ -220,7 +233,7 @@ function StudioFeature({
                           fallbackSeed={`${entry.slug}-thumb-${i}`}
                           fill
                           sizes="80px"
-                          className="object-cover"
+                          className={fitClass}
                         />
                         {/* Active-state rule — bottom bar reads as "selected
                             tab" without a jittery ring. */}
