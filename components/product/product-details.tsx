@@ -26,7 +26,7 @@ export function ProductDetails({ product }: { product: Product }) {
           </motion.h2>
 
           <Link
-            href="/journal/the-case-for-unlacquered-brass"
+            href="/the-studio/the-case-for-unlacquered-brass"
             className="text-[11px] uppercase tracking-[0.24em] text-chalk/70 underline underline-offset-[6px] decoration-chalk/40 transition-colors hover:text-chalk hover:decoration-chalk/80"
           >
             Care instructions

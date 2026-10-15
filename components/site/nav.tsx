@@ -14,7 +14,7 @@ const PRIMARY_LINKS: Array<{ href: string; label: string; tag?: string }> = [
   { href: "/collections", label: "The Collection" },
   { href: "/edit", label: "The Edit" },
   { href: "/house", label: "The House" },
-  { href: "/journal", label: "The Studio" }
+  { href: "/the-studio", label: "The Studio" }
 ];
 
 // Sits inside the floating dark panel below the wordmark — sub-taxonomy of Objects + Lighting
@@ -33,7 +33,7 @@ const DROPDOWN_LINKS = [
   { href: "/collections", label: "The Collection" },
   { href: "/edit", label: "The Edit" },
   { href: "/house", label: "The House" },
-  { href: "/journal", label: "The Studio" }
+  { href: "/the-studio", label: "The Studio" }
 ];
 
 const SECONDARY_LINKS = [

@@ -93,13 +93,12 @@ export const PRODUCTS: Product[] = [
     description:
       "An everyday object carried in Carrara marble. MONOGRAMME reinterprets the carriall as a sculpted form — quilted motifs worked by hand into the stone, handles doubling into a single relaxed knot. Luxury rendered as study.",
     price: { inr: 184000, usd: 2260 },
-    image: "/Edit/Bag/Bag1.png",
+    image: "/Edit/Bag/Bag2.png",
     aspect: "portrait",
     material: "Hand-carved Carrara marble",
     body:
       "MONOGRAMME is a sculptural meditation on the everyday object. A carriall, pulled out of leather and into stone — the quilted repeats, the stitched seam, the looped handles all carved from a single block of white Carrara. Scaled for the console, the mantel, the shelf that asks for one considered object rather than many.",
     gallery: [
-      "/Edit/Bag/Bag1.png",
       "/Edit/Bag/Bag2.png",
       "/Edit/Bag/Bag3.png",
       "/Edit/Bag/Bag4.png",
@@ -154,7 +153,11 @@ export const PRODUCTS: Product[] = [
     material: "Carved stone with aged bronze patina, dark marble plinth",
     body:
       "COURONNE translates a draped garment into carved stone — the deep vertical folds pulled upward into a sculpted collar, the surface finished in a warm aged bronze. A figure present and absent at once; the piece reads as a torso gathered, a presence held in the moment before it moves.",
-    gallery: ["/Edit/Dress/dress1.png"],
+    gallery: ["/Edit/Dress/dress1.png",
+              "/Edit/Dress/dress2.png",
+              "/Edit/Dress/dress4.png",
+              "/Edit/Dress/dress3.png"
+    ],
     details: [
       {
         label: "Material",
@@ -420,17 +423,17 @@ export const PRODUCTS: Product[] = [
     description:
       "A rare sculpture captures strength and momentum. Its sweeping horns and grounded stance convey an unmistakable sense of power and resolve.",
     price: { inr: 96000, usd: 1180 },
-    image: "/images/sculptures/Ardor/Ardor0.png",
+    image: "/images/sculptures/Ardor/Ardor-first.png",
     aspect: "portrait",
     material: "Metal, textured bronze finish",
     body:
       "Defined by its richly textured surface and sculptural weight, the piece captures the bull's muscularity with striking depth. Sweeping horns, a lowered stance and pronounced contours heighten its sense of movement, while the nuanced bronze finish accentuates the character of the piece.",
     gallery: [
-      "/images/sculptures/Ardor/Ardor0.png",
-      "/images/sculptures/Ardor/Ardor1.png",
-       "/images/sculptures/Ardor/Ardor2.png",
+      "/images/sculptures/Ardor/Ardor2.png",
+       "/images/sculptures/Ardor/Ardor1.png",
       "/images/sculptures/Ardor/Ardor3.png",
-      "/images/sculptures/Ardor/Ardor5.png"
+      "/images/sculptures/Ardor/Ardor5.png",
+      "/images/sculptures/Ardor/Ardor0.png"
     ],
     details: [
       {
@@ -531,17 +534,18 @@ export const PRODUCTS: Product[] = [
     description:
       "A study in rhythm, form and restraint. Sculpted in textured wood, CADENCE pairs a bowed silhouette with a deeply textured black finish, carrying a quiet yet commanding presence.",
     price: { inr: 128000, usd: 1580 },
-    image: "/images/sculptures/Cadence/Cadence3.png",
+    image: "/images/sculptures/Cadence/Cadence1.png",
     aspect: "portrait",
     material: "Textured wood, textured black finish",
     body:
       "Defined by its graphic equine silhouette, CADENCE balances the solidity of carved wood with the visual lightness of slender metal supports. The raised composition gives the sculpture an architectural quality, while the textured surface brings depth to its monochromatic form.",
     gallery: [
-      "/images/sculptures/Cadence/Cadence3.png",
+      
       "/images/sculptures/Cadence/Cadence1.png",
       "/images/sculptures/Cadence/Cadence2.png",
       "/images/sculptures/Cadence/Cadence5.png",
       "/images/sculptures/Cadence/Cadence4.png",
+      "/images/sculptures/Cadence/Cadence3.png",
       "/images/sculptures/Cadence/Cadence6.png",
       "/images/sculptures/Cadence/Cadence7.png",
       "/images/sculptures/Cadence/Cadence8.png",
@@ -1644,12 +1648,13 @@ export const PRODUCTS: Product[] = [
     description:
       "Named for its association with Helios, the Greek sun god, ELIO evokes light and warmth. A serene facial profile emerges from this sculptural vase, its elongated form complemented by a white marble-effect finish with flowing grey veins — a poetic expression of presence and stillness.",
     price: { inr: 74000, usd: 910 },
-    image: "/images/vases/Elios/Elio1.png",
+    image: "/images/vases/Elios/Elio.png",
     aspect: "portrait",
     material: "Ceramic and glass, white marble-effect finish with grey veining",
     body:
       "ELIO invites contemplation through a face only partly revealed. Its architectural proportions create a distinctive focal point, bringing quiet strength and individuality to a thoughtfully composed space.",
     gallery: [
+      "/images/vases/Elios/Elio.png",
       "/images/vases/Elios/Elio1.png",
       "/images/vases/Elios/Elio2.png",
       "/images/vases/Elios/Elio3.png",
@@ -1901,7 +1906,12 @@ export const EXCLUSIVE_PIECES: ExclusivePiece[] = [
       "/Exclusive/Eagle/Eagle.png",
       "/Exclusive/Eagle/Eagle3.png",
       "/Exclusive/Eagle/Eagle2.png",
-      "/Exclusive/Eagle/Eagle4.png"
+      "/Exclusive/Eagle/Eagle4.png",
+      "/Exclusive/Eagle/Eagle6.png",
+      "/Exclusive/Eagle/Eagle7.png",
+      "/Exclusive/Eagle/Eagle8.png",
+      "/Exclusive/Eagle/Eagle5.png",
+      
 
     ],
     price: { inr: 624000, usd: 7480 },
@@ -1943,7 +1953,8 @@ export const EXCLUSIVE_PIECES: ExclusivePiece[] = [
     gallery: [
       "/Exclusive/Star/Star1.png",
       "/Exclusive/Star/Star2.png",
-      "/Exclusive/Star/Star3.png"
+      "/Exclusive/Star/Star3.png",
+      "/Exclusive/Star/Star4.png"
 
 
     ],
@@ -2094,44 +2105,87 @@ export const JOURNAL_ENTRIES = [
       "Carved from solid wood and marked by a distressed finish, VESTIGE carries the character of an object shaped by time",
     image: "/images/sculptures/Vestige/Vestige.png"
   },
+
+  // ── Studio portraits — hand-carved marble, travertine and basalt pieces
+  // worked in the studio and photographed on a dark ground.
   {
-    slug: "a-house-in-the-hills",
-    kicker: "Interior",
-    title: "A house in the hills",
+    slug: "a-heart-in-the-round",
+    kicker: "Studio",
+    title: "A HEART, IN THE ROUND",
     excerpt:
-      "The Verre chandelier at rest — a long lens on the room that first commissioned it.",
-    image: "/images/lighting/light2.png"
+      "The simplest form, carved slowly. On the pieces that invite touch instead of distance.",
+    image: "/Studio/Heart-cover.png"
   },
   {
-    slug: "on-the-dining-chandelier",
-    kicker: "Guide",
-    title: "On the dining chandelier",
-    excerpt:
-      "Choosing a chandelier for the dining table — length, drop height, and the light it should give at eight.",
-    image: "/images/lighting/light3.png"
-  },
-  {
-    slug: "the-case-for-unlacquered-brass",
-    kicker: "Craft",
-    title: "The case for unlacquered brass",
-    excerpt:
-      "On the finish that ages with the room instead of resisting it — and why we choose it every time.",
-    image: "/images/table-top/table1.png"
-  },
-  {
-    slug: "the-making-of-the-sillon",
+    slug: "wings-raised",
     kicker: "Object",
-    title: "The making of the Sillon",
+    title: "WINGS RAISED",
     excerpt:
-      "From clay maquette to cast bronze — the year-long path of a single sculpted seat.",
-    image: "/images/sculptures/scu3.png"
+      "A white marble eagle cut from a single block — the piece a mantel will arrange itself around.",
+    image: "/Studio/Eagle.png"
   },
   {
-    slug: "in-the-workshop-with-louis",
-    kicker: "Conversation",
-    title: "In the workshop with Louis",
+    slug: "the-landed-bird",
+    kicker: "Object",
+    title: "THE LANDED BIRD",
     excerpt:
-      "A morning with the glassblower who shapes every leaf of the Verre chandelier by hand.",
-    image: "/images/vases/vase2.png"
+      "Caught at the end of a descent, not the middle of flight. On sculptures that anchor a room rather than lunge through it.",
+    image: "/Studio/Pigeon3.png"
+  },
+  {
+    slug: "the-water-bird-held",
+    kicker: "Studio",
+    title: "THE WATER BIRD, HELD",
+    excerpt:
+      "A stone cygnet caught between gestures — the fan of its tail unfurled across the full breadth of the base.",
+    image: "/Studio/Duck1.png"
+  },
+  {
+    slug: "a-pair-unbroken",
+    kicker: "Guide",
+    title: "A PAIR, UNBROKEN",
+    excerpt:
+      "Two figures held in one line of stone — on reading a sculpture as a composition, not a count.",
+    image: "/Studio/Figurine1.png"
+  },
+  {
+    slug: "an-instrument-held",
+    kicker: "Object",
+    title: "AN INSTRUMENT, HELD",
+    excerpt:
+      "A dark-bodied guitar set upright on a weathered plinth — on objects that borrow the gravity of music without producing a note.",
+    image: "/Studio/Guitar1.png"
+  },
+  {
+    slug: "a-guitar-in-stone",
+    kicker: "Craft",
+    title: "A GUITAR, IN STONE",
+    excerpt:
+      "An instrument carved from marble on a plinth of stacked stone — a studio exercise in the gravity of a thing that cannot be played.",
+    image: "/Studio/Stone-guitar1.png"
+  },
+  {
+    slug: "the-seated-figure",
+    kicker: "Portrait",
+    title: "THE SEATED FIGURE",
+    excerpt:
+      "A reclining form in white marble — carved not to recline, but to hold the quiet of the room around it.",
+    image: "/Studio/Human1.png"
+  },
+  {
+    slug: "a-face-in-fragments",
+    kicker: "Portrait",
+    title: "A FACE, IN FRAGMENTS",
+    excerpt:
+      "A profile carved in veined marble — set in three stepped planes that read as one eye at a distance.",
+    image: "/Studio/man-scu1.png"
+  },
+  {
+    slug: "the-spiral-form",
+    kicker: "Guide",
+    title: "THE SPIRAL FORM",
+    excerpt:
+      "A shell held mid-furl, a sail-like crest — on reading a single line through two distinct silhouettes.",
+    image: "/Studio/Star1.png"
   }
 ];

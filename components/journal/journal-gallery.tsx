@@ -122,8 +122,8 @@ function GalleryTile({
       style={{ y }}
     >
       <Link
-        href={`/journal/${entry.slug}`}
-        className="group relative block aspect-[3/4] w-full overflow-hidden bg-onyx"
+        href={`/the-studio/${entry.slug}`}
+        className="group relative block aspect-square w-full overflow-hidden bg-onyx"
       >
         {/* Image — slow scale on hover for the cinematic reveal. */}
         <SafeImage

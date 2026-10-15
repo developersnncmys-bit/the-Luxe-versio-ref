@@ -32,7 +32,7 @@ export function JournalFeatured({ entry }: { entry: Entry }) {
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="group"
         >
-          <Link href={`/journal/${entry.slug}`} className="block">
+          <Link href={`/the-studio/${entry.slug}`} className="block">
             {/* Wide feature image — 16/9 letterbox to differentiate from the
                 4/5 portrait cards in the article rows below. */}
             <div className="relative aspect-[16/9] w-full overflow-hidden bg-onyx">

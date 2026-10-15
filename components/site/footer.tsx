@@ -39,7 +39,7 @@ const COLUMNS = [
     title: "The Luxe Version",
     links: [
       { href: "/house", label: "The House" },
-      { href: "/journal", label: "The Studio" },
+      { href: "/the-studio", label: "The Studio" },
       { href: "/careers", label: "Careers" },
       // { href: "/press", label: "Press" },
       { href: "/legal", label: "Legal Statement" },

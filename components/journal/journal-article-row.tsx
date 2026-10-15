@@ -35,7 +35,7 @@ export function JournalArticleRow({
         >
           {/* Image column — 7 cols wide, position flips on `mirror`. */}
           <Link
-            href={`/journal/${entry.slug}`}
+            href={`/the-studio/${entry.slug}`}
             className={clsx(
               "relative block aspect-[4/5] w-full overflow-hidden bg-onyx md:col-span-7",
               mirror ? "md:col-start-6" : "md:col-start-1"
@@ -69,7 +69,7 @@ export function JournalArticleRow({
               className="mt-6 text-[clamp(1.5rem,2.75vw,2.5rem)] font-normal italic leading-[1.15] text-chalk"
             >
               <Link
-                href={`/journal/${entry.slug}`}
+                href={`/the-studio/${entry.slug}`}
                 className="transition-opacity hover:opacity-70"
               >
                 {entry.title}
@@ -81,7 +81,7 @@ export function JournalArticleRow({
             </p>
 
             <Link
-              href={`/journal/${entry.slug}`}
+              href={`/the-studio/${entry.slug}`}
               className="mt-8 inline-block text-[11px] font-semibold uppercase tracking-[0.24em] text-chalk underline underline-offset-[6px] decoration-chalk/50 transition-colors hover:decoration-chalk"
             >
               Read the essay
