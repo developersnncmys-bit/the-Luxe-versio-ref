@@ -2072,7 +2072,178 @@ export function isExclusiveHandle(handle: string): boolean {
   return EXCLUSIVE_PIECES.some((p) => p.slug === handle);
 }
 
-export const JOURNAL_ENTRIES = [
+export type JournalEntry = {
+  slug: string;
+  kicker: string;
+  title: string;
+  excerpt: string;
+  image: string; // hero/primary image
+  // Additional angles for the Studio portraits. Rendered as clickable
+  // thumbnails below the text column; clicking swaps the hero in place.
+  gallery?: string[];
+};
+
+export const JOURNAL_ENTRIES: JournalEntry[] = [
+  // ── Studio portraits — hand-carved marble, travertine and basalt pieces
+  // photographed on a dark ground. Each entry's gallery holds the extra
+  // angles that render as thumbnail swatches beside the hero. ──
+  {
+    slug: "a-heart-in-the-round",
+    kicker: "Studio",
+    title: "A HEART, IN THE ROUND",
+    excerpt:
+      "The simplest form, carved slowly. On the pieces that invite touch instead of distance.",
+    image: "/Studio2/Heart/Heart-Hero.webp",
+    gallery: [
+      "/Studio2/Heart/H1.webp",
+      "/Studio2/Heart/H2.webp",
+      "/Studio2/Heart/H3.webp",
+      "/Studio2/Heart/H4.webp",
+      "/Studio2/Heart/H5.webp",
+      "/Studio2/Heart/H6.webp",
+      "/Studio2/Heart/H7.webp",
+      "/Studio2/Heart/H8.webp",
+      "/Studio2/Heart/H9.webp",
+      "/Studio2/Heart/H10.webp"
+    ]
+  },
+  {
+    slug: "wings-raised",
+    kicker: "Object",
+    title: "WINGS RAISED",
+    excerpt:
+      "A white marble eagle cut from a single block — the piece a mantel will arrange itself around.",
+    image: "/Studio2/Eagle/Eagle-hero.webp",
+    gallery: [
+      "/Studio2/Eagle/E2.webp",
+      "/Studio2/Eagle/E3.webp",
+      "/Studio2/Eagle/E4.webp",
+      "/Studio2/Eagle/E5.webp"
+    ]
+  },
+  {
+    slug: "the-landed-bird",
+    kicker: "Object",
+    title: "THE LANDED BIRD",
+    excerpt:
+      "Caught at the end of a descent, not the middle of flight. On sculptures that anchor a room rather than lunge through it.",
+    image: "/Studio2/Pigeon/Pigeon-hero.webp",
+    gallery: [
+      "/Studio2/Pigeon/P1.webp",
+      "/Studio2/Pigeon/P2.webp",
+      "/Studio2/Pigeon/P3.webp",
+      "/Studio2/Pigeon/P4.webp",
+      "/Studio2/Pigeon/P5.webp",
+      "/Studio2/Pigeon/P6.webp",
+      "/Studio2/Pigeon/P7.webp",
+      "/Studio2/Pigeon/P8.webp"
+    ]
+  },
+  {
+    slug: "the-water-bird-held",
+    kicker: "Studio",
+    title: "THE WATER BIRD, HELD",
+    excerpt:
+      "A stone cygnet caught between gestures — the fan of its tail unfurled across the full breadth of the base.",
+    image: "/Studio2/Duck/Duck-hero.webp",
+    gallery: ["/Studio2/Duck/D1.webp"]
+  },
+  {
+    slug: "a-pair-unbroken",
+    kicker: "Guide",
+    title: "A PAIR, UNBROKEN",
+    excerpt:
+      "Two figures held in one line of stone — on reading a sculpture as a composition, not a count.",
+    image: "/Studio2/Figurine/Figurine-hero.webp"
+  },
+  {
+    slug: "an-instrument-held",
+    kicker: "Object",
+    title: "AN INSTRUMENT, HELD",
+    excerpt:
+      "A dark-bodied guitar set upright on a weathered plinth — on objects that borrow the gravity of music without producing a note.",
+    image: "/Studio2/Guitar/Guitar-hero.webp",
+    gallery: [
+      "/Studio2/Guitar/G1.webp",
+      "/Studio2/Guitar/G2.webp",
+      "/Studio2/Guitar/G3.webp",
+      "/Studio2/Guitar/G4.webp"
+    ]
+  },
+  {
+    slug: "a-guitar-in-stone",
+    kicker: "Craft",
+    title: "A GUITAR, IN STONE",
+    excerpt:
+      "An instrument carved from marble on a plinth of stacked stone — a studio exercise in the gravity of a thing that cannot be played.",
+    // Stone-Guitar folder has no explicit "hero" file — SG1 reads as the
+    // front elevation and lands as the primary.
+    image: "/Studio2/Stone-Guitar/SG1.webp",
+    gallery: [
+      "/Studio2/Stone-Guitar/SG2.webp",
+      "/Studio2/Stone-Guitar/SG3.webp",
+      "/Studio2/Stone-Guitar/SG4.webp",
+      "/Studio2/Stone-Guitar/SG5.webp"
+    ]
+  },
+  {
+    slug: "the-seated-figure",
+    kicker: "Portrait",
+    title: "THE SEATED FIGURE",
+    excerpt:
+      "A reclining form in white marble — carved not to recline, but to hold the quiet of the room around it.",
+    image: "/Studio2/Human/Human-Hero.webp",
+    gallery: [
+      "/Studio2/Human/H.webp",
+      "/Studio2/Human/Hu1.webp",
+      "/Studio2/Human/Hu2.webp"
+    ]
+  },
+  {
+    slug: "a-face-in-fragments",
+    kicker: "Portrait",
+    title: "A FACE, IN FRAGMENTS",
+    excerpt:
+      "A profile carved in veined marble — set in three stepped planes that read as one eye at a distance.",
+    image: "/Studio2/man-scu/man-scu-hero.webp",
+    gallery: ["/Studio2/man-scu/m1.webp", "/Studio2/man-scu/m2.webp"]
+  },
+  {
+    slug: "the-spiral-form",
+    kicker: "Guide",
+    title: "THE SPIRAL FORM",
+    excerpt:
+      "A shell held mid-furl, a sail-like crest — on reading a single line through two distinct silhouettes.",
+    image: "/Studio2/Star/Star-hero.webp",
+    gallery: [
+      "/Studio2/Star/St1.webp",
+      "/Studio2/Star/St2.webp",
+      "/Studio2/Star/St3.webp",
+      "/Studio2/Star/St4.webp",
+      "/Studio2/Star/St5.webp",
+      "/Studio2/Star/St6.webp",
+      "/Studio2/Star/St7.webp"
+    ]
+  },
+  {
+    slug: "the-swan-feathered",
+    kicker: "Studio",
+    title: "THE SWAN, FEATHERED",
+    excerpt:
+      "A long neck held against a feathered wing — carved as a single, continuous line through the stone.",
+    image: "/Studio2/Swan/Swan-hero.webp",
+    gallery: [
+      "/Studio2/Swan/S1.webp",
+      "/Studio2/Swan/S2.webp",
+      "/Studio2/Swan/S3.webp",
+      "/Studio2/Swan/S4.webp",
+      "/Studio2/Swan/S5.webp",
+      "/Studio2/Swan/S6.webp"
+    ]
+  },
+
+  // ── Editorial notes tied to real products — placed last so they close the
+  // procession as quieter single-image features. ──
   {
     slug: "AT THE CERAMIC STUDIO",
     kicker: "Guide",
@@ -2090,14 +2261,6 @@ export const JOURNAL_ENTRIES = [
     image: "/images/sculptures/Engime/Engime-Studio.png"
   },
   {
-    slug: "IN THE AMBIENT LIGHT",
-    kicker: "Studio",
-    title: "IN THE AMBIENT LIGHT",
-    excerpt:
-      "Defined by a fluid silhouette and deep teal glass, OBRE turns a simple vessel into a striking sculptural presence.",
-    image: "/images/vases/Obre/Obre-studio.png"
-  },
-  {
     slug: "IN THE QUIET CORNER",
     kicker: "Guide",
     title: "IN THE QUIET CORNER",
@@ -2105,87 +2268,12 @@ export const JOURNAL_ENTRIES = [
       "Carved from solid wood and marked by a distressed finish, VESTIGE carries the character of an object shaped by time",
     image: "/images/sculptures/Vestige/Vestige.png"
   },
-
-  // ── Studio portraits — hand-carved marble, travertine and basalt pieces
-  // worked in the studio and photographed on a dark ground.
   {
-    slug: "a-heart-in-the-round",
+    slug: "IN THE AMBIENT LIGHT",
     kicker: "Studio",
-    title: "A HEART, IN THE ROUND",
+    title: "IN THE AMBIENT LIGHT",
     excerpt:
-      "The simplest form, carved slowly. On the pieces that invite touch instead of distance.",
-    image: "/Studio/Heart-cover.png"
-  },
-  {
-    slug: "wings-raised",
-    kicker: "Object",
-    title: "WINGS RAISED",
-    excerpt:
-      "A white marble eagle cut from a single block — the piece a mantel will arrange itself around.",
-    image: "/Studio/Eagle.png"
-  },
-  {
-    slug: "the-landed-bird",
-    kicker: "Object",
-    title: "THE LANDED BIRD",
-    excerpt:
-      "Caught at the end of a descent, not the middle of flight. On sculptures that anchor a room rather than lunge through it.",
-    image: "/Studio/Pigeon3.png"
-  },
-  {
-    slug: "the-water-bird-held",
-    kicker: "Studio",
-    title: "THE WATER BIRD, HELD",
-    excerpt:
-      "A stone cygnet caught between gestures — the fan of its tail unfurled across the full breadth of the base.",
-    image: "/Studio/Duck1.png"
-  },
-  {
-    slug: "a-pair-unbroken",
-    kicker: "Guide",
-    title: "A PAIR, UNBROKEN",
-    excerpt:
-      "Two figures held in one line of stone — on reading a sculpture as a composition, not a count.",
-    image: "/Studio/Figurine1.png"
-  },
-  {
-    slug: "an-instrument-held",
-    kicker: "Object",
-    title: "AN INSTRUMENT, HELD",
-    excerpt:
-      "A dark-bodied guitar set upright on a weathered plinth — on objects that borrow the gravity of music without producing a note.",
-    image: "/Studio/Guitar1.png"
-  },
-  {
-    slug: "a-guitar-in-stone",
-    kicker: "Craft",
-    title: "A GUITAR, IN STONE",
-    excerpt:
-      "An instrument carved from marble on a plinth of stacked stone — a studio exercise in the gravity of a thing that cannot be played.",
-    image: "/Studio/Stone-guitar1.png"
-  },
-  {
-    slug: "the-seated-figure",
-    kicker: "Portrait",
-    title: "THE SEATED FIGURE",
-    excerpt:
-      "A reclining form in white marble — carved not to recline, but to hold the quiet of the room around it.",
-    image: "/Studio/Human1.png"
-  },
-  {
-    slug: "a-face-in-fragments",
-    kicker: "Portrait",
-    title: "A FACE, IN FRAGMENTS",
-    excerpt:
-      "A profile carved in veined marble — set in three stepped planes that read as one eye at a distance.",
-    image: "/Studio/man-scu1.png"
-  },
-  {
-    slug: "the-spiral-form",
-    kicker: "Guide",
-    title: "THE SPIRAL FORM",
-    excerpt:
-      "A shell held mid-furl, a sail-like crest — on reading a single line through two distinct silhouettes.",
-    image: "/Studio/Star1.png"
+      "Defined by a fluid silhouette and deep teal glass, OBRE turns a simple vessel into a striking sculptural presence.",
+    image: "/images/vases/Obre/Obre-studio.png"
   }
 ];

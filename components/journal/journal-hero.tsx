@@ -13,7 +13,6 @@ export function JournalHero() {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "16%"]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.05]);
   const opacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
 
   return (
@@ -21,7 +20,7 @@ export function JournalHero() {
       ref={ref}
       className="relative h-[100svh] w-full overflow-hidden bg-ink text-chalk grain"
     >
-      <motion.div style={{ y, scale }} className="absolute inset-0">
+      <motion.div style={{ y }} className="absolute inset-0">
         <Image
           src="/images/studio-hero.png"
           alt="Inside the studio"

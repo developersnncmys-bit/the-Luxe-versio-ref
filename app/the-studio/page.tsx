@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { JOURNAL_ENTRIES } from "@/lib/content";
 import { JournalHero } from "@/components/journal/journal-hero";
-import { JournalGallery } from "@/components/journal/journal-gallery";
+import { StudioProcession } from "@/components/journal/studio-procession";
 import { JournalClosing } from "@/components/journal/journal-closing";
 
 export const metadata: Metadata = {
@@ -9,11 +9,11 @@ export const metadata: Metadata = {
   description: "Notes, guides and portraits from the studio."
 };
 
-export default function JournalPage() {
+export default function TheStudioPage() {
   return (
     <>
       <JournalHero />
-      <JournalGallery entries={JOURNAL_ENTRIES} />
+      <StudioProcession entries={JOURNAL_ENTRIES} />
       <JournalClosing />
     </>
   );
