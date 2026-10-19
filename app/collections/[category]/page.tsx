@@ -79,12 +79,6 @@ const CATEGORIES: Record<string, CategoryConfig> = {
         image: "/images/vases/Vase-rivage/Rivage-craft.png",
         imageAlt: "A ceramic vessel",
         href: "/collections/vases"
-      },
-      {
-        title: "Tabletop",
-        image: "/images/table-top/table1.png",
-        imageAlt: "A stoneware charger",
-        href: "/collections/tabletop"
       }
     ]
   },
@@ -110,8 +104,8 @@ const CATEGORIES: Record<string, CategoryConfig> = {
       title: "Sculpture That Holds",
       body:
         "A vessel earns its place by presence, not use. Set on a console or a low table, it draws the light of the room to one held form — quiet, weighted, unrepeatable.",
-      image: "/images/vases/vase3.png",
-      imageAlt: "A ceramic vase in profile",
+      image: "/images/vases/Vase-rivage/Rivage-presence.png",
+      imageAlt: "A ceramic vase in a lived-in setting",
       href: "/collections/vases"
     },
     related: [
@@ -119,53 +113,6 @@ const CATEGORIES: Record<string, CategoryConfig> = {
         title: "Sculptures",
         image: "/images/sculptures/Majeste/Majeste.png",
         imageAlt: "The Majesté sculpture in a lived-in setting",
-        href: "/collections/sculptures"
-      },
-      {
-        title: "Tabletop",
-        image: "/images/table-top/table1.png",
-        imageAlt: "A stoneware charger",
-        href: "/collections/tabletop"
-      }
-    ]
-  },
-  tabletop: {
-    filter: "Tabletop",
-    title: "Tabletop",
-    kicker: "The Collection · Objects",
-    description:
-      "Vessels and forms scaled for the dining table — service as composition. Stoneware chargers, hand-blown carafes, undyed linen runners.",
-    image: "/images/banners/table-top.png",
-    imageAlt: "A stoneware charger",
-    savoirFaire: {
-      kicker: "The Savoir-faire",
-      title: "Service as Composition",
-      body:
-        "Stoneware chargers thrown by a single potter, carafes hand-blown in warm glass, linens undyed and hand-hemmed. A table set from a single hand reads as one thought.",
-      poster: "/images/table-top/table2.png",
-      posterAlt: "A composed dining table",
-      videoSrc: "/images/dining-video.mp4"
-    },
-    editorial: {
-      kicker: "The Collection",
-      title: "One Thought, Set",
-      body:
-        "The dining table is the most-used sculpture in the house. Set with pieces from one hand — chargers, carafe, glass — it composes rather than serves.",
-      image: "/images/table-top/table4.png",
-      imageAlt: "A composed dining setting",
-      href: "/collections/tabletop"
-    },
-    related: [
-      {
-        title: "Vases",
-        image: "/images/vases/vase1.png",
-        imageAlt: "A ceramic vessel",
-        href: "/collections/vases"
-      },
-      {
-        title: "Sculptures",
-        image: "/images/sculptures/scu1.png",
-        imageAlt: "A hand-carved sculpture",
         href: "/collections/sculptures"
       }
     ]

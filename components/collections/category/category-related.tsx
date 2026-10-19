@@ -36,7 +36,13 @@ export function CategoryRelated({ kicker = "Also from the house", cards }: Props
           {kicker}
         </motion.p>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 md:gap-x-12">
+        <div
+          className={
+            cards.length === 1
+              ? "mx-auto w-full max-w-xl"
+              : "grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 md:gap-x-12"
+          }
+        >
           {cards.map((card, i) => (
             <RelatedTile key={card.href} card={card} index={i} />
           ))}

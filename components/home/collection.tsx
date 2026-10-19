@@ -14,8 +14,8 @@ import { SafeImage } from "@/components/ui/safe-image";
 const FEATURED_HANDLES = [
   "sculpture-linconnu",
   "vase-onde",
-  "charger-terra",
-  "carafe-verre",
+  "sculpture-silhouette",
+  "vase-rivage",
   "sculpture-ardor",
   "vase-auren"
 ];

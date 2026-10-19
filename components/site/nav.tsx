@@ -22,7 +22,6 @@ const COLLECTION_SUBLINKS = [
   { href: "/collections/objects", label: "All Objects" },
   { href: "/collections/sculptures", label: "Sculptures" },
   { href: "/collections/vases", label: "Vases" },
-  { href: "/collections/tabletop", label: "Tabletop" },
   { href: "/exclusive", label: "Luxe Exclusive" }
 ];
 

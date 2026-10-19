@@ -31,12 +31,6 @@ const CATEGORY_CONFIG: Array<{
     label: "Vases",
     intro:
       "Vessels in ceramic, stone and glass — sculpture that holds."
-  },
-  {
-    id: "tabletop",
-    label: "Tabletop",
-    intro:
-      "Vessels and forms scaled for the dining table — service as composition."
   }
 ];
 

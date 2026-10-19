@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { IconGlobe, IconChevron } from "@/components/ui/icons";
 
@@ -11,7 +11,6 @@ const COLUMNS = [
     links: [
       { href: "/collections/sculptures", label: "Sculptures" },
       { href: "/collections/vases", label: "Vases" },
-      { href: "/collections/tabletop", label: "Tabletop" },
       { href: "/collections", label: "The Complete Collection" }
     ]
   },
@@ -143,9 +142,7 @@ export function Footer() {
               <p className="mb-4 text-[13px] leading-[1.8] text-ink/75">
                 Subscribe to receive the latest dispatches from The Luxe Version.
               </p>
-              <Link href="/newsletter" className="cta-outline cta-outline--dark text-ink">
-                Subscribe
-              </Link>
+              <NewsletterForm />
             </motion.div>
           </div>
       </motion.section>
@@ -232,5 +229,51 @@ export function Footer() {
         </div>
       </div>
     </footer>
+  );
+}
+
+// Inline newsletter form — hairline input + Subscribe button, mirrors the
+// "Find the studio" field above it. Submit is a UI stub (same pattern as
+// the enquiry forms and checkout payment); replace with a real list
+// provider when the subscriber backend is wired.
+function NewsletterForm() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "done">("idle");
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!email.trim()) return;
+    setStatus("done");
+  };
+
+  if (status === "done") {
+    return (
+      <p className="text-[12px] uppercase tracking-[0.24em] text-ink/70">
+        Thank you — you're on the list.
+      </p>
+    );
+  }
+
+  return (
+    <form
+      onSubmit={handleSubmit}
+      className="flex items-center gap-3 border-b border-ink/30 pb-2"
+    >
+      <input
+        type="email"
+        required
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Your email address"
+        aria-label="Email address for newsletter"
+        className="w-full bg-transparent text-[13px] placeholder:text-ink/40 focus:outline-none"
+      />
+      <button
+        type="submit"
+        className="text-[10px] uppercase tracking-[0.22em] text-ink/70 transition-colors hover:text-ink"
+      >
+        Subscribe
+      </button>
+    </form>
   );
 }

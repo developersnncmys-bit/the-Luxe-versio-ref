@@ -65,8 +65,7 @@ export function ObjectsHero() {
         >
           Sculptural and quiet — the objects that finish a room. Sculptures in
           hand-carved wood and cast bronze, vessels wheel-thrown in stoneware
-          and glass, and tabletop pieces for the dining table. Each conceived
-          as a composition, sized to be lived with.
+          and glass. Each conceived as a composition, sized to be lived with.
         </motion.p>
       </div>
     </section>
