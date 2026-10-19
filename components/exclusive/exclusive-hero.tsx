@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
@@ -23,14 +22,20 @@ export function ExclusiveHero() {
       aria-labelledby="exclusive-hero-heading"
     >
       <motion.div style={{ y, scale }} className="absolute inset-0">
-        <Image
-          src="/images/banners/Exclusive.png"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
+        {/* Poster PNG paints instantly on first render; the mp4 takes over
+            once the browser has enough bytes. autoPlay + muted + playsInline
+            is the trio iOS requires to permit silent autoplay. */}
+        <video
+          src="/images/banners/Exclusive.mp4"
+          poster="/images/banners/Exclusive1.png"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="h-full w-full object-cover"
         />
+        <div className="absolute inset-0 bg-ink/30" />
       </motion.div>
 
       <div className="relative z-10 flex min-h-[90svh] flex-col items-start justify-center px-6 text-left md:px-14 lg:px-20">
