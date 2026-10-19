@@ -4,7 +4,6 @@ import { PRODUCTS, EDITS, type Product } from "@/lib/content";
 import { CategoryHero } from "@/components/collections/category/category-hero";
 import { CategoryFilterableGrid } from "@/components/collections/category/category-filterable-grid";
 import { CategorySavoirFaire } from "@/components/collections/category/category-savoir-faire";
-import { CategorySavoirFairePair } from "@/components/collections/category/category-savoir-faire-pair";
 import { CategoryEditorial } from "@/components/collections/category/category-editorial";
 import {
   CategoryRelated,
@@ -185,14 +184,12 @@ export default function CategoryPage({
         products={products}
         interstitial={
           cfg.savoirFaire
-            ? Array.isArray(cfg.savoirFaire) && cfg.savoirFaire.length > 1
-              ? <CategorySavoirFairePair items={cfg.savoirFaire} />
-              : (() => {
-                  const sf = Array.isArray(cfg.savoirFaire)
-                    ? cfg.savoirFaire[0]
-                    : cfg.savoirFaire;
-                  return <CategorySavoirFaire {...sf} />;
-                })()
+            ? (Array.isArray(cfg.savoirFaire)
+                ? cfg.savoirFaire
+                : [cfg.savoirFaire]
+              ).map((sf, i) => (
+                <CategorySavoirFaire key={`${sf.title}-${i}`} {...sf} />
+              ))
             : null
         }
       />
