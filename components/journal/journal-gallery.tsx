@@ -37,7 +37,7 @@ export function JournalGallery({ entries }: { entries: readonly Entry[] }) {
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-15% 0px" }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
             className="mb-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.32em] text-chalk/55"
           >
             <span className="inline-block h-px w-10 bg-chalk/50" />
@@ -50,7 +50,7 @@ export function JournalGallery({ entries }: { entries: readonly Entry[] }) {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-15% 0px" }}
-            transition={{ duration: 1.1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
             className="font-display text-display-md font-semibold uppercase leading-[1.02] tracking-[0.06em]"
           >
             The Studio
@@ -60,7 +60,7 @@ export function JournalGallery({ entries }: { entries: readonly Entry[] }) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-15% 0px" }}
-            transition={{ duration: 1.2, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.65, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
             className="mt-8 max-w-md text-[11px] uppercase leading-[1.9] tracking-[0.18em] text-chalk/80 md:text-[12px]"
           >
             Essays, guides and portraits — quiet notes on the pieces.
@@ -115,8 +115,8 @@ function GalleryTile({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-10% 0px" }}
       transition={{
-        duration: 1.2,
-        delay: (index % 3) * 0.12,
+        duration: 0.65,
+        delay: (index % 3) * 0.08,
         ease: [0.22, 1, 0.36, 1]
       }}
       style={{ y }}

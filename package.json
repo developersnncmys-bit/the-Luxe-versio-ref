@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "compress:images": "node scripts/compress-images.mjs public/images",
+    "compress:studio": "node scripts/compress-images.mjs public/Studio",
+    "compress:all": "node scripts/compress-images.mjs public"
   },
   "dependencies": {
     "clsx": "2.1.1",

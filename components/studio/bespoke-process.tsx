@@ -36,7 +36,7 @@ export function BespokeProcess() {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-15% 0px" }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
             className="text-[10px] uppercase tracking-[0.32em] text-chalk/70"
           >
             How It Works
@@ -47,7 +47,7 @@ export function BespokeProcess() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-15% 0px" }}
-            transition={{ duration: 1.1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
             className="font-display text-[clamp(1.5rem,2.6vw,2.25rem)] font-semibold uppercase leading-[1.15] tracking-[0.04em]"
           >
             From a note to a single piece
@@ -58,7 +58,7 @@ export function BespokeProcess() {
             initial={{ opacity: 0, scaleX: 0 }}
             whileInView={{ opacity: 1, scaleX: 1 }}
             viewport={{ once: true, margin: "-15% 0px" }}
-            transition={{ duration: 1.1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="block h-px w-16 origin-center bg-chalk/40"
           />
         </div>
@@ -97,8 +97,8 @@ function StepCard({
               visible: { y: "0%" }
             }}
             transition={{
-              duration: 1.1,
-              delay: 0.1 + stagger,
+              duration: 0.6,
+              delay: 0.08 + stagger,
               ease: [0.22, 1, 0.36, 1]
             }}
             className="block font-[family-name:var(--font-serif-display)] text-[clamp(2.5rem,3.6vw,3.75rem)] font-light italic leading-[0.85] text-chalk/25 transition-colors duration-700 ease-silk group-hover:text-chalk/45"
@@ -114,8 +114,8 @@ function StepCard({
             visible: { scaleY: 1 }
           }}
           transition={{
-            duration: 0.9,
-            delay: 0.45 + stagger,
+            duration: 0.5,
+            delay: 0.22 + stagger,
             ease: [0.22, 1, 0.36, 1]
           }}
           className="mt-2 block h-[clamp(2rem,3vw,2.75rem)] w-px origin-top bg-chalk/30 transition-colors duration-500 group-hover:bg-chalk/60"
@@ -129,8 +129,8 @@ function StepCard({
           visible: { scaleX: 1 }
         }}
         transition={{
-          duration: 0.9,
-          delay: 0.55 + stagger,
+          duration: 0.5,
+          delay: 0.28 + stagger,
           ease: [0.22, 1, 0.36, 1]
         }}
         className="mt-8 block h-px w-12 origin-left bg-chalk/50 transition-[width] duration-500 ease-silk group-hover:w-20"
@@ -142,8 +142,8 @@ function StepCard({
           visible: { opacity: 1, y: 0 }
         }}
         transition={{
-          duration: 0.9,
-          delay: 0.65 + stagger,
+          duration: 0.55,
+          delay: 0.34 + stagger,
           ease: [0.22, 1, 0.36, 1]
         }}
         className="mt-6 text-[11px] font-semibold uppercase tracking-[0.3em] text-chalk"
@@ -157,8 +157,8 @@ function StepCard({
           visible: { opacity: 1, y: 0 }
         }}
         transition={{
-          duration: 1,
-          delay: 0.75 + stagger,
+          duration: 0.6,
+          delay: 0.4 + stagger,
           ease: [0.22, 1, 0.36, 1]
         }}
         className="mt-4 text-[13px] leading-[1.75] text-chalk/75 md:text-[14px]"

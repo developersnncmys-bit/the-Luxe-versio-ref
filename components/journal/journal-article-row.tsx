@@ -30,7 +30,7 @@ export function JournalArticleRow({
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10% 0px" }}
-          transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="group grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-16"
         >
           {/* Image column — 7 cols wide, position flips on `mirror`. */}

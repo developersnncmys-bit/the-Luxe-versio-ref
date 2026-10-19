@@ -886,11 +886,11 @@ export const PRODUCTS: Product[] = [
     body:
       "Monumental in scale, SILLAGE expresses an extravagance of form and gold, with a fluidity that seems to know no bounds. Its substantial metal construction gives the piece weight, solidity and commanding presence.",
     gallery: [
-      "/images/sculptures/Sillage/Sillage1.png",
-      "/images/sculptures/Sillage/Sillage2.png",
-      "/images/sculptures/Sillage/Sillage3.png",
-      "/images/sculptures/Sillage/Sillage4.png",
-      "/images/sculptures/Sillage/Sillage5.png"
+      "/images/sculptures/Sillage/Sillage-new1.png",
+      "/images/sculptures/Sillage/Sillage-new2.png",
+      "/images/sculptures/Sillage/Sillage-new3.png",
+      "/images/sculptures/Sillage/Sillage-new4.png",
+      "/images/sculptures/Sillage/Sillage-hero.png"
     ],
     details: [
       {
@@ -1001,8 +1001,10 @@ export const PRODUCTS: Product[] = [
       "Two faces, two scales, two finishes — held together by a singular sculptural language. Their quiet ambiguity invites interpretation rather than defining it.",
     gallery: [
       "/images/sculptures/Engime/Engime1.png",
-      "/images/sculptures/Engime/Engime2.png",
-      "/images/sculptures/Engime/Engime3.png"
+      "/images/sculptures/Engime/Engime1.2.png",
+      "/images/sculptures/Engime/Engime1.4.png",
+      "/images/sculptures/Engime/Engime1.5.png",
+      "/images/sculptures/Engime/Engime1.6.png",
     ],
     details: [
       {
@@ -1402,13 +1404,13 @@ export type ExclusivePiece = {
 
 export const EXCLUSIVE_PIECES: ExclusivePiece[] = [
   {
-    slug: "aigle",
+    slug: "essor",
     number: "I",
-    name: "Aigle",
+    name: "ESSOR",
     discipline: "Mantel sculpture",
-    intro: "Wings held open, the moment before stillness.",
+    intro: "The Art of Ascent.",
     body:
-      "Hand-carved from a single block of white marble and finished to a soft silk polish. Aigle is a study in arrested motion — the eagle set down, wings fully spread but not yet folded, each feather worked by hand across the full breadth of the bird. Set on a honed black granite plinth, cut to size.",
+      "An expression of power, instinct and effortless grace. ESSOR captures the eagle in a moment of poised majesty, its wings unfolding through an intricate rhythm of sculpted feathers. The artistry lies in the extraordinary treatment of marble — each feather emerges with its own definition, meticulously carved in successive layers to create a remarkable sense of depth, texture and movement. A dialogue between strength and refinement, movement and stillness.",
     material: "White marble, hand-carved; granite plinth",
     dimensions: "H 580 · W 1120 · D 280 mm",
     leadTime: "18 – 24 weeks",
@@ -1423,28 +1425,28 @@ export const EXCLUSIVE_PIECES: ExclusivePiece[] = [
       "/Exclusive/Eagle/Eagle7.png",
       "/Exclusive/Eagle/Eagle8.png",
       "/Exclusive/Eagle/Eagle5.png",
-      
+
 
     ],
     price: { inr: 624000, usd: 7480 },
     inspiration: {
       eyebrow: "Why This Piece",
-      title: "A silence, with wings open",
+      title: "A singular presence, conceived to transcend the ordinary.",
       reasons: [
         {
-          label: "Carved from one block",
+          label: "Feathered in successive layers",
           body:
-            "The bird and its base are drawn from a single piece of white marble. No seams, no joins — the mass of the stone carries through the body and into the stance."
+            "Each feather emerges with its own definition, meticulously carved in successive layers to create a remarkable sense of depth, texture and movement across the full breadth of the bird."
         },
         {
-          label: "Feathered by hand",
+          label: "Light across the plumage",
           body:
-            "Every feather is cut by chisel in sequence, pass by pass. The wings read differently as the light moves — slow in the morning, sharper by late afternoon."
+            "Fine incisions trace the natural rhythm of the feathers, and the sculpted transitions between each layer catch the light as the day moves — revealing the intricacies of the artistry and the quiet sophistication of every detail."
         },
         {
-          label: "Stilled, not posed",
+          label: "Strength and refinement",
           body:
-            "The eagle is caught at the end of a landing, not in the middle of a flight. Aigle holds weight downward, not forward — which is why it anchors a room instead of lunging through it."
+            "The delicate refinement of the feathered edges contrasts with the strength of the stone, giving the wings an almost weightless quality — solid marble read as seemingly effortless flight."
         }
       ]
     }
@@ -1614,17 +1616,15 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "A HEART, IN THE ROUND",
     excerpt:
       "The simplest form, carved slowly. On the pieces that invite touch instead of distance.",
-    image: "/Studio2/Heart/Heart-Hero.webp",
+    image: "/Studio/Heart/Heart-Hero.png",
     gallery: [
-      "/Studio2/Heart/H1.webp",
-      "/Studio2/Heart/H2.webp",
-      "/Studio2/Heart/H3.webp",
-      "/Studio2/Heart/H4.webp",
-      "/Studio2/Heart/H5.webp",
-      "/Studio2/Heart/H6.webp",
-      "/Studio2/Heart/H7.webp",
-      "/Studio2/Heart/H8.webp",
-      "/Studio2/Heart/H10.webp"
+      "/Studio/Heart/H2.png",
+      "/Studio/Heart/H3.png",
+      "/Studio/Heart/H4.png",
+      "/Studio/Heart/H5.png",
+      "/Studio/Heart/H6.png",
+      "/Studio/Heart/H7.png",
+      "/Studio/Heart/H8.png"
     ]
   },
   {
@@ -1633,12 +1633,15 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "WINGS RAISED",
     excerpt:
       "A white marble eagle cut from a single block — the piece a mantel will arrange itself around.",
-    image: "/Studio2/Eagle/Eagle-hero.webp",
+    image: "/Studio/Eagle/Eagle-hero.png",
     gallery: [
-      "/Studio2/Eagle/E2.webp",
-      "/Studio2/Eagle/E3.webp",
-      "/Studio2/Eagle/E4.webp",
-      "/Studio2/Eagle/E5.webp"
+      "/Studio/Eagle/Eagle2.png",
+      "/Studio/Eagle/Eagle3.png",
+      "/Studio/Eagle/Eagle4.png",
+      "/Studio/Eagle/Eagle5.png",
+      "/Studio/Eagle/Eagle6.png",
+      "/Studio/Eagle/Eagle7.png",
+      "/Studio/Eagle/Eagle8.png"
     ]
   },
   {
@@ -1647,16 +1650,15 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "THE LANDED BIRD",
     excerpt:
       "Caught at the end of a descent, not the middle of flight. On sculptures that anchor a room rather than lunge through it.",
-    image: "/Studio2/Pigeon/Pigeon-hero.webp",
+    image: "/Studio/Pigeon/Pigeon-hero.png",
     gallery: [
-      "/Studio2/Pigeon/P1.webp",
-      "/Studio2/Pigeon/P2.webp",
-      "/Studio2/Pigeon/P3.webp",
-      "/Studio2/Pigeon/P4.webp",
-      "/Studio2/Pigeon/P5.webp",
-      "/Studio2/Pigeon/P6.webp",
-      "/Studio2/Pigeon/P7.webp",
-      "/Studio2/Pigeon/P8.webp"
+      "/Studio/Pigeon/Pigeon2.png",
+      "/Studio/Pigeon/Pigeon3.png",
+      "/Studio/Pigeon/Pigeon4.png",
+      "/Studio/Pigeon/Pigeon5.png",
+      "/Studio/Pigeon/Pigeon6.png",
+      "/Studio/Pigeon/Pigeon7.png",
+      "/Studio/Pigeon/Pigeon8.png"
     ]
   },
   {
@@ -1665,8 +1667,8 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "THE WATER BIRD, HELD",
     excerpt:
       "A stone cygnet caught between gestures — the fan of its tail unfurled across the full breadth of the base.",
-    image: "/Studio2/Duck/Duck-hero.webp",
-    gallery: ["/Studio2/Duck/D1.webp"]
+    image: "/Studio/Duck/Duck-hero.png",
+    gallery: ["/Studio/Duck/Duck2.png"]
   },
   {
     slug: "a-pair-unbroken",
@@ -1674,7 +1676,7 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "A PAIR, UNBROKEN",
     excerpt:
       "Two figures held in one line of stone — on reading a sculpture as a composition, not a count.",
-    image: "/Studio2/Figurine/Figurine-hero.webp"
+    image: "/Studio/Figurines/Figurine-hero.png"
   },
   {
     slug: "an-instrument-held",
@@ -1682,11 +1684,10 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "AN INSTRUMENT, HELD",
     excerpt:
       "A dark-bodied guitar set upright on a weathered plinth — on objects that borrow the gravity of music without producing a note.",
-    image: "/Studio2/Guitar/Guitar-hero.webp",
+    image: "/Studio/Guitar/Guitar-hero.png",
     gallery: [
-      "/Studio2/Guitar/G1.webp",
-      "/Studio2/Guitar/G3.webp",
-      "/Studio2/Guitar/G4.webp"
+      "/Studio/Guitar/Guitar2.png",
+      "/Studio/Guitar/Guitar3.png"
     ]
   },
   {
@@ -1695,14 +1696,14 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "A GUITAR, IN STONE",
     excerpt:
       "An instrument carved from marble on a plinth of stacked stone — a studio exercise in the gravity of a thing that cannot be played.",
-    // Stone-Guitar folder has no explicit "hero" file — SG1 reads as the
-    // front elevation and lands as the primary.
-    image: "/Studio2/Stone-Guitar/SG1.webp",
+    // Stone-guitar folder has no explicit "hero" file — Stone-guitar1 reads
+    // as the front elevation and lands as the primary.
+    image: "/Studio/Stone-guitar/Stone-guitar1.png",
     gallery: [
-      "/Studio2/Stone-Guitar/SG2.webp",
-      "/Studio2/Stone-Guitar/SG3.webp",
-      "/Studio2/Stone-Guitar/SG4.webp",
-      "/Studio2/Stone-Guitar/SG5.webp"
+      "/Studio/Stone-guitar/Stone-guitar2.png",
+      "/Studio/Stone-guitar/Stone-guitar3.png",
+      "/Studio/Stone-guitar/Stone-guitar4.png",
+      "/Studio/Stone-guitar/Stone-guitar5.png"
     ]
   },
   {
@@ -1711,11 +1712,11 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "THE SEATED FIGURE",
     excerpt:
       "A reclining form in white marble — carved not to recline, but to hold the quiet of the room around it.",
-    image: "/Studio2/Human/Human-Hero.webp",
+    image: "/Studio/Human/Human-hero.png",
     gallery: [
-      "/Studio2/Human/H.webp",
-      "/Studio2/Human/Hu1.webp",
-      "/Studio2/Human/Hu2.webp"
+      "/Studio/Human/Human2.png",
+      "/Studio/Human/Human3.png",
+      "/Studio/Human/Human4.png"
     ]
   },
   {
@@ -1724,8 +1725,12 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "A FACE, IN FRAGMENTS",
     excerpt:
       "A profile carved in veined marble — set in three stepped planes that read as one eye at a distance.",
-    image: "/Studio2/man-scu/man-scu-hero.webp",
-    gallery: ["/Studio2/man-scu/m1.webp", "/Studio2/man-scu/m2.webp"]
+    image: "/Studio/man-scu/man-scu-hero.png",
+    gallery: [
+      "/Studio/man-scu/man-scu2.png",
+      "/Studio/man-scu/man-scu3.png"
+    
+    ]
   },
   {
     slug: "the-spiral-form",
@@ -1733,20 +1738,13 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "THE SPIRAL FORM",
     excerpt:
       "A shell held mid-furl, a sail-like crest — on reading a single line through two distinct silhouettes.",
-    image: "/Studio2/Star/Star-hero.webp",
+    image: "/Studio/Star/Star-hero.png",
     gallery: [
-      "/Studio2/Star/St1.webp",
-      "/Studio2/Star/St2.webp",
-      "/Studio2/Star/St3.webp",
-      "/Studio2/Star/St4.webp",
-      "/Studio2/Star/St5.webp",
-      "/Studio2/Star/St6.webp",
-      "/Studio2/Star/St7.webp"
-    ],
-    // All 8 Star images are native 16:9 (1280×720). Match the frame to the
-    // image so the container itself is the correct shape — nothing crops,
-    // nothing letterboxes.
-    aspect: "16/9"
+      "/Studio/Star/Star2.png",
+      "/Studio/Star/Star3.png",
+      "/Studio/Star/Star5.png",
+      "/Studio/Star/Star4.png",
+    ]
   },
   {
     slug: "the-swan-feathered",
@@ -1754,20 +1752,17 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "THE SWAN, FEATHERED",
     excerpt:
       "A long neck held against a feathered wing — carved as a single, continuous line through the stone.",
-    image: "/Studio2/Swan/Swan-hero.webp",
+    image: "/Studio/Swan/swan-hero.png",
     gallery: [
-     
-      "/Studio2/Swan/S2.webp",
-      "/Studio2/Swan/S3.webp",
-      "/Studio2/Swan/S4.webp",
-      "/Studio2/Swan/S5.webp",
-      "/Studio2/Swan/S6.webp"
+      "/Studio/Swan/Swan2.png",
+      "/Studio/Swan/Swan3.png",
+      "/Studio/Swan/Swan5.png"
     ]
   },
 
   // ── Editorial notes tied to real products — placed last so they close the
   // procession as quieter single-image features. ──
-  {
+  /*{
     slug: "AT THE CERAMIC STUDIO",
     kicker: "Guide",
     title: "AT THE CERAMIC STUDIO",
@@ -1798,5 +1793,5 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     excerpt:
       "Defined by a fluid silhouette and deep teal glass, OBRE turns a simple vessel into a striking sculptural presence.",
     image: "/images/vases/Obre/Obre-studio.png"
-  }
+  }*/
 ];

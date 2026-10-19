@@ -33,6 +33,13 @@ export function CategorySavoirFaire({
     offset: ["start end", "end start"]
   });
   const scale = useTransform(scrollYProgress, [0, 1], [1.02, 1.12]);
+  // Derive a per-instance id from the title so pages that render more than
+  // one savoir-faire block (e.g. Sculptures highlighting both Majesté and
+  // Sillage) don't produce duplicate ids.
+  const headingId = `savoir-faire-${title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "")}`;
 
   // Lazy-load the video (~7–30 MB per file). Only mount the <video> element
   // once the media block is within ~500px of the viewport. Until then, we
@@ -58,24 +65,24 @@ export function CategorySavoirFaire({
     <section
       ref={ref}
       className="relative bg-ink text-chalk"
-      aria-labelledby="savoir-faire-heading"
+      aria-labelledby={headingId}
     >
       <div className="mx-auto max-w-3xl px-6 pt-24 pb-16 text-center md:px-14 md:pt-32 md:pb-20">
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-15% 0px" }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="mb-8 text-[10px] uppercase tracking-[0.32em] text-chalk/55"
         >
           {kicker}
         </motion.p>
         <motion.h2
-          id="savoir-faire-heading"
+          id={headingId}
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-15% 0px" }}
-          transition={{ duration: 1.2, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.65, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
           className="font-display text-display-md font-semibold uppercase leading-[1.05] tracking-[0.03em]"
         >
           {title}
@@ -84,7 +91,7 @@ export function CategorySavoirFaire({
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-15% 0px" }}
-          transition={{ duration: 1.2, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.65, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
           className="mt-10 text-[14px] leading-[1.8] text-chalk/80 md:text-[15px]"
         >
           {body}
@@ -94,7 +101,7 @@ export function CategorySavoirFaire({
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
-            transition={{ duration: 1.1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
             className="mt-10 flex justify-center"
           >
             <Link href={href} className="cta-rule text-chalk">

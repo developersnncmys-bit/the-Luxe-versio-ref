@@ -30,7 +30,7 @@ export function CategoryRelated({ kicker = "Also from the house", cards }: Props
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-15% 0px" }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="mb-16 text-center text-[10px] uppercase tracking-[0.32em] text-chalk/55 md:mb-20"
         >
           {kicker}
@@ -59,8 +59,8 @@ function RelatedTile({ card, index }: { card: RelatedCard; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-10% 0px" }}
       transition={{
-        duration: 1,
-        delay: index * 0.1,
+        duration: 0.6,
+        delay: index * 0.08,
         ease: [0.22, 1, 0.36, 1]
       }}
       className="group"

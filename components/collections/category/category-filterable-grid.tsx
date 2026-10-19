@@ -11,14 +11,17 @@ import {
 import type { Product } from "@/lib/content";
 
 // Owns filter state and the interstitial split. The parent page passes a
-// pre-filtered set of products (by category) and, optionally, an interstitial
-// block (savoir-faire) that appears between the two halves of the grid.
+// pre-filtered set of products (by category) and, optionally, one or more
+// interstitial blocks (savoir-faire). With N interstitials the grid splits
+// into N+1 roughly-equal segments and each interstitial is placed between
+// consecutive segments — so two highlights punctuate the grid at the third
+// and two-thirds marks rather than stacking in one place.
 export function CategoryFilterableGrid({
   products,
   interstitial
 }: {
   products: Product[];
-  interstitial?: ReactNode;
+  interstitial?: ReactNode | ReactNode[];
 }) {
   const [open, setOpen] = useState(false);
   const [selectedMaterials, setSelectedMaterials] = useState<Set<string>>(
@@ -38,17 +41,30 @@ export function CategoryFilterableGrid({
     [products, selectedMaterials, selectedPrices]
   );
 
-  // Split around the interstitial. Round the midpoint up to the nearest
-  // multiple of the desktop column count (3) so the first-half grid always
-  // ends on a full row — otherwise a lone product dangles next to the
-  // interstitial with two empty grid cells beside it.
-  const rawMidpoint = Math.ceil(filtered.length / 2);
-  const midpoint = Math.min(
-    Math.ceil(rawMidpoint / 3) * 3,
-    filtered.length
-  );
-  const firstHalf = filtered.slice(0, midpoint);
-  const secondHalf = filtered.slice(midpoint);
+  // Normalise interstitials to an array, dropping nullish entries. If none
+  // are supplied the grid renders as a single uninterrupted segment.
+  const interstitialList = (
+    Array.isArray(interstitial) ? interstitial : [interstitial]
+  ).filter(Boolean) as ReactNode[];
+
+  // Build N+1 roughly-equal product segments to sit between interstitials.
+  // Each cut point is rounded up to the nearest multiple of the desktop
+  // column count (3) so no segment ends with a dangling row of empty cells
+  // next to the following interstitial.
+  const segmentCount = interstitialList.length + 1;
+  const segments: Product[][] = [];
+  let cursor = 0;
+  for (let i = 0; i < segmentCount; i++) {
+    const remaining = segmentCount - i;
+    const rawTarget = cursor + Math.ceil((filtered.length - cursor) / remaining);
+    const target =
+      i === segmentCount - 1
+        ? filtered.length
+        : Math.min(Math.ceil(rawTarget / 3) * 3, filtered.length);
+    segments.push(filtered.slice(cursor, target));
+    cursor = target;
+  }
+
   const activeCount = selectedMaterials.size + selectedPrices.size;
 
   const toggleMaterial = (kw: string) =>
@@ -108,11 +124,23 @@ export function CategoryFilterableGrid({
         </section>
       ) : (
         <>
-          <CategoryGrid products={firstHalf} showToolbar={false} />
-          {interstitial && secondHalf.length > 0 && interstitial}
-          {secondHalf.length > 0 && (
-            <CategoryGrid products={secondHalf} showToolbar={false} />
-          )}
+          {segments.map((segment, i) => {
+            const next = interstitialList[i];
+            // Only drop the interstitial between segments if the following
+            // segment actually has products — avoids a lonely highlight at
+            // the tail with nothing beneath it.
+            const hasFollowingProducts = segments
+              .slice(i + 1)
+              .some((s) => s.length > 0);
+            return (
+              <div key={`segment-${i}`}>
+                {segment.length > 0 && (
+                  <CategoryGrid products={segment} showToolbar={false} />
+                )}
+                {next && hasFollowingProducts && next}
+              </div>
+            );
+          })}
         </>
       )}
 

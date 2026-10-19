@@ -14,7 +14,7 @@ export function JournalClosing() {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-20% 0px" }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="mb-6 text-[10px] uppercase tracking-[0.32em] text-chalk/55"
         >
           Dispatches
@@ -25,7 +25,7 @@ export function JournalClosing() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-20% 0px" }}
-          transition={{ duration: 1.1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
           className="font-display text-display-md font-semibold uppercase leading-[1.05] tracking-[0.06em]"
         >
           The next dispatch, quietly in your inbox
@@ -35,7 +35,7 @@ export function JournalClosing() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-20% 0px" }}
-          transition={{ duration: 1.2, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
           className="mt-8 max-w-md text-[13px] leading-[1.8] text-chalk/70 md:text-[14px]"
         >
           A few times a season, the studio sends a note — new pieces, new
@@ -46,7 +46,7 @@ export function JournalClosing() {
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-20% 0px" }}
-          transition={{ duration: 1.2, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
           className="mt-12"
         >
           <Link href="/newsletter" className="cta-outline text-chalk">

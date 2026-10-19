@@ -41,7 +41,7 @@ export function BespokeHero() {
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
           className="mb-8 text-[10px] uppercase tracking-[0.38em] text-chalk/70"
         >
           Studio Services · By the Hand
@@ -51,7 +51,7 @@ export function BespokeHero() {
           id="bespoke-hero-heading"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.3, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           className="font-display text-[clamp(1.75rem,4vw,3.5rem)] font-light uppercase leading-[1.05] tracking-[0.03em]"
         >
           Bespoke Commissions
@@ -61,14 +61,14 @@ export function BespokeHero() {
           aria-hidden
           initial={{ opacity: 0, scaleX: 0 }}
           animate={{ opacity: 1, scaleX: 1 }}
-          transition={{ duration: 1.1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="mt-8 block h-px w-14 origin-left bg-chalk/60"
         />
 
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.75, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.65, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="mt-8 max-w-md text-[12px] leading-[1.85] text-chalk/80 md:text-[13px]"
         >
           Pieces designed and made for a single client. One of one — drawn to a

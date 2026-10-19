@@ -4,6 +4,7 @@ import { PRODUCTS, EDITS, type Product } from "@/lib/content";
 import { CategoryHero } from "@/components/collections/category/category-hero";
 import { CategoryFilterableGrid } from "@/components/collections/category/category-filterable-grid";
 import { CategorySavoirFaire } from "@/components/collections/category/category-savoir-faire";
+import { CategorySavoirFairePair } from "@/components/collections/category/category-savoir-faire-pair";
 import { CategoryEditorial } from "@/components/collections/category/category-editorial";
 import {
   CategoryRelated,
@@ -39,7 +40,10 @@ type CategoryConfig = {
   description: string;
   image: string;
   imageAlt: string;
-  savoirFaire?: SavoirFaireConfig;
+  // Accept a single config OR an array when the category wants to highlight
+  // more than one piece back-to-back (e.g. Sculptures highlighting both
+  // Majesté and Sillage). The grid interstitial renders each entry stacked.
+  savoirFaire?: SavoirFaireConfig | SavoirFaireConfig[];
   editorial?: EditorialConfig;
   related?: RelatedCard[];
 };
@@ -53,17 +57,29 @@ const CATEGORIES: Record<string, CategoryConfig> = {
       "Hand-carved and cast forms — the piece a room turns toward first. Walnut, travertine, cast bronze, each shaped to hold a corner or an entry.",
     image: "/images/banners/sculpture.png",
     imageAlt: "A hand-carved walnut sculpture",
-    savoirFaire: {
-      kicker: "The Savoir-faire",
-      title: "Of The Luxe Version",
-      body:
-        "A study in quiet majesty. MAJESTÉ captures the profound stillness of the Buddha through a serene expression and intricately sculpted crown, while its time-worn patina lends the piece a sense of history, character and regal presence.",
-      poster: "/images/sculptures/Majeste/Budha1.png",
-      posterAlt: "A hand-carved sculpture in a lived-in room",
-      href: "/collections/sculptures/sculpture-majeste",
-      ctaLabel: "DISCOVER MAJESTE"
-      //videoSrc: "/images/living-room2.mp4"
-    },
+    savoirFaire: [
+      {
+        kicker: "The Savoir-faire",
+        title: "Of The Luxe Version",
+        body:
+          "A study in quiet majesty. MAJESTÉ captures the profound stillness of the Buddha through a serene expression and intricately sculpted crown, while its time-worn patina lends the piece a sense of history, character and regal presence.",
+        poster: "/images/sculptures/Majeste/Budha1.png",
+        posterAlt: "A hand-carved sculpture in a lived-in room",
+        href: "/collections/sculptures/sculpture-majeste",
+        ctaLabel: "DISCOVER MAJESTE"
+        //videoSrc: "/images/living-room2.mp4"
+      },
+      {
+        kicker: "The Savoir-faire",
+        title: "A Line That Moves",
+        body:
+          "Monumental in scale, SILLAGE expresses an extravagance of form and gold, with a fluidity that seems to know no bounds. Its substantial metal construction gives the piece weight, solidity and commanding presence — a defining line for the room.",
+        poster: "/images/sculptures/Sillage/Sillage-hero.png",
+        posterAlt: "The Sillage sculpture in a lived-in setting",
+        href: "/collections/sculptures/sculpture-sillage",
+        ctaLabel: "DISCOVER SILLAGE"
+      }
+    ],
     editorial: {
       kicker: "The Collection",
       title: "One Line, Held",
@@ -144,17 +160,17 @@ export default function CategoryPage({
   const cfg = CATEGORIES[params.category];
   if (!cfg) notFound();
 
-  // Pieces featured on /edit are deliberately pushed to the end of the
-  // category grid so visitors land on the broader catalogue first and meet
-  // the Edit's curated picks as the closing beat.
+  // On the Sculptures category only, hide pieces that are featured on the
+  // /edit page — those pieces continue to live on /edit, but we don't want
+  // them duplicated into the main sculpture grid. Other categories include
+  // all their products unchanged.
   const editHandles = new Set(EDITS.flatMap((e) => e.handles));
-  const inCategory = PRODUCTS.filter(
-    (p) => p.category === cfg.filter && p.handle !== "sculpture-majeste"
+  const products: Product[] = PRODUCTS.filter(
+    (p) =>
+      p.category === cfg.filter &&
+      p.handle !== "sculpture-majeste" &&
+      !(params.category === "sculptures" && editHandles.has(p.handle))
   );
-  const products: Product[] = [
-    ...inCategory.filter((p) => !editHandles.has(p.handle)),
-    ...inCategory.filter((p) => editHandles.has(p.handle))
-  ];
 
   return (
     <>
@@ -168,7 +184,16 @@ export default function CategoryPage({
       <CategoryFilterableGrid
         products={products}
         interstitial={
-          cfg.savoirFaire ? <CategorySavoirFaire {...cfg.savoirFaire} /> : null
+          cfg.savoirFaire
+            ? Array.isArray(cfg.savoirFaire) && cfg.savoirFaire.length > 1
+              ? <CategorySavoirFairePair items={cfg.savoirFaire} />
+              : (() => {
+                  const sf = Array.isArray(cfg.savoirFaire)
+                    ? cfg.savoirFaire[0]
+                    : cfg.savoirFaire;
+                  return <CategorySavoirFaire {...sf} />;
+                })()
+            : null
         }
       />
       {cfg.editorial && <CategoryEditorial {...cfg.editorial} />}

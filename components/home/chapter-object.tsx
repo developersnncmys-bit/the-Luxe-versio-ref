@@ -41,7 +41,7 @@ const HERO_HANDLE_OVERRIDE: Partial<Record<Product["category"], string>> = {
 // Lets us pick a specific in-frame image without mutating the product data
 // (which would also change the collection card, sticky bar, etc.).
 const HERO_IMAGE_OVERRIDE: Partial<Record<Product["category"], string>> = {
-  Sculptures: "/images/sculptures/Linconnu/Linconnu-presence.png",
+  Sculptures: "/images/sculptures/Linconnu/Linconnu-cover.png",
   Vases: "/images/vases/Onde/Vase-onde-presence.png"
 };
 

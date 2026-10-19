@@ -1,14 +1,17 @@
 #!/usr/bin/env node
 /**
- * One-off compressor for /public/images.
+ * One-off compressor for image folders under /public.
  *
- * - Walks the folder recursively.
+ * - Walks the given folder recursively.
  * - For every .png / .jpg / .jpeg over MIN_BYTES, resizes to MAX_WIDTH (only
  *   downscales — never upscales) and re-encodes with reasonable quality.
  * - Writes to a temp file first, verifies it's actually smaller, then
  *   overwrites the original. Skips files that don't win.
  *
- * Run with:   node scripts/compress-images.mjs
+ * Run with:
+ *   node scripts/compress-images.mjs                   # default: public/images
+ *   node scripts/compress-images.mjs public/Studio     # any subfolder
+ *   node scripts/compress-images.mjs public            # entire public tree
  */
 import { readdir, stat, rename, unlink } from "node:fs/promises";
 import path from "node:path";
@@ -16,7 +19,9 @@ import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const IMAGES_DIR = path.resolve(__dirname, "..", "public", "images");
+const PROJECT_ROOT = path.resolve(__dirname, "..");
+const TARGET_ARG = process.argv[2] ?? "public/images";
+const IMAGES_DIR = path.resolve(PROJECT_ROOT, TARGET_ARG);
 
 const MIN_BYTES = 500 * 1024; // only touch files >500KB
 const MAX_WIDTH = 2400;       // downscale ceiling — enough for retina hero

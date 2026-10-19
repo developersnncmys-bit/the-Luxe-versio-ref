@@ -15,7 +15,7 @@ export function JournalIntro() {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-15% 0px" }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="mb-8 text-[10px] uppercase tracking-[0.32em] text-chalk/55"
         >
           From the Studio
@@ -25,7 +25,7 @@ export function JournalIntro() {
           initial={{ opacity: 0, y: 22 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-15% 0px" }}
-          transition={{ duration: 1.2, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.65, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           style={{ fontFamily: "var(--font-serif-display)" }}
           className="text-[clamp(1.125rem,1.75vw,1.5rem)] font-light leading-[1.6] text-chalk/85"
         >

@@ -73,7 +73,7 @@ export function CategoryEditorial({
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-15% 0px" }}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
               className="mb-8 text-[10px] uppercase tracking-[0.32em] text-chalk/55"
             >
               {kicker}
@@ -83,7 +83,7 @@ export function CategoryEditorial({
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-15% 0px" }}
-              transition={{ duration: 1.1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
               className="font-display text-[clamp(1.75rem,3vw,2.4rem)] font-semibold uppercase leading-[1.05] tracking-[0.03em]"
             >
               {title}
@@ -92,7 +92,7 @@ export function CategoryEditorial({
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-15% 0px" }}
-              transition={{ duration: 1.2, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.65, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
               className="mt-10 text-[14px] leading-[1.8] text-chalk/80"
             >
               {body}
@@ -101,7 +101,7 @@ export function CategoryEditorial({
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-10% 0px" }}
-              transition={{ duration: 1.1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
               className="mt-12"
             >
               <Link href={href} className="cta-rule text-chalk">

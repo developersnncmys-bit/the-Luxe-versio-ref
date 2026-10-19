@@ -17,7 +17,7 @@ export function BespokePromise() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10% 0px" }}
-          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="relative aspect-[4/5] w-full overflow-hidden bg-onyx md:col-span-7"
         >
           <SafeImage
@@ -37,7 +37,7 @@ export function BespokePromise() {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20% 0px" }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
             className="text-[10px] uppercase tracking-[0.38em] text-chalk/55"
           >
             The House Promise
@@ -47,7 +47,7 @@ export function BespokePromise() {
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20% 0px" }}
-            transition={{ duration: 1.1, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
             className="mt-5 font-display text-[clamp(1.5rem,2.6vw,2.25rem)] font-light uppercase leading-[1.1] tracking-[0.015em]"
           >
             Few pieces, finished slowly
@@ -57,7 +57,7 @@ export function BespokePromise() {
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20% 0px" }}
-            transition={{ duration: 1.1, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="mt-8 text-[13px] leading-[1.9] text-chalk/75 md:text-[14px]"
           >
             The studio accepts a limited number of private commissions each year.
@@ -70,7 +70,7 @@ export function BespokePromise() {
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20% 0px" }}
-            transition={{ duration: 1.1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
             className="mt-10 divide-y divide-chalk/10 border-y border-chalk/10"
           >
             {[
