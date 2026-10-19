@@ -889,7 +889,7 @@ export const PRODUCTS: Product[] = [
       "/images/sculptures/Sillage/Sillage-new1.png",
       "/images/sculptures/Sillage/Sillage-new2.png",
       "/images/sculptures/Sillage/Sillage-new3.png",
-      "/images/sculptures/Sillage/Sillage-new4.png",
+      "/images/sculptures/Sillage/Sillage2.png",
       "/images/sculptures/Sillage/Sillage-hero.png"
     ],
     details: [
