@@ -28,8 +28,7 @@ export type Product = {
   category:
     | "Sculptures"
     | "Vases"
-    | "Tabletop"
-    | "Lighting";
+    | "Tabletop";
   description: string;
   price: { inr: number; usd: number };
   image: string;
@@ -305,117 +304,7 @@ export const PRODUCTS: Product[] = [
       ]
     }
   },
-  {
-    handle: "chandelier-verre",
-    name: "Chandelier — Verre",
-    category: "Lighting",
-    description:
-      "A hand-blown glass chandelier in warm brass. Suspended presence for the dining table or a double-height entry.",
-    price: { inr: 328000, usd: 4050 },
-    image: "/images/lighting/light1.png",
-    aspect: "portrait",
-    material: "Hand-blown glass, unlacquered brass",
-    body:
-      "A chandelier of many small glass forms, each shaped by hand and suspended in warm, unlacquered brass. Scaled for the dining table or the double-height entry — a slow, held presence that reads as jewellery for the room. The brass is left raw; it warms and deepens with time, so the piece belongs more fully to the house each year.",
-    gallery: [
-      "/images/lighting/light1.png",
-      "/images/lighting/light2.png",
-      "/images/lighting/light3.png",
-      "/images/lighting/light4.png"
-    ],
-    details: [
-      {
-        label: "Material",
-        body:
-          "Unlacquered brass frame with hand-blown clear glass leaves. Finished by hand; the brass warms with time. Weight: 12 kg. Overall drop: 90–140 cm, made to order.",
-        image: "/images/materials/glass.png"
-      },
-      {
-        label: "Craft",
-        body:
-          "Each leaf is shaped by a single glassblower in a small studio outside Firozabad. Assembly, wiring and finishing take four to six weeks per piece.",
-        image: "/images/lighting/light6.png"
-      }
-    ],
-    pullQuote:
-      "One fixture that holds the whole room together — hung once, lived with for decades.",
-    lifestyleImage: "/images/lighting/light4.png",
-    inspiration: {
-      title: "The piece the room is built around",
-      reasons: [
-        {
-          label: "Craftsmanship",
-          body:
-            "Each glass leaf is shaped by a single glassblower in a small studio outside Firozabad. No two Verre chandeliers are identical."
-        },
-        {
-          label: "Made to your ceiling",
-          body:
-            "Four to six weeks per piece. Drop, wiring and rose fitted to the exact height your room asks for."
-        },
-        {
-          label: "Living surface",
-          body:
-            "The brass is unlacquered — it warms and darkens with every year in the house. Fixtures at this scale are typically inherited, not bought."
-        }
-      ]
-    }
-  },
-  {
-    handle: "table-lamp-alba",
-    name: "Table Lamp — Alba",
-    category: "Lighting",
-    description:
-      "A brass table lamp with an ivory linen shade. Warm enough to read by — for the side table or the console.",
-    price: { inr: 68000, usd: 840 },
-    image: "/images/lighting/light2.png",
-    aspect: "portrait",
-    material: "Turned brass, ivory linen shade",
-    body:
-      "A turned brass table lamp with a hand-sewn ivory linen shade. Warm enough to read by, quiet enough to leave on all evening. Sized for the side table, the console, the writing desk that wants a single warm light.",
-    gallery: [
-      "/images/lighting/light2.png",
-      "/images/lighting/light3.png",
-      "/images/lighting/light4.png",
-      "/images/lighting/light5.png"
-    ],
-    details: [
-      {
-        label: "Material",
-        body:
-          "Solid turned brass base with a hand-sewn linen shade. E27 fitting, dimmable. 52 cm overall height, 30 cm shade diameter.",
-        image: "/images/materials/metal.png"
-      },
-      {
-        label: "Craft",
-        body:
-          "The base is turned and hand-finished in a small workshop. Each shade is cut, sewn and trimmed to order — no two identical.",
-        image: "/images/lighting/light1.png"
-      }
-    ],
-    pullQuote: "The lamp you leave on until the last of the guests have gone.",
-    lifestyleImage: "/images/lighting/light5.png",
-    inspiration: {
-      title: "The lamp you stop replacing",
-      reasons: [
-        {
-          label: "Solid brass",
-          body:
-            "Turned from solid stock — not plated, not lacquered. Nothing thin to chip; the finish gets better with age."
-        },
-        {
-          label: "Shade to order",
-          body:
-            "Each linen shade is cut, sewn and trimmed by hand. Small variations are inherent — no two are identical."
-        },
-        {
-          label: "Generational",
-          body:
-            "Buy this once at forty; hand it down at seventy. Replaces the whole cycle of disposable side-table lamps."
-        }
-      ]
-    }
-  },
+
   {
     handle: "sculpture-ardor",
     name: "Sculpture — Ardor",
@@ -472,61 +361,7 @@ export const PRODUCTS: Product[] = [
       ]
     }
   },
-  {
-    handle: "pendant-lume",
-    name: "Pendant — Lume",
-    category: "Lighting",
-    description:
-      "A single-drop pendant in unlacquered brass. Reads as jewellery for the room — above a console, a bar, or a corner reading chair.",
-    price: { inr: 84000, usd: 1040 },
-    image: "/images/lighting/light3.png",
-    aspect: "portrait",
-    material: "Unlacquered brass, single drop",
-    body:
-      "A single-drop pendant in unlacquered brass — a small, held light that reads as jewellery for the room. Hung low over a console, a bar corner, or a reading chair. The brass is raw; it warms and darkens with time.",
-    gallery: [
-      "/images/lighting/light3.png",
-      "/images/lighting/light4.png",
-      "/images/lighting/light5.png",
-      "/images/lighting/light6.png"
-    ],
-    details: [
-      {
-        label: "Material",
-        body:
-          "Unlacquered brass shade and stem. E14 fitting, 2m black fabric cord, brass ceiling rose.",
-        image: "/images/materials/metal.png"
-      },
-      {
-        label: "Craft",
-        body:
-          "Spun and hand-finished in the same brass workshop as the Verre chandelier. Made to order; drop height specified at purchase.",
-        image: "/images/lighting/light2.png"
-      }
-    ],
-    pullQuote: "Jewellery, hung.",
-    lifestyleImage: "/images/lighting/light6.png",
-    inspiration: {
-      title: "The small piece with real provenance",
-      reasons: [
-        {
-          label: "Same maker",
-          body:
-            "Spun and finished in the same brass workshop that shapes the Verre chandelier — same hands, same brass."
-        },
-        {
-          label: "Cut to your drop",
-          body:
-            "Drop height set at purchase. No standard length; every Lume is fitted to a specific ceiling."
-        },
-        {
-          label: "Ages upward",
-          body:
-            "Unlacquered brass warms into the walls over years. The finish improves rather than fades."
-        }
-      ]
-    }
-  },
+
   {
     handle: "sculpture-cadence",
     name: "Sculpture — Cadence",
@@ -1120,19 +955,19 @@ export const PRODUCTS: Product[] = [
       {
         label: "Craft",
         body:
-          "Blown by the same glassblowers who shape the Verre chandelier. Small bubbles and slight asymmetries are inherent to the process.",
+          "Blown by hand in a small Firozabad studio. Small bubbles and slight asymmetries are inherent to the process.",
         image: "/images/table-top/table1.png"
       }
     ],
     pullQuote: "Even water, held with intent.",
     lifestyleImage: "/images/table-top/table5.png",
     inspiration: {
-      title: "The everyday piece, from the same hands as the chandelier",
+      title: "An everyday piece, blown by hand",
       reasons: [
         {
-          label: "Same makers",
+          label: "A small studio",
           body:
-            "Blown by the same glassblowers who shape the Verre chandelier. Same studio, same lungs, same rods."
+            "Blown by a single team of glassblowers in a Firozabad studio. Same hands, same lungs, same rods — piece after piece."
         },
         {
           label: "No duplicates",
@@ -1202,45 +1037,7 @@ export const PRODUCTS: Product[] = [
       ]
     }
   },
-  {
-    handle: "sconce-fumo",
-    name: "Sconce — Fumo",
-    category: "Lighting",
-    description:
-      "A brass wall sconce with a small hand-sewn linen shade. Warm to sit beside, quiet on the wall.",
-    price: { inr: 46000, usd: 570 },
-    image: "/images/lighting/light4.png",
-    aspect: "portrait",
-    material: "Turned brass, linen shade",
-    body:
-      "A brass wall sconce with a small hand-sewn linen shade. Hung on either side of a bed, a mantel, or a corridor — warm to sit beside, quiet on the wall."
-  },
-  {
-    handle: "floor-lamp-colonne",
-    name: "Floor Lamp — Colonne",
-    category: "Lighting",
-    description:
-      "A tall column lamp in unlacquered brass. A single warm light for a reading corner or the edge of a sofa.",
-    price: { inr: 118000, usd: 1450 },
-    image: "/images/lighting/light5.png",
-    aspect: "portrait",
-    material: "Unlacquered brass, silk shade",
-    body:
-      "A slim brass column with a hand-sewn silk shade. Placed at the end of a sofa or beside a reading chair — one warm light, sized to last a lifetime."
-  },
-  {
-    handle: "chandelier-prisme",
-    name: "Chandelier — Prisme",
-    category: "Lighting",
-    description:
-      "A faceted glass chandelier on a blackened bronze frame. For the low-ceilinged room that still wants presence.",
-    price: { inr: 268000, usd: 3300 },
-    image: "/images/lighting/light6.png",
-    aspect: "portrait",
-    material: "Cut glass, blackened bronze",
-    body:
-      "A compact chandelier of faceted glass panels on a blackened bronze frame. Sized for a lower ceiling — the dining nook, the entry, the small hall that still wants presence."
-  },
+
   {
     handle: "sculpture-sillage",
     name: "Sculpture — Sillage",

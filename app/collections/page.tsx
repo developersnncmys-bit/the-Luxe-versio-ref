@@ -9,7 +9,7 @@ import { CollectionClosing } from "@/components/collections/collection-closing";
 export const metadata: Metadata = {
   title: "The Collection — The Luxe Version",
   description:
-    "Objects and lighting — the pieces you keep."
+    "Objects for the house — the pieces you keep."
 };
 
 // Taxonomy mirrors the navbar sublinks. Empty categories are filtered out at
@@ -37,12 +37,6 @@ const CATEGORY_CONFIG: Array<{
     label: "Tabletop",
     intro:
       "Vessels and forms scaled for the dining table — service as composition."
-  },
-  {
-    id: "lighting",
-    label: "Lighting",
-    intro:
-      "Chandeliers, pendants and lamps — light that draws a room together."
   }
 ];
 

@@ -154,9 +154,8 @@ export function SearchOverlay() {
 
 function SuggestedList({ onSelect }: { onSelect: () => void }) {
   const suggestions = [
-    { label: "Chandeliers", href: "/collections/lighting" },
-    { label: "Vases", href: "/collections/vases" },
     { label: "Sculptures", href: "/collections/sculptures" },
+    { label: "Vases", href: "/collections/vases" },
     { label: "Tabletop", href: "/collections/tabletop" }
   ];
   return (

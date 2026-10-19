@@ -31,7 +31,7 @@ export function HouseStory() {
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto mt-16 max-w-5xl text-center font-display text-[clamp(1.5rem,2.4vw,2rem)] font-light italic leading-[1.35] text-chalk/90 md:mt-24"
         >
-          &ldquo;We started with one chandelier and a small studio. The rest of the
+          &ldquo;We started with one sculpture and a small studio. The rest of the
           house grew around it.&rdquo;
         </motion.p>
 
@@ -44,9 +44,9 @@ export function HouseStory() {
         >
           <p>
             The Luxe Version began the way most quiet things do — with a single piece,
-            made carefully, that other rooms wanted. A chandelier, blown by hand, hung
-            over the studio's own dining table. Then a lamp. Then a mirror. Then a form
-            in bronze that did not need explaining.
+            made carefully, that other rooms wanted. A sculpture, carved by hand, placed
+            on the studio's own mantel. Then a vessel. Then a mirror. Then a form in
+            bronze that did not need explaining.
           </p>
           <p>
             We opened the house because there was no place we wanted to buy these

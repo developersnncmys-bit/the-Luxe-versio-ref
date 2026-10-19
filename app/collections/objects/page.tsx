@@ -10,9 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function ObjectsPage() {
-  // All non-lighting products belong to the Objects umbrella.
-  const objects = PRODUCTS.filter((p) => p.category !== "Lighting");
-
   return (
     <>
       <CategoryHero
@@ -22,7 +19,7 @@ export default function ObjectsPage() {
         image="/images/product-banners/allobjects-banner.png"
         imageAlt="An arrangement of objects — a curated composition"
       />
-      <ObjectsCatalog products={objects} />
+      <ObjectsCatalog products={PRODUCTS} />
     </>
   );
 }

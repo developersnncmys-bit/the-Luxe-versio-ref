@@ -25,7 +25,7 @@ export function CollectionHero() {
       <motion.div style={{ y, scale }} className="absolute inset-0">
         <Image
           src="/images/collection-hero.png"
-          alt="The Collection — a sculptural chandelier at dusk"
+          alt="The Collection — a composed interior at dusk"
           fill
           priority
           sizes="100vw"

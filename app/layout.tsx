@@ -31,13 +31,13 @@ const serifDisplay = Noto_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "THE LUXE VERSION — SHOWPIECES & LIGHT, REDEFINED.",
+  title: "THE LUXE VERSION — SHOWPIECES & MIRRORS, REDEFINED.",
   description:
-    "A house of decorative showpieces, lighting and mirrors — pieces conceived as compositions.",
+    "A house of decorative showpieces and mirrors — pieces conceived as compositions.",
   metadataBase: new URL("https://theluxeversion.example"),
   openGraph: {
     title: "THE LUXE VERSION",
-    description: "Showpieces & light, redefined.",
+    description: "Showpieces & mirrors, redefined.",
     type: "website"
   }
 };

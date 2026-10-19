@@ -9,9 +9,9 @@ const COLUMNS = [
   {
     title: "Explore The House",
     links: [
-      { href: "/collections/showpieces", label: "Showpieces" },
-      { href: "/collections/lighting", label: "Lighting" },
-      { href: "/collections/mirrors", label: "Mirrors" },
+      { href: "/collections/sculptures", label: "Sculptures" },
+      { href: "/collections/vases", label: "Vases" },
+      { href: "/collections/tabletop", label: "Tabletop" },
       { href: "/collections", label: "The Complete Collection" }
     ]
   },

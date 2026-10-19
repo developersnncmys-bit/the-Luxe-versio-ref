@@ -12,8 +12,7 @@ import { categorySlug, type Product } from "@/lib/content";
 const CATEGORY_BANNERS: Record<Product["category"], string> = {
   Sculptures: "/images/product-banners/sculpture-banner.png",
   Vases: "/images/product-banners/vase-banner.png",
-  Tabletop: "/images/product-banners/tabletop-banner.png",
-  Lighting: "/images/product-banners/lighting-banner.png"
+  Tabletop: "/images/product-banners/tabletop-banner.png"
 };
 
 // Collection tie-in — full-bleed image banner with the collection copy

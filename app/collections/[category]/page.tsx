@@ -81,10 +81,10 @@ const CATEGORIES: Record<string, CategoryConfig> = {
         href: "/collections/vases"
       },
       {
-        title: "Lighting",
-        image: "/images/lighting/light1.png",
-        imageAlt: "A sculptural chandelier",
-        href: "/collections/lighting"
+        title: "Tabletop",
+        image: "/images/table-top/table1.png",
+        imageAlt: "A stoneware charger",
+        href: "/collections/tabletop"
       }
     ]
   },
@@ -162,41 +162,6 @@ const CATEGORIES: Record<string, CategoryConfig> = {
         imageAlt: "A ceramic vessel",
         href: "/collections/vases"
       },
-      {
-        title: "Lighting",
-        image: "/images/lighting/light1.png",
-        imageAlt: "A sculptural chandelier",
-        href: "/collections/lighting"
-      }
-    ]
-  },
-  lighting: {
-    filter: "Lighting",
-    title: "Lighting",
-    kicker: "The Collection",
-    description:
-      "Chandeliers, pendants and lamps — light that draws a room together. Hand-blown glass, unlacquered brass, warm to read by.",
-    image: "/images/banners/lighting.png",
-    imageAlt: "A sculptural chandelier",
-    savoirFaire: {
-      kicker: "The Savoir-faire",
-      title: "Jewellery for the Room",
-      body:
-        "Every leaf of glass is shaped by a single hand outside Firozabad. Frames turned in unlacquered brass; wiring and finishing take four to six weeks per fixture.",
-      poster: "/images/lighting/light4.png",
-      posterAlt: "A chandelier in a lived-in room",
-      videoSrc: "/images/living-room1.mp4"
-    },
-    editorial: {
-      kicker: "The Collection",
-      title: "Hung Once, Lived With",
-      body:
-        "One fixture holds a whole room together. Hung low over the dining table, or the double-height entry, it becomes the piece the house is arranged around.",
-      image: "/images/lighting/light5.png",
-      imageAlt: "A chandelier over a stairwell",
-      href: "/collections/lighting"
-    },
-    related: [
       {
         title: "Sculptures",
         image: "/images/sculptures/scu1.png",

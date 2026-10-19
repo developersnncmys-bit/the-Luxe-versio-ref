@@ -24,8 +24,8 @@ export default function BespokePage() {
         submitLabel="Send the brief"
         subjectOptions={[
           "Sculpture",
-          "Lighting",
           "Vessel",
+          "Mirror",
           "Wall relief",
           "I'm not sure yet"
         ]}

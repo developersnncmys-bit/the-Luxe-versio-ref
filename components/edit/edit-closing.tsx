@@ -39,7 +39,7 @@ export function EditClosing() {
           className="mt-8 max-w-md text-[13px] leading-[1.8] text-chalk/70 md:text-[14px]"
         >
           The pieces above are a small window. The full collection lives on its own page —
-          showpieces, lighting and mirrors, catalogued.
+          showpieces and mirrors, catalogued.
         </motion.p>
 
         <motion.div

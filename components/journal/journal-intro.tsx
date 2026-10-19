@@ -29,8 +29,8 @@ export function JournalIntro() {
           style={{ fontFamily: "var(--font-serif-display)" }}
           className="text-[clamp(1.125rem,1.75vw,1.5rem)] font-light leading-[1.6] text-chalk/85"
         >
-          The studio publishes the writing behind the pieces — how a chandelier
-          finds its drop height, why the mantel wants one object and not three,
+          The studio publishes the writing behind the pieces — how a sculpture
+          finds its plinth, why the mantel wants one object and not three,
           the small decisions that make a room feel resolved.
         </motion.p>
       </div>

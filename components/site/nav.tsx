@@ -17,13 +17,12 @@ const PRIMARY_LINKS: Array<{ href: string; label: string; tag?: string }> = [
   { href: "/the-studio", label: "The Studio" }
 ];
 
-// Sits inside the floating dark panel below the wordmark — sub-taxonomy of Objects + Lighting
+// Sits inside the floating dark panel below the wordmark — sub-taxonomy of the Objects umbrella.
 const COLLECTION_SUBLINKS = [
   { href: "/collections/objects", label: "All Objects" },
   { href: "/collections/sculptures", label: "Sculptures" },
   { href: "/collections/vases", label: "Vases" },
   { href: "/collections/tabletop", label: "Tabletop" },
-  { href: "/collections/lighting", label: "Lighting" },
   { href: "/exclusive", label: "Luxe Exclusive" }
 ];
 

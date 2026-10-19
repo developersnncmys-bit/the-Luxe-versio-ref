@@ -15,7 +15,7 @@ const FEATURED_HANDLES = [
   "sculpture-linconnu",
   "vase-onde",
   "charger-terra",
-  "chandelier-verre",
+  "carafe-verre",
   "sculpture-ardor",
   "vase-auren"
 ];
