@@ -17,7 +17,7 @@ export function JournalClosing() {
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="mb-6 text-[10px] uppercase tracking-[0.32em] text-chalk/55"
         >
-          Dispatches
+          Stay close
         </motion.p>
 
         <motion.h2
@@ -28,7 +28,7 @@ export function JournalClosing() {
           transition={{ duration: 0.6, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
           className="font-display text-display-md font-semibold uppercase leading-[1.05] tracking-[0.06em]"
         >
-          The next dispatch, quietly in your inbox
+          A line to the studio, when it matters
         </motion.h2>
 
         <motion.p
@@ -38,8 +38,8 @@ export function JournalClosing() {
           transition={{ duration: 0.6, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
           className="mt-8 max-w-md text-[13px] leading-[1.8] text-chalk/70 md:text-[14px]"
         >
-          A few times a season, the studio sends a note — new pieces, new
-          writing, an invitation now and then. Nothing else.
+          No mailing list, no scheduled dispatch. One studio reading every
+          note that arrives, writing back within two working days.
         </motion.p>
 
         <motion.div
@@ -49,8 +49,8 @@ export function JournalClosing() {
           transition={{ duration: 0.6, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
           className="mt-12"
         >
-          <Link href="/newsletter" className="cta-outline text-chalk">
-            Subscribe to the dispatch
+          <Link href="/contact" className="cta-outline text-chalk">
+            Write to the studio
           </Link>
         </motion.div>
       </div>

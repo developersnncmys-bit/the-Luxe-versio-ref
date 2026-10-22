@@ -945,7 +945,7 @@ export const PRODUCTS: Product[] = [
     gallery: [
       "/images/sculptures/Vestige/Vestige.png",
       "/images/sculptures/Vestige/Vestige3.jpg",
-      "/images/sculptures/Vestige/vestige5.png",
+      "/images/sculptures/Vestige/Vestige5.png",
       "/images/sculptures/Vestige/Vestige1.jpg",
       "/images/sculptures/Vestige/Vestige6.jpg"
     

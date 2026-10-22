@@ -64,11 +64,17 @@ html.lenis, html.lenis body {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   transition: background-color 500ms cubic-bezier(0.22, 1, 0.36, 1),
-              color 500ms cubic-bezier(0.22, 1, 0.36, 1);
+              color 500ms cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 500ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 .cta-outline:hover {
-  background-color: currentColor;
+  /* Deterministic chalk-on-ink hover. Using var(--chalk) directly instead
+     of currentColor — the same :hover block sets `color: var(--ink)`, which
+     makes `currentColor` resolve to ink and produces a dark-on-dark button
+     that is invisible on dark page sections. */
+  background-color: var(--chalk);
   color: var(--ink);
+  border-color: var(--chalk);
 }
 .cta-outline--dark:hover { color: var(--chalk); background-color: var(--ink); }
 

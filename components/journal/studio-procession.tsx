@@ -83,7 +83,7 @@ function StudioFeature({
   const fitClass = entry.fit === "contain" ? "object-contain" : "object-cover";
   // Hero container ratio — overrideable per entry when the source photos
   // have a native aspect that would letterbox or crop against the default.
-  const heroAspect = entry.aspect ?? "4/5";
+  const heroAspect = entry.aspect ?? "1/1";
 
   // Alternate sides so the procession doesn't read as a column — odd rows
   // get the hero on the right, text on the left.
