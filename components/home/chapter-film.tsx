@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export function ChapterFilm() {
   return (
@@ -17,12 +16,15 @@ export function ChapterFilm() {
         className="mx-auto max-w-3xl px-6 md:px-10"
       >
         <div className="relative aspect-[4/3] w-full overflow-hidden bg-onyx">
-          <Image
-            src="/images/Home/studio.png"
-            alt="A conversation at the studio"
-            fill
-            sizes="(min-width: 768px) 48rem, 100vw"
-            className="object-cover"
+          <video
+            src="/images/dining-video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            aria-label="A conversation at the studio"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
 

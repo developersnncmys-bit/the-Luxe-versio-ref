@@ -24,18 +24,19 @@ export function ProductDiscoverAlso({
         ? "md:grid-cols-2"
         : "md:grid-cols-3";
   const smColsClass = products.length === 1 ? "sm:grid-cols-1" : "sm:grid-cols-2";
-  // Narrow the grid to its natural card width so the row sits dead-centre
-  // under the heading on larger screens.
-  const widthClass =
+  // Images grid is left-aligned within the editorial container; narrow the
+  // grid itself (not the whole section) so 1- and 2-item rails hug the left
+  // edge instead of stretching across.
+  const gridWidthClass =
     products.length === 1
-      ? "max-w-lg"
+      ? "max-w-md mr-auto"
       : products.length === 2
-        ? "max-w-5xl"
-        : "max-w-editorial";
+        ? "max-w-3xl mr-auto"
+        : "";
 
   return (
     <section className="relative bg-ink py-24 text-chalk md:py-32">
-      <div className={`mx-auto ${widthClass} px-6 md:px-14`}>
+      <div className="mx-auto max-w-editorial px-6 md:px-14">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +47,7 @@ export function ProductDiscoverAlso({
           Discover Also
         </motion.h2>
 
-        <div className={`grid grid-cols-1 gap-x-8 gap-y-16 ${smColsClass} ${mdColsClass} md:gap-x-14 lg:gap-x-20`}>
+        <div className={`grid grid-cols-1 gap-x-8 gap-y-16 ${smColsClass} ${mdColsClass} ${gridWidthClass} md:gap-x-14 lg:gap-x-20`}>
           {products.map((product, i) => (
             <RelatedCard key={product.handle} product={product} index={i} aspectClass={aspectClass} />
           ))}

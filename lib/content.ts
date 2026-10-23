@@ -91,19 +91,16 @@ export const PRODUCTS: Product[] = [
     description:
       "An everyday object carried in Carrara marble. MONOGRAMME reinterprets the carriall as a sculpted form — quilted motifs worked by hand into the stone, handles doubling into a single relaxed knot. Luxury rendered as study.",
     price: { inr: 184000, usd: 2260 },
-    image: "/Edit/Bag/Bag-front.png",
+    image: "/Edit/Bag/Bag-front3.png",
     aspect: "portrait",
     material: "Hand-carved Carrara marble",
     body:
       "MONOGRAMME is a sculptural meditation on the everyday object. A carriall, pulled out of leather and into stone — the quilted repeats, the stitched seam, the looped handles all carved from a single block of white Carrara. Scaled for the console, the mantel, the shelf that asks for one considered object rather than many.",
     gallery: [
-      "/Edit/Bag/Bag-front.png",
+      "/Edit/Bag/Bag-front3.png",
       "/Edit/Bag/Bag1.png",
-      "/Edit/Bag/Bag3.png",
-      "/Edit/Bag/Bag-left.png",
-      "/Edit/Bag/Bag-right.png",
-      "/Edit/Bag/Bag-back.png",
-      "/Edit/Bag/Bag5.png",
+      "/Edit/Bag/Bagold3.png",
+      "/Edit/Bag/Bag5.png"
 
     ],
     details: [
@@ -1005,9 +1002,9 @@ export const PRODUCTS: Product[] = [
       "Two faces, two scales, two finishes — held together by a singular sculptural language. Their quiet ambiguity invites interpretation rather than defining it.",
     gallery: [
       "/images/sculptures/Engime/Engime1.webp",
+      "/images/sculptures/Engime/Engime1.4.webp",
       "/images/sculptures/Engime/Engime1.2.webp",
       "/images/sculptures/Engime/Engime1.5.webp",
-      "/images/sculptures/Engime/Engime1.4.webp",
       "/images/sculptures/Engime/Engime1.6.webp",
     ],
     details: [
@@ -1055,14 +1052,14 @@ export const PRODUCTS: Product[] = [
     description:
       "An abstract interpretation of the horse, defined by elongated lines, sculptural geometry and a commanding stance. The contrasting metallic mane brings a quiet flash of opulence to its otherwise restrained form.",
     price: { inr: 118000, usd: 1450 },
-    image: "/images/sculptures/Fouge/Fouge-new2.webp",
+    image: "/images/sculptures/Fouge/Fouge-new1.webp",
     aspect: "portrait",
     material: "Metal, aged patina with metallic mane",
     body:
       "FOUGUE embodies contained power — strong without heaviness, expressive without excess. Its poised silhouette and architectural proportions give it a striking presence from every angle.",
     gallery: [
-      "/images/sculptures/Fouge/Fouge-new2.webp",
       "/images/sculptures/Fouge/Fouge-new1.webp",
+      "/images/sculptures/Fouge/Fouge-new2.webp",
       "/images/sculptures/Fouge/Fouge-new3.webp",
       "/images/sculptures/Fouge/Fouge-new4.webp",
       "/images/sculptures/Fouge/horse1.webp",
@@ -1113,20 +1110,18 @@ export const PRODUCTS: Product[] = [
     description:
       "A study of human instinct — what is concealed, what is sought, what is ultimately revealed. A fluid gesture veils the gaze, poised between shadow and awakening.",
     price: { inr: 168000, usd: 2060 },
-    image: "/images/sculptures/Linconnu/Li1.webp",
+    image: "/images/sculptures/Linconnu/L1.png",
     aspect: "portrait",
     material: "Textured metal with layered detailing, black marble base",
     body:
       "L'INCONNU explores the space between the visible and the unknown. Its raw, fragmented surface is interrupted by a fluid gesture across the gaze — creating a sculptural presence that feels both human and abstract.",
     gallery: [
-      "/images/sculptures/Linconnu/Li1.webp",
-      "/images/sculptures/Linconnu/Li2.webp",
-      "/images/sculptures/Linconnu/Li3.webp",
-      "/images/sculptures/Linconnu/Li4.webp",
-       "/images/sculptures/Linconnu/Li5.webp",
-      "/images/sculptures/Linconnu/Li6.webp",
-      "/images/sculptures/Linconnu/Li7.webp",
-      "/images/sculptures/Linconnu/Li8.webp",
+      "/images/sculptures/Linconnu/L1.png",
+      "/images/sculptures/Linconnu/L2.PNG",
+      "/images/sculptures/Linconnu/L3.PNG",
+      "/images/sculptures/Linconnu/L4.png",
+       "/images/sculptures/Linconnu/L5.PNG",
+      "/images/sculptures/Linconnu/L6.PNG",
       
     ],
     details: [
