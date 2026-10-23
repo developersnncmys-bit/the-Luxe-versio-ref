@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import clsx from "clsx";
-import { SafeImage } from "@/components/ui/safe-image";
 import type { JournalEntry } from "@/lib/content";
 
 // Cinematic vertical procession — one editorial feature per piece.
@@ -121,17 +120,19 @@ function StudioFeature({
                 transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
                 className="absolute inset-0"
               >
-                {/* Fit driven by entry.fit — cover by default (fills the
-                    portrait frame), contain for landscape/environmental
-                    sources (spiral form) so the full composition reads. */}
-                <SafeImage
+                {/* Served directly from /public — WebP source is already
+                    tiny (~50-130 KB each) and sized for a 2x retina hero,
+                    so bypassing /_next/image avoids multi-second
+                    on-demand AVIF conversion on cold cache. First two
+                    heroes eager-load; the rest lazy-load as the user
+                    scrolls. */}
+                <img
                   src={activeImage}
                   alt={entry.title}
-                  fallbackSeed={`${entry.slug}-${activeImage}`}
-                  fill
-                  sizes="(min-width: 768px) 58vw, 100vw"
-                  className={fitClass}
-                  priority={index < 2}
+                  loading={index < 2 ? "eager" : "lazy"}
+                  decoding="async"
+                  fetchPriority={index < 2 ? "high" : "auto"}
+                  className={clsx("absolute inset-0 h-full w-full", fitClass)}
                 />
               </motion.div>
             </AnimatePresence>
@@ -227,13 +228,12 @@ function StudioFeature({
                           isActive ? "opacity-100" : "opacity-55 hover:opacity-100"
                         )}
                       >
-                        <SafeImage
+                        <img
                           src={img}
                           alt=""
-                          fallbackSeed={`${entry.slug}-thumb-${i}`}
-                          fill
-                          sizes="80px"
-                          className={fitClass}
+                          loading="lazy"
+                          decoding="async"
+                          className={clsx("absolute inset-0 h-full w-full", fitClass)}
                         />
                         {/* Active-state rule — bottom bar reads as "selected
                             tab" without a jittery ring. */}

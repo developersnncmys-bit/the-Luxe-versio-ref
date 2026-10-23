@@ -217,14 +217,9 @@ export function Footer() {
               <IconChevron />
             </button>
             */}
-            <a
-              href="https://nakshatranamahacreations.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cursor-pointer self-start text-[11px] uppercase tracking-[0.22em] text-chalk/70 underline-offset-4 transition-colors hover:text-chalk hover:underline md:self-auto"
-            >
-              Developed by Nakshatranamaha Creations
-            </a>
+            <p className="self-start text-[11px] uppercase tracking-[0.22em] text-chalk/70 md:self-auto">
+              © {new Date().getFullYear()} The Luxe Version. All rights reserved.
+            </p>
           </div>
         </div>
       </div>

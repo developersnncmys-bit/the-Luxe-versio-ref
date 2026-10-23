@@ -16,10 +16,27 @@ export function ProductDiscoverAlso({
 }) {
   if (products.length === 0) return null;
   const aspectClass = aspect === "square" ? "aspect-square" : "aspect-[4/5]";
+  // Cap desktop columns at the actual card count so 1- and 2-item rails
+  // center inside the editorial width instead of being pinned to the left.
+  const mdColsClass =
+    products.length === 1
+      ? "md:grid-cols-1"
+      : products.length === 2
+        ? "md:grid-cols-2"
+        : "md:grid-cols-3";
+  const smColsClass = products.length === 1 ? "sm:grid-cols-1" : "sm:grid-cols-2";
+  // Narrow the grid to its natural card width so the row sits dead-centre
+  // under the heading on larger screens.
+  const widthClass =
+    products.length === 1
+      ? "max-w-lg"
+      : products.length === 2
+        ? "max-w-5xl"
+        : "max-w-editorial";
 
   return (
     <section className="relative bg-ink py-24 text-chalk md:py-32">
-      <div className="mx-auto max-w-editorial px-6 md:px-14">
+      <div className={`mx-auto ${widthClass} px-6 md:px-14`}>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -30,7 +47,7 @@ export function ProductDiscoverAlso({
           Discover Also
         </motion.h2>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 md:grid-cols-3 md:gap-x-14 lg:gap-x-20">
+        <div className={`grid grid-cols-1 gap-x-8 gap-y-16 ${smColsClass} ${mdColsClass} md:gap-x-14 lg:gap-x-20`}>
           {products.map((product, i) => (
             <RelatedCard key={product.handle} product={product} index={i} aspectClass={aspectClass} />
           ))}

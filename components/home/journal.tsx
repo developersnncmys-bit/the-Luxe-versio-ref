@@ -8,6 +8,18 @@ import { SafeImage } from "@/components/ui/safe-image";
 
 type Entry = (typeof JOURNAL_ENTRIES)[number];
 
+// Per-slug HOME-ONLY image overrides. These shots live in
+// /public/Home-studio-cover/ and are used ONLY on the home-page "From the
+// Studio" teaser — the /the-studio index and individual entry pages
+// continue to read entry.image from content.ts. Add a slug key here to
+// swap the home tile without touching the shared journal data.
+const HOME_IMAGE_OVERRIDE: Record<string, string> = {
+  "a-heart-in-the-round": "/Home-studio-cover/Heart.png",
+  "wings-raised": "/Home-studio-cover/Eagle.png",
+  "the-landed-bird": "/Home-studio-cover/Pigeon.png",
+  "the-water-bird-held": "/Home-studio-cover/Duck.png"
+};
+
 export function JournalTeaser() {
   const stripRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -107,12 +119,12 @@ function JournalCard({
     >
       <Link
         href={`/the-studio/${entry.slug}`}
-        className="group relative block h-[70svh] w-full overflow-hidden bg-onyx md:h-[85svh]"
+        className="group relative block h-[55svh] w-full overflow-hidden bg-onyx md:h-[65svh]"
       >
         {/* Parallax image (extends past container so translate doesn't reveal empty edges) */}
         <motion.div style={{ y }} className="absolute -inset-y-[8%] inset-x-0">
           <SafeImage
-            src={entry.image}
+            src={HOME_IMAGE_OVERRIDE[entry.slug] ?? entry.image}
             alt={entry.title}
             fallbackSeed={entry.slug}
             fill
@@ -122,7 +134,7 @@ function JournalCard({
             // section scrolls into view; the other three lazy-load normally.
             priority={index === 0}
             loading={index === 0 ? "eager" : "lazy"}
-            className="object-cover transition-transform duration-[1800ms] ease-silk group-hover:scale-[1.08]"
+            className="object-cover object-center transition-transform duration-[1800ms] ease-silk group-hover:scale-[1.08]"
           />
         </motion.div>
 

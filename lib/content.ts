@@ -91,16 +91,20 @@ export const PRODUCTS: Product[] = [
     description:
       "An everyday object carried in Carrara marble. MONOGRAMME reinterprets the carriall as a sculpted form — quilted motifs worked by hand into the stone, handles doubling into a single relaxed knot. Luxury rendered as study.",
     price: { inr: 184000, usd: 2260 },
-    image: "/Edit/Bag/Bag2.png",
+    image: "/Edit/Bag/Bag-front.png",
     aspect: "portrait",
     material: "Hand-carved Carrara marble",
     body:
       "MONOGRAMME is a sculptural meditation on the everyday object. A carriall, pulled out of leather and into stone — the quilted repeats, the stitched seam, the looped handles all carved from a single block of white Carrara. Scaled for the console, the mantel, the shelf that asks for one considered object rather than many.",
     gallery: [
-      "/Edit/Bag/Bag2.png",
+      "/Edit/Bag/Bag-front.png",
+      "/Edit/Bag/Bag1.png",
       "/Edit/Bag/Bag3.png",
-      "/Edit/Bag/Bag4.png",
-      "/Edit/Bag/Bag5.png"
+      "/Edit/Bag/Bag-left.png",
+      "/Edit/Bag/Bag-right.png",
+      "/Edit/Bag/Bag-back.png",
+      "/Edit/Bag/Bag5.png",
+
     ],
     details: [
       {
@@ -720,8 +724,8 @@ export const PRODUCTS: Product[] = [
       "A study in fullness and space. Obre brings fluid movement to architectural settings, its open centre allowing the surroundings to become part of the composition. Perfect for a candlelit cocktail bar or lounge setting, where soft light accentuates its deep teal curves.",
     gallery: [
       "/images/vases/Obre/Obre1.png",
-      "/images/vases/Obre/Obre2.png",
       "/images/vases/Obre/Obre3.png",
+      "/images/vases/Obre/Obre2.png",
       "/images/vases/Obre/Obre4.png",
       "/images/vases/Obre/Obre5.png"
     ],
@@ -776,9 +780,9 @@ export const PRODUCTS: Product[] = [
     gallery: [
       "/images/vases/Seve/Seve1.png",
       "/images/vases/Seve/Seve2.png",
-      "/images/vases/Seve/Seve3.png",
       "/images/vases/Seve/Seve4.png",
       "/images/vases/Seve/Seve5.png",
+      "/images/vases/Seve/Seve3.png",
       "/images/vases/Seve/Seve6.png"
     ],
     details: [
@@ -1002,8 +1006,8 @@ export const PRODUCTS: Product[] = [
     gallery: [
       "/images/sculptures/Engime/Engime1.png",
       "/images/sculptures/Engime/Engime1.2.png",
-      "/images/sculptures/Engime/Engime1.4.png",
       "/images/sculptures/Engime/Engime1.5.png",
+      "/images/sculptures/Engime/Engime1.4.png",
       "/images/sculptures/Engime/Engime1.6.png",
     ],
     details: [
@@ -1051,14 +1055,14 @@ export const PRODUCTS: Product[] = [
     description:
       "An abstract interpretation of the horse, defined by elongated lines, sculptural geometry and a commanding stance. The contrasting metallic mane brings a quiet flash of opulence to its otherwise restrained form.",
     price: { inr: 118000, usd: 1450 },
-    image: "/images/sculptures/Fouge/Fouge-new1.png",
+    image: "/images/sculptures/Fouge/Fouge-new2.png",
     aspect: "portrait",
     material: "Metal, aged patina with metallic mane",
     body:
       "FOUGUE embodies contained power — strong without heaviness, expressive without excess. Its poised silhouette and architectural proportions give it a striking presence from every angle.",
     gallery: [
-      "/images/sculptures/Fouge/Fouge-new1.png",
       "/images/sculptures/Fouge/Fouge-new2.png",
+      "/images/sculptures/Fouge/Fouge-new1.png",
       "/images/sculptures/Fouge/Fouge-new3.png",
       "/images/sculptures/Fouge/Fouge-new4.png",
       "/images/sculptures/Fouge/horse1.jpg",
@@ -1109,16 +1113,21 @@ export const PRODUCTS: Product[] = [
     description:
       "A study of human instinct — what is concealed, what is sought, what is ultimately revealed. A fluid gesture veils the gaze, poised between shadow and awakening.",
     price: { inr: 168000, usd: 2060 },
-    image: "/images/sculptures/Linconnu/L1.png",
+    image: "/images/sculptures/Linconnu/Li1.png",
     aspect: "portrait",
     material: "Textured metal with layered detailing, black marble base",
     body:
       "L'INCONNU explores the space between the visible and the unknown. Its raw, fragmented surface is interrupted by a fluid gesture across the gaze — creating a sculptural presence that feels both human and abstract.",
     gallery: [
-      "/images/sculptures/Linconnu/L1.png",
-      "/images/sculptures/Linconnu/L2.PNG",
-      "/images/sculptures/Linconnu/L3.PNG",
-      "/images/sculptures/Linconnu/L4.png"
+      "/images/sculptures/Linconnu/Li1.png",
+      "/images/sculptures/Linconnu/Li2.png",
+      "/images/sculptures/Linconnu/Li3.png",
+      "/images/sculptures/Linconnu/Li4.png",
+       "/images/sculptures/Linconnu/Li5.png",
+      "/images/sculptures/Linconnu/Li6.png",
+      "/images/sculptures/Linconnu/Li7.png",
+      "/images/sculptures/Linconnu/Li8.png",
+      
     ],
     details: [
       {
@@ -1616,15 +1625,15 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "A HEART, IN THE ROUND",
     excerpt:
       "The simplest form, carved slowly. On the pieces that invite touch instead of distance.",
-    image: "/Studio/Heart/Heart-Hero.png",
+    image: "/Studio/Heart/Heart-Hero.webp",
     gallery: [
-      "/Studio/Heart/H2.png",
-      "/Studio/Heart/H3.png",
-      "/Studio/Heart/H4.png",
-      "/Studio/Heart/H5.png",
-      "/Studio/Heart/H6.png",
-      "/Studio/Heart/H7.png",
-      "/Studio/Heart/H8.png"
+      "/Studio/Heart/H2.webp",
+      "/Studio/Heart/H3.webp",
+      "/Studio/Heart/H4.webp",
+      "/Studio/Heart/H5.webp",
+      "/Studio/Heart/H6.webp",
+      "/Studio/Heart/H7.webp",
+      "/Studio/Heart/H8.webp"
     ]
   },
   {
@@ -1633,15 +1642,15 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "WINGS RAISED",
     excerpt:
       "A white marble eagle cut from a single block — the piece a mantel will arrange itself around.",
-    image: "/Studio/Eagle/Eagle-hero.png",
+    image: "/Studio/Eagle/Eagle-hero.webp",
     gallery: [
-      "/Studio/Eagle/Eagle2.png",
-      "/Studio/Eagle/Eagle3.png",
-      "/Studio/Eagle/Eagle4.png",
-      "/Studio/Eagle/Eagle5.png",
-      "/Studio/Eagle/Eagle6.png",
-      "/Studio/Eagle/Eagle7.png",
-      "/Studio/Eagle/Eagle8.png"
+      "/Studio/Eagle/Eagle2.webp",
+      "/Studio/Eagle/Eagle3.webp",
+      "/Studio/Eagle/Eagle4.webp",
+      "/Studio/Eagle/Eagle5.webp",
+      "/Studio/Eagle/Eagle6.webp",
+      "/Studio/Eagle/Eagle7.webp",
+      "/Studio/Eagle/Eagle8.webp"
     ]
   },
   {
@@ -1650,15 +1659,15 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "THE LANDED BIRD",
     excerpt:
       "Caught at the end of a descent, not the middle of flight. On sculptures that anchor a room rather than lunge through it.",
-    image: "/Studio/Pigeon/Pigeon-hero.png",
+    image: "/Studio/Pigeon/Pigeon-hero.webp",
     gallery: [
-      "/Studio/Pigeon/Pigeon2.png",
-      "/Studio/Pigeon/Pigeon3.png",
-      "/Studio/Pigeon/Pigeon4.png",
-      "/Studio/Pigeon/Pigeon5.png",
-      "/Studio/Pigeon/Pigeon6.png",
-      "/Studio/Pigeon/Pigeon7.png",
-      "/Studio/Pigeon/Pigeon8.png"
+      "/Studio/Pigeon/Pigeon2.webp",
+      "/Studio/Pigeon/Pigeon3.webp",
+      "/Studio/Pigeon/Pigeon4.webp",
+      "/Studio/Pigeon/Pigeon5.webp",
+      "/Studio/Pigeon/Pigeon6.webp",
+      "/Studio/Pigeon/Pigeon7.webp",
+      "/Studio/Pigeon/Pigeon8.webp"
     ]
   },
   {
@@ -1667,8 +1676,8 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "THE WATER BIRD, HELD",
     excerpt:
       "A stone cygnet caught between gestures — the fan of its tail unfurled across the full breadth of the base.",
-    image: "/Studio/Duck/Duck-hero.png",
-    gallery: ["/Studio/Duck/Duck2.png"]
+    image: "/Studio/Duck/Duck-hero.webp",
+    gallery: ["/Studio/Duck/Duck2.webp"]
   },
   {
     slug: "a-pair-unbroken",
@@ -1676,7 +1685,7 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "A PAIR, UNBROKEN",
     excerpt:
       "Two figures held in one line of stone — on reading a sculpture as a composition, not a count.",
-    image: "/Studio/Figurines/Figurine-hero.png"
+    image: "/Studio/Figurines/Figurine-hero.webp"
   },
   {
     slug: "an-instrument-held",
@@ -1684,10 +1693,10 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "AN INSTRUMENT, HELD",
     excerpt:
       "A dark-bodied guitar set upright on a weathered plinth — on objects that borrow the gravity of music without producing a note.",
-    image: "/Studio/Guitar/Guitar-hero.png",
+    image: "/Studio/Guitar/Guitar-hero.webp",
     gallery: [
-      "/Studio/Guitar/Guitar2.png",
-      "/Studio/Guitar/Guitar3.png"
+      "/Studio/Guitar/Guitar2.webp",
+      "/Studio/Guitar/Guitar3.webp"
     ]
   },
   {
@@ -1698,12 +1707,12 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
       "An instrument carved from marble on a plinth of stacked stone — a studio exercise in the gravity of a thing that cannot be played.",
     // Stone-guitar folder has no explicit "hero" file — Stone-guitar1 reads
     // as the front elevation and lands as the primary.
-    image: "/Studio/Stone-guitar/Stone-guitar1.png",
+    image: "/Studio/Stone-guitar/Stone-guitar1.webp",
     gallery: [
-      "/Studio/Stone-guitar/Stone-guitar2.png",
-      "/Studio/Stone-guitar/Stone-guitar3.png",
-      "/Studio/Stone-guitar/Stone-guitar4.png",
-      "/Studio/Stone-guitar/Stone-guitar5.png"
+      "/Studio/Stone-guitar/Stone-guitar2.webp",
+      "/Studio/Stone-guitar/Stone-guitar3.webp",
+      "/Studio/Stone-guitar/Stone-guitar4.webp",
+      "/Studio/Stone-guitar/Stone-guitar5.webp"
     ]
   },
   {
@@ -1712,11 +1721,11 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "THE SEATED FIGURE",
     excerpt:
       "A reclining form in white marble — carved not to recline, but to hold the quiet of the room around it.",
-    image: "/Studio/Human/Human-hero.png",
+    image: "/Studio/Human/Human-hero.webp",
     gallery: [
-      "/Studio/Human/Human2.png",
-      "/Studio/Human/Human3.png",
-      "/Studio/Human/Human4.png"
+      "/Studio/Human/Human2.webp",
+      "/Studio/Human/Human3.webp",
+      "/Studio/Human/Human4.webp"
     ]
   },
   {
@@ -1725,10 +1734,10 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "A FACE, IN FRAGMENTS",
     excerpt:
       "A profile carved in veined marble — set in three stepped planes that read as one eye at a distance.",
-    image: "/Studio/man-scu/man-scu-hero.png",
+    image: "/Studio/man-scu/man-scu-hero.webp",
     gallery: [
-      "/Studio/man-scu/man-scu2.png",
-      "/Studio/man-scu/man-scu3.png"
+      "/Studio/man-scu/man-scu2.webp",
+      "/Studio/man-scu/man-scu3.webp"
     
     ]
   },
@@ -1738,12 +1747,12 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "THE SPIRAL FORM",
     excerpt:
       "A shell held mid-furl, a sail-like crest — on reading a single line through two distinct silhouettes.",
-    image: "/Studio/Star/Star-hero.png",
+    image: "/Studio/Star/Star-hero.webp",
     gallery: [
-      "/Studio/Star/Star2.png",
-      "/Studio/Star/Star3.png",
-      "/Studio/Star/Star5.png",
-      "/Studio/Star/Star4.png",
+      "/Studio/Star/Star2.webp",
+      "/Studio/Star/Star3.webp",
+      "/Studio/Star/Star5.webp",
+      "/Studio/Star/Star4.webp",
     ]
   },
   {
@@ -1752,11 +1761,11 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "THE SWAN, FEATHERED",
     excerpt:
       "A long neck held against a feathered wing — carved as a single, continuous line through the stone.",
-    image: "/Studio/Swan/swan-hero.png",
+    image: "/Studio/Swan/swan-hero.webp",
     gallery: [
-      "/Studio/Swan/Swan2.png",
-      "/Studio/Swan/Swan3.png",
-      "/Studio/Swan/Swan5.png"
+      "/Studio/Swan/Swan2.webp",
+      "/Studio/Swan/Swan3.webp",
+      "/Studio/Swan/Swan5.webp"
     ]
   },
 
