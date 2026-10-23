@@ -62,7 +62,7 @@ const CATEGORIES: Record<string, CategoryConfig> = {
         title: "Of The Luxe Version",
         body:
           "A study in quiet majesty. MAJESTÉ captures the profound stillness of the Buddha through a serene expression and intricately sculpted crown, while its time-worn patina lends the piece a sense of history, character and regal presence.",
-        poster: "/images/sculptures/Majeste/Budha1.png",
+        poster: "/images/sculptures/Majeste/Budha1.webp",
         posterAlt: "A hand-carved sculpture in a lived-in room",
         href: "/collections/sculptures/sculpture-majeste",
         ctaLabel: "DISCOVER MAJESTE"
@@ -73,7 +73,7 @@ const CATEGORIES: Record<string, CategoryConfig> = {
         title: "A Line That Moves",
         body:
           "Monumental in scale, SILLAGE expresses an extravagance of form and gold, with a fluidity that seems to know no bounds. Its substantial metal construction gives the piece weight, solidity and commanding presence — a defining line for the room.",
-        poster: "/images/sculptures/Sillage/Sillage-hero.png",
+        poster: "/images/sculptures/Sillage/Sillage-hero.webp",
         posterAlt: "The Sillage sculpture in a lived-in setting",
         href: "/collections/sculptures/sculpture-sillage",
         ctaLabel: "DISCOVER SILLAGE"
@@ -84,14 +84,14 @@ const CATEGORIES: Record<string, CategoryConfig> = {
       title: "One Line, Held",
       body:
         "A sculpture is the piece a room turns toward first. Placed on a mantel or at the edge of an entry, it holds the eye without asking. The rest of the room arranges itself around it.",
-      image: "/images/sculptures/Altesse/Altesse1.png",
+      image: "/images/sculptures/Altesse/Altesse1.webp",
       imageAlt: "A carved sculpture in profile",
       href: "/collections/sculptures"
     },
     related: [
       {
         title: "Vases",
-        image: "/images/vases/Vase-rivage/Rivage-craft.png",
+        image: "/images/vases/Vase-rivage/Rivage-craft.webp",
         imageAlt: "A ceramic vessel",
         href: "/collections/vases"
       }
@@ -110,7 +110,7 @@ const CATEGORIES: Record<string, CategoryConfig> = {
       title: "Vessels, By Hand",
       body:
         "Each vessel is wheel-thrown, hand-blown, or bronze-glazed in a single studio. No two share the same silhouette; each carries the small asymmetries of the hand that shaped it.",
-      poster: "/images/vases/vase2.png",
+      poster: "/images/vases/vase2.webp",
       posterAlt: "A hand-thrown ceramic vessel",
       videoSrc: "/images/dining-video.mp4"
     },
@@ -119,14 +119,14 @@ const CATEGORIES: Record<string, CategoryConfig> = {
       title: "Sculpture That Holds",
       body:
         "A vessel earns its place by presence, not use. Set on a console or a low table, it draws the light of the room to one held form — quiet, weighted, unrepeatable.",
-      image: "/images/vases/Vase-rivage/Rivage-presence.png",
+      image: "/images/vases/Vase-rivage/Rivage-presence.webp",
       imageAlt: "A ceramic vase in a lived-in setting",
       href: "/collections/vases"
     },
     related: [
       {
         title: "Sculptures",
-        image: "/images/sculptures/Majeste/Majeste.png",
+        image: "/images/sculptures/Majeste/Majeste.webp",
         imageAlt: "The Majesté sculpture in a lived-in setting",
         href: "/collections/sculptures"
       }

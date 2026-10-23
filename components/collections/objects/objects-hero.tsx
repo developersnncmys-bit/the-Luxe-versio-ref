@@ -20,7 +20,7 @@ export function ObjectsHero() {
         <div className="relative aspect-[4/5] overflow-hidden md:col-span-7 md:aspect-auto md:min-h-[100svh]">
           <motion.div style={{ y, scale }} className="absolute inset-0">
             <Image
-              src="/images/sculptures/scu2.png"
+              src="/images/sculptures/scu2.webp"
               alt="Objects — a curated selection"
               fill
               priority

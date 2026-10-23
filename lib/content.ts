@@ -315,17 +315,17 @@ export const PRODUCTS: Product[] = [
     description:
       "A rare sculpture captures strength and momentum. Its sweeping horns and grounded stance convey an unmistakable sense of power and resolve.",
     price: { inr: 96000, usd: 1180 },
-    image: "/images/sculptures/Ardor/Ardor-first.png",
+    image: "/images/sculptures/Ardor/Ardor-first.webp",
     aspect: "portrait",
     material: "Metal, textured bronze finish",
     body:
       "Defined by its richly textured surface and sculptural weight, the piece captures the bull's muscularity with striking depth. Sweeping horns, a lowered stance and pronounced contours heighten its sense of movement, while the nuanced bronze finish accentuates the character of the piece.",
     gallery: [
-      "/images/sculptures/Ardor/Ardor2.png",
-       "/images/sculptures/Ardor/Ardor1.png",
-      "/images/sculptures/Ardor/Ardor3.png",
-      "/images/sculptures/Ardor/Ardor5.png",
-      "/images/sculptures/Ardor/Ardor0.png"
+      "/images/sculptures/Ardor/Ardor2.webp",
+       "/images/sculptures/Ardor/Ardor1.webp",
+      "/images/sculptures/Ardor/Ardor3.webp",
+      "/images/sculptures/Ardor/Ardor5.webp",
+      "/images/sculptures/Ardor/Ardor0.webp"
     ],
     details: [
       {
@@ -338,11 +338,11 @@ export const PRODUCTS: Product[] = [
         label: "Craft",
         body:
           "Cast in metal and hand-finished in a textured bronze patina. The surface catches light differently at every angle; every casting bears its own tonal variations — no two Ardor read exactly the same way.",
-        image: "/images/sculptures/Ardor/Ardor-craft.png"
+        image: "/images/sculptures/Ardor/Ardor-craft.webp"
       }
     ],
     pullQuote: "Momentum captured in bronze — a study in strength and resolve.",
-    lifestyleImage: "/images/sculptures/Ardor/The-Ardor1.png",
+    lifestyleImage: "/images/sculptures/Ardor/The-Ardor1.webp",
     inspiration: {
       title: "Strength and momentum, held in bronze",
       reasons: [
@@ -372,22 +372,22 @@ export const PRODUCTS: Product[] = [
     description:
       "A study in rhythm, form and restraint. Sculpted in textured wood, CADENCE pairs a bowed silhouette with a deeply textured black finish, carrying a quiet yet commanding presence.",
     price: { inr: 128000, usd: 1580 },
-    image: "/images/sculptures/Cadence/Cadence1.png",
+    image: "/images/sculptures/Cadence/Cadence1.webp",
     aspect: "portrait",
     material: "Textured wood, textured black finish",
     body:
       "Defined by its graphic equine silhouette, CADENCE balances the solidity of carved wood with the visual lightness of slender metal supports. The raised composition gives the sculpture an architectural quality, while the textured surface brings depth to its monochromatic form.",
     gallery: [
       
-      "/images/sculptures/Cadence/Cadence1.png",
-      "/images/sculptures/Cadence/Cadence2.png",
-      "/images/sculptures/Cadence/Cadence5.png",
-      "/images/sculptures/Cadence/Cadence4.png",
-      "/images/sculptures/Cadence/Cadence3.png",
-      "/images/sculptures/Cadence/Cadence6.png",
-      "/images/sculptures/Cadence/Cadence7.png",
-      "/images/sculptures/Cadence/Cadence8.png",
-      "/images/sculptures/Cadence/Cadence9.png"
+      "/images/sculptures/Cadence/Cadence1.webp",
+      "/images/sculptures/Cadence/Cadence2.webp",
+      "/images/sculptures/Cadence/Cadence5.webp",
+      "/images/sculptures/Cadence/Cadence4.webp",
+      "/images/sculptures/Cadence/Cadence3.webp",
+      "/images/sculptures/Cadence/Cadence6.webp",
+      "/images/sculptures/Cadence/Cadence7.webp",
+      "/images/sculptures/Cadence/Cadence8.webp",
+      "/images/sculptures/Cadence/Cadence9.webp"
     ],
     details: [
       {
@@ -400,11 +400,11 @@ export const PRODUCTS: Product[] = [
         label: "Craft",
         body:
           "Hand-carved from solid wood, the equine silhouette shaped by successive cuts. The textured black finish is worked into the surface by hand — deepening the grain rather than covering it. Signed at the base.",
-        image: "/images/sculptures/Cadence/cadence-craft.png"
+        image: "/images/sculptures/Cadence/cadence-craft.webp"
       }
     ],
     pullQuote: "Rhythm and restraint, carved in wood.",
-    lifestyleImage: "/images/sculptures/Cadence/candecehover.png",
+    lifestyleImage: "/images/sculptures/Cadence/candecehover.webp",
     inspiration: {
       title: "A study in rhythm, form and restraint",
       reasons: [
@@ -433,16 +433,16 @@ export const PRODUCTS: Product[] = [
     description:
       "A sculptural vase defined by sweeping vertical contours and a dramatic petal-like crown. AUREN is a study of scale and texture, with a quiet presence.",
     price: { inr: 74000, usd: 910 },
-    image: "/images/vases/Auren/Vase-Auren1.png",
+    image: "/images/vases/Auren/Vase-Auren1.webp",
     aspect: "portrait",
     material: "Ceramic, textured grey glaze",
     body:
       "A substantial ceramic vase defined by its broad proportions and sculptural, foliage-inspired silhouette. Deep vertical ridges travel across the surface into curved, rising edges, giving AUREN a distinct architectural character.",
     gallery: [
-      "/images/vases/Auren/Vase-Auren1.png",
-      "/images/vases/Auren/Auren2.png",
-      "/images/vases/Auren/Auren3.png",
-      "/images/vases/Auren/Auren4.png"
+      "/images/vases/Auren/Vase-Auren1.webp",
+      "/images/vases/Auren/Auren2.webp",
+      "/images/vases/Auren/Auren3.webp",
+      "/images/vases/Auren/Auren4.webp"
     ],
     details: [
       {
@@ -455,12 +455,12 @@ export const PRODUCTS: Product[] = [
         label: "Craft",
         body:
           "Thrown, glazed and fired in a small studio in Auroville. Each piece signed and dated at the foot.",
-        image: "/images/vases/Auren/Auren-Craft.png"
+        image: "/images/vases/Auren/Auren-Craft.webp"
       }
     ],
     pullQuote:
       "Sculpture that also holds — the honest, ancient trick of the vessel.",
-    lifestyleImage: "/images/vases/Auren/Vase-auren-presence.png",
+    lifestyleImage: "/images/vases/Auren/Vase-auren-presence.webp",
     inspiration: {
       title: "Part of a series of forty. Signed at the foot.",
       reasons: [
@@ -489,16 +489,16 @@ export const PRODUCTS: Product[] = [
     description:
       "A sculptural ceramic form where colour moves like an abstract landscape. Sweeps of mineral blue, ivory, charcoal and muted rust travel across its broad silhouette, giving the piece the presence of a painted canvas.",
     price: { inr: 82000, usd: 1010 },
-    image: "/images/vases/Vase-rivage/Rivage1.png",
+    image: "/images/vases/Vase-rivage/Rivage1.webp",
     aspect: "portrait",
     material: "Premium ceramic, hand-painted multitone finish",
     body:
       "RIVAGE transforms a vessel into an art object. Its generous proportions, tactile surface and expressive composition allow it to stand confidently on its own — commanding attention without excess.",
     gallery: [
-      "/images/vases/Vase-rivage/Rivage1.png",
-      "/images/vases/Vase-rivage/Rivage2.png",
-      "/images/vases/Vase-rivage/Rivage3.png",
-      "/images/vases/Vase-rivage/Rivage4.png"
+      "/images/vases/Vase-rivage/Rivage1.webp",
+      "/images/vases/Vase-rivage/Rivage2.webp",
+      "/images/vases/Vase-rivage/Rivage3.webp",
+      "/images/vases/Vase-rivage/Rivage4.webp"
       
     ],
     details: [
@@ -512,11 +512,11 @@ export const PRODUCTS: Product[] = [
         label: "Craft",
         body:
           "Hand-painted and hand-textured with a coarse, tactile finish and expressive multitone brushwork. Each piece bears its own composition — no two Rivages are alike.",
-        image: "/images/vases/Vase-rivage/Rivage-craft.png"
+        image: "/images/vases/Vase-rivage/Rivage-craft.webp"
       }
     ],
     pullQuote: "Colour moves across the surface like an abstract landscape.",
-    lifestyleImage: "/images/vases/Vase-rivage/Rivage-presence.png",
+    lifestyleImage: "/images/vases/Vase-rivage/Rivage-presence.webp",
     inspiration: {
       title: "A vessel transformed into a canvas",
       reasons: [
@@ -545,17 +545,17 @@ export const PRODUCTS: Product[] = [
     description:
       "An open porcelain form with a fluid, irregular silhouette. Misty grey markings move across its ivory surface, while fine gold lines trace the rim and descend through the body.",
     price: { inr: 72000, usd: 890 },
-    image: "/images/vases/Onde/Onde-1.png",
+    image: "/images/vases/Onde/Onde-1.webp",
     aspect: "portrait",
     material: "Porcelain, grey marbling with gold detailing",
     body:
       "Onde means \"wave\" in French. The piece evokes France's Atlantic shoreline: water moving over pale stone, with a trace of gold in the last light. The glossy interior catches light within each curve.",
     gallery: [
-      "/images/vases/Onde/06.jpg",
-      "/images/vases/Onde/Onde5.png",
-      "/images/vases/Onde/Onde3.png",
-      "/images/vases/Onde/Onde4.png",
-      "/images/vases/Onde/Onde-2.png"
+      "/images/vases/Onde/06.webp",
+      "/images/vases/Onde/Onde5.webp",
+      "/images/vases/Onde/Onde3.webp",
+      "/images/vases/Onde/Onde4.webp",
+      "/images/vases/Onde/Onde-2.webp"
     ],
     details: [
       {
@@ -568,12 +568,12 @@ export const PRODUCTS: Product[] = [
         label: "Craft",
         body:
           "The grey marbling is worked into the porcelain by hand — every piece bears its own pattern of drift. Fine gold lines are applied last, tracing the rim and descending through the body.",
-        image: "/images/vases/Onde/Vase-onde-craft.png"
+        image: "/images/vases/Onde/Vase-onde-craft.webp"
       }
     ],
     pullQuote:
       "Water moving over pale stone, with a trace of gold in the last light.",
-    lifestyleImage: "/images/vases/Onde/Vase-onde-presence.png",
+    lifestyleImage: "/images/vases/Onde/Vase-onde-presence.webp",
     inspiration: {
       title: "A wave, held in porcelain",
       reasons: [
@@ -602,19 +602,19 @@ export const PRODUCTS: Product[] = [
     description:
       "A lowered gaze and flowing mane give REIN its composed presence. Carved in wood, its sculpted contours carry a weathered grey finish with bronze-painted accents. A black pedestal lends the form an architectural stance.",
     price: { inr: 136000, usd: 1620 },
-    image: "/images/sculptures/Rein/Rein1.png",
+    image: "/images/sculptures/Rein/Rein1.webp",
     aspect: "portrait",
     material: "Wood, Weathered grey with bronze-painted accents, mounted on a black base.",
     body:
       "The horse embodies strength guided by sensitivity. REIN captures that balance, bringing quiet authority to a console, study or collected interior.",
       
     gallery: [
-      "/images/sculptures/Rein/Rein1.png",
-      "/images/sculptures/Rein/Rein4.png",
-      "/images/sculptures/Rein/Rein3.png",
-      "/images/sculptures/Rein/Rein2.png",
-      "/images/sculptures/Rein/Rein5.png",
-      "/images/sculptures/Rein/Rein6.png"
+      "/images/sculptures/Rein/Rein1.webp",
+      "/images/sculptures/Rein/Rein4.webp",
+      "/images/sculptures/Rein/Rein3.webp",
+      "/images/sculptures/Rein/Rein2.webp",
+      "/images/sculptures/Rein/Rein5.webp",
+      "/images/sculptures/Rein/Rein6.webp"
       
     ],
     details: [
@@ -622,17 +622,17 @@ export const PRODUCTS: Product[] = [
         label: "Material",
         body:
           "Wood, Weathered grey with bronze-painted accents, mounted on a black base. Dimensions: 12.2 × 5.9 × 19.7 in (31 × 15 × 50 cm). Weight: 3.178 kg / 7.01 lb.",
-        image: "/images/sculptures/Rein/Rein-decor.png"
+        image: "/images/sculptures/Rein/Rein-decor.webp"
       },
       {
         label: "Craft",
         body:
           "The flowing mane, layered painted finish and precise black base create a measured balance of movement and stillness.",
-        image: "/images/sculptures/Rein/Rein-Craft.png"
+        image: "/images/sculptures/Rein/Rein-Craft.webp"
       }
     ],
     pullQuote: "A STUDY IN STRENGTH, FORM AND TIME.",
-    lifestyleImage: "/images/sculptures/Rein/Rein-presence.png",
+    lifestyleImage: "/images/sculptures/Rein/Rein-presence.webp",
     inspiration: {
       title: "A STUDY IN STRENGTH AND STILLNESS",
       reasons: [
@@ -661,17 +661,17 @@ export const PRODUCTS: Product[] = [
     description:
       "A study in quiet majesty. MAJESTÉ captures the profound stillness of the Buddha through a serene expression and intricately sculpted crown, while its time-worn patina lends the piece a sense of history, character and regal presence.",
     price: { inr: 148000, usd: 1820 },
-    image: "/images/sculptures/Majeste/Budha1.png",
+    image: "/images/sculptures/Majeste/Budha1.webp",
     aspect: "portrait",
     material: "Premium ceramic, textured aged patina finish",
     body:
       "Arched brows, elongated features and an intricately carved crown lend MAJESTÉ its distinctly regal character. A richly aged patina in warm earth, ivory and charcoal heightens its time-worn presence. Rising to 52 cm, its substantial scale and commanding form give the sculpture an almost monumental presence.",
     gallery: [
-      "/images/sculptures/Majeste/Budha1.png",
-      "/images/sculptures/Majeste/Budha2.png",
-      "/images/sculptures/Majeste/Budha3.png",
-      "/images/sculptures/Majeste/Budha4.png",
-      "/images/sculptures/Majeste/Budha5.png"
+      "/images/sculptures/Majeste/Budha1.webp",
+      "/images/sculptures/Majeste/Budha2.webp",
+      "/images/sculptures/Majeste/Budha3.webp",
+      "/images/sculptures/Majeste/Budha4.webp",
+      "/images/sculptures/Majeste/Budha5.webp"
     ],
     details: [
       {
@@ -684,11 +684,11 @@ export const PRODUCTS: Product[] = [
         label: "Craft",
         body:
           "Hand-sculpted in ceramic, the crown and features shaped by hand. The aged patina is layered by hand — warm earth, ivory and charcoal — so each piece bears its own weathered character. No two Majesté age the same way.",
-        image: "/images/sculptures/Majeste/majeste-craft.png"
+        image: "/images/sculptures/Majeste/majeste-craft.webp"
       }
     ],
     pullQuote: "A study in quiet majesty.",
-    lifestyleImage: "/images/sculptures/Majeste/Majeste.png",
+    lifestyleImage: "/images/sculptures/Majeste/Majeste.webp",
     inspiration: {
       title: "A face carried by time",
       reasons: [
@@ -717,17 +717,17 @@ export const PRODUCTS: Product[] = [
     description:
       "Defined by a continuous sweep of deep teal glass, Obre balances an elongated silhouette with a generous oval opening. Its substantial 1 cm thickness creates visual depth, while light traces the transition from the rising arch to the rounded body. A subtly lifted lip and clear glass base complete its architectural form.",
     price: { inr: 58000, usd: 720 },
-    image: "/images/vases/Obre/Obre1.png",
+    image: "/images/vases/Obre/Obre1.webp",
     aspect: "portrait",
     material: "Polished Deep Teal Glass",
     body:
       "A study in fullness and space. Obre brings fluid movement to architectural settings, its open centre allowing the surroundings to become part of the composition. Perfect for a candlelit cocktail bar or lounge setting, where soft light accentuates its deep teal curves.",
     gallery: [
-      "/images/vases/Obre/Obre1.png",
-      "/images/vases/Obre/Obre3.png",
-      "/images/vases/Obre/Obre2.png",
-      "/images/vases/Obre/Obre4.png",
-      "/images/vases/Obre/Obre5.png"
+      "/images/vases/Obre/Obre1.webp",
+      "/images/vases/Obre/Obre3.webp",
+      "/images/vases/Obre/Obre2.webp",
+      "/images/vases/Obre/Obre4.webp",
+      "/images/vases/Obre/Obre5.webp"
     ],
     details: [
       {
@@ -739,11 +739,11 @@ export const PRODUCTS: Product[] = [
         label: "Craft",
         body:
           "The interplay of substantial glass, fine elegance and flowing contours gives the piece a changing presence as light moves across it.",
-        image: "/images/vases/Obre/Obre-craft.png"
+        image: "/images/vases/Obre/Obre-craft.webp"
       }
     ],
     pullQuote: "A QUIET STATEMENT — WHERE DEEP TEAL GLASS MEETS FLOWING FORM.",
-    lifestyleImage: "/images/vases/Obre/Obre-presence.png",
+    lifestyleImage: "/images/vases/Obre/Obre-presence.webp",
     inspiration: {
       title: "EVERY CURVE HOLDS THE LIGHT",
       reasons: [
@@ -772,18 +772,18 @@ export const PRODUCTS: Product[] = [
     description:
       "SÈVE expresses botanical grace through softened contours and an asymmetric silhouette. A finely veined gold leaf rests against its textured grey surface, creating a considered balance of warmth, depth and quiet presence.",
     price: { inr: 68000, usd: 840 },
-    image: "/images/vases/Seve/Seve1.png",
+    image: "/images/vases/Seve/Seve1.webp",
     aspect: "portrait",
     material: "Premium ceramic, textured surface with gold leaf detailing",
     body:
       "Named after the French word for sap, SÈVE evokes the life within nature. Its solitary leaf becomes a focal point, bringing an intimate sense of artistry to a console, library or thoughtfully composed living space.",
     gallery: [
-      "/images/vases/Seve/Seve1.png",
-      "/images/vases/Seve/Seve2.png",
-      "/images/vases/Seve/Seve4.png",
-      "/images/vases/Seve/Seve5.png",
-      "/images/vases/Seve/Seve3.png",
-      "/images/vases/Seve/Seve6.png"
+      "/images/vases/Seve/Seve1.webp",
+      "/images/vases/Seve/Seve2.webp",
+      "/images/vases/Seve/Seve4.webp",
+      "/images/vases/Seve/Seve5.webp",
+      "/images/vases/Seve/Seve3.webp",
+      "/images/vases/Seve/Seve6.webp"
     ],
     details: [
       {
@@ -796,11 +796,11 @@ export const PRODUCTS: Product[] = [
         label: "Craft",
         body:
           "A textured grey surface is finished by hand, then detailed with a single finely veined gold leaf — applied individually, no two placements identical.",
-        image: "/images/vases/Seve/Seve-craft.png"
+        image: "/images/vases/Seve/Seve-craft.webp"
       }
     ],
     pullQuote: "A solitary leaf — the quietest way to speak of nature.",
-    lifestyleImage: "/images/vases/Seve/Seve-presence.png",
+    lifestyleImage: "/images/vases/Seve/Seve-presence.webp",
     inspiration: {
       title: "Named for the sap that moves inside a living thing",
       reasons: [
@@ -829,15 +829,15 @@ export const PRODUCTS: Product[] = [
     description:
       "Broad, rounded shoulders meet an elongated body in a sculptural study of form and proportion. A fine dull gold seam traces the textured grey surface, lending a quiet luminosity to its earthy character.",
     price: { inr: 72000, usd: 890 },
-    image: "/images/vases/Fauve/Fauve1.png",
+    image: "/images/vases/Fauve/Fauve1.webp",
     aspect: "portrait",
     material: "Premium ceramic, textured grey with dull gold seam",
     body:
       "FAUVE finds beauty in irregularity — the subtle shifts of tone, the expressive surface, the line that draws the eye. Its composed presence brings depth and character to a thoughtfully curated setting.",
     gallery: [
-      "/images/vases/Fauve/Fauve1.png",
-      "/images/vases/Fauve/Fauve2.png",
-      "/images/vases/Fauve/Fauve3.png"
+      "/images/vases/Fauve/Fauve1.webp",
+      "/images/vases/Fauve/Fauve2.webp",
+      "/images/vases/Fauve/Fauve3.webp"
     ],
     details: [
       {
@@ -850,11 +850,11 @@ export const PRODUCTS: Product[] = [
         label: "Craft",
         body:
           "The textured surface is worked by hand before firing; the fine gold seam is applied individually, following the natural line of each piece.",
-        image: "/images/vases/Fauve/Fauve-craft.png"
+        image: "/images/vases/Fauve/Fauve-craft.webp"
       }
     ],
     pullQuote: "Substantial form, restrained detail — the quiet finesse of a single line.",
-    lifestyleImage: "/images/vases/Fauve/Fauve-presence.png",
+    lifestyleImage: "/images/vases/Fauve/Fauve-presence.webp",
     inspiration: {
       title: "Where generous silhouette meets a single, considered line",
       reasons: [
@@ -884,17 +884,17 @@ export const PRODUCTS: Product[] = [
     description:
       "A carved metal sculpture captured in motion. SILLAGE is conceived for a mantel, lounge or formal living that calls for a defining line.",
     price: { inr: 174000, usd: 2150 },
-    image: "/images/sculptures/Sillage/Sillage1.png",
+    image: "/images/sculptures/Sillage/Sillage1.webp",
     aspect: "portrait",
     material: "Metal, textured gold finish",
     body:
       "Monumental in scale, SILLAGE expresses an extravagance of form and gold, with a fluidity that seems to know no bounds. Its substantial metal construction gives the piece weight, solidity and commanding presence.",
     gallery: [
-      "/images/sculptures/Sillage/Sillage-new1.png",
-      "/images/sculptures/Sillage/Sillage-new2.png",
-      "/images/sculptures/Sillage/Sillage-new3.png",
-      "/images/sculptures/Sillage/Sillage2.png",
-      "/images/sculptures/Sillage/Sillage-hero.png"
+      "/images/sculptures/Sillage/Sillage-new1.webp",
+      "/images/sculptures/Sillage/Sillage-new2.webp",
+      "/images/sculptures/Sillage/Sillage-new3.webp",
+      "/images/sculptures/Sillage/Sillage2.webp",
+      "/images/sculptures/Sillage/Sillage-hero.webp"
     ],
     details: [
       {
@@ -907,12 +907,12 @@ export const PRODUCTS: Product[] = [
         label: "Craft",
         body:
           "Cast in metal and hand-finished in textured gold. Each surface is layered to catch light differently at every angle; the tactile character emerges only when the piece is placed in a room.",
-        image: "/images/sculptures/Sillage/Sillage-Craft.png"
+        image: "/images/sculptures/Sillage/Sillage-Craft.webp"
       }
     ],
     pullQuote:
       "An extravagance of form — a fluidity that seems to know no bounds.",
-    lifestyleImage: "/images/sculptures/Sillage/Sillage-presence.png",
+    lifestyleImage: "/images/sculptures/Sillage/Sillage-presence.webp",
     inspiration: {
       title: "A defining line for the room",
       reasons: [
@@ -941,17 +941,17 @@ export const PRODUCTS: Product[] = [
     description:
       "Ancient in spirit. Monumental in presence. VESTIGE rises in carved wood, its Egyptian-inspired form shaped by geometry, instinct and time.",
     price: { inr: 112000, usd: 1380 },
-    image: "/images/sculptures/Vestige/Vestige.png",
+    image: "/images/sculptures/Vestige/Vestige.webp",
     aspect: "portrait",
     material: "Solid wood, distressed finish",
     body:
       "At over five feet, VESTIGE commands space without ornament. Deep incisions trace its elongated form, while the weathered surface reveals the natural character of solid wood. Primitive in expression, architectural in scale — an object with the presence of a discovered artefact.",
     gallery: [
-      "/images/sculptures/Vestige/Vestige.png",
-      "/images/sculptures/Vestige/Vestige3.jpg",
-      "/images/sculptures/Vestige/Vestige5.png",
-      "/images/sculptures/Vestige/Vestige1.jpg",
-      "/images/sculptures/Vestige/Vestige6.jpg"
+      "/images/sculptures/Vestige/Vestige.webp",
+      "/images/sculptures/Vestige/Vestige3.webp",
+      "/images/sculptures/Vestige/Vestige5.webp",
+      "/images/sculptures/Vestige/Vestige1.webp",
+      "/images/sculptures/Vestige/Vestige6.webp"
     
     ],
     details: [
@@ -965,11 +965,11 @@ export const PRODUCTS: Product[] = [
         label: "Craft",
         body:
           "Deep incisions trace the elongated form; each cut is worked by hand. The distressed finish preserves the natural character of the wood — grain, knots and the marks of shaping intact.",
-        image: "/images/sculptures/Vestige/Vestige-Craft.png"
+        image: "/images/sculptures/Vestige/Vestige-Craft.webp"
       }
     ],
     pullQuote: "Ancient in spirit. Monumental in presence.",
-    lifestyleImage: "/images/sculptures/Vestige/Vestige-presence.png",
+    lifestyleImage: "/images/sculptures/Vestige/Vestige-presence.webp",
     inspiration: {
       title: "An object with the presence of a discovered artefact",
       reasons: [
@@ -998,35 +998,35 @@ export const PRODUCTS: Product[] = [
     description:
       "A study in abstraction and restraint. ÉNIGME reduces the human face to its most elemental lines, leaving expression deliberately unresolved.",
     price: { inr: 132000, usd: 1620 },
-    image: "/images/sculptures/Engime/Engime1.png",
+    image: "/images/sculptures/Engime/Engime1.webp",
     aspect: "portrait",
     material: "Metal, textured pale gold and charcoal finish",
     body:
       "Two faces, two scales, two finishes — held together by a singular sculptural language. Their quiet ambiguity invites interpretation rather than defining it.",
     gallery: [
-      "/images/sculptures/Engime/Engime1.png",
-      "/images/sculptures/Engime/Engime1.2.png",
-      "/images/sculptures/Engime/Engime1.5.png",
-      "/images/sculptures/Engime/Engime1.4.png",
-      "/images/sculptures/Engime/Engime1.6.png",
+      "/images/sculptures/Engime/Engime1.webp",
+      "/images/sculptures/Engime/Engime1.2.webp",
+      "/images/sculptures/Engime/Engime1.5.webp",
+      "/images/sculptures/Engime/Engime1.4.webp",
+      "/images/sculptures/Engime/Engime1.6.webp",
     ],
     details: [
       {
         label: "Material",
         body:
           "Metal with a textured pale gold and charcoal finish. Dimensions: 11 × 6 × 6 cm (4.3 × 2.4 × 2.4 in).",
-        image: "/images/sculptures/Engime/engime-presence2.png"
+        image: "/images/sculptures/Engime/engime-presence2.webp"
       },
       {
         label: "Craft",
         body:
           "Cast in metal, the pairing juxtaposes pale gold with deep charcoal. Textured surfaces temper the metallic finish, while carved contours give each face its individual presence.",
-        image: "/images/sculptures/Engime/Engime-craft.png"
+        image: "/images/sculptures/Engime/Engime-craft.webp"
       }
     ],
     pullQuote:
       "Two faces, one language — expression deliberately unresolved.",
-    lifestyleImage: "/images/sculptures/Engime/Engime-presence.png",
+    lifestyleImage: "/images/sculptures/Engime/Engime-presence.webp",
     inspiration: {
       title: "Two faces, one sculptural language",
       reasons: [
@@ -1055,18 +1055,18 @@ export const PRODUCTS: Product[] = [
     description:
       "An abstract interpretation of the horse, defined by elongated lines, sculptural geometry and a commanding stance. The contrasting metallic mane brings a quiet flash of opulence to its otherwise restrained form.",
     price: { inr: 118000, usd: 1450 },
-    image: "/images/sculptures/Fouge/Fouge-new2.png",
+    image: "/images/sculptures/Fouge/Fouge-new2.webp",
     aspect: "portrait",
     material: "Metal, aged patina with metallic mane",
     body:
       "FOUGUE embodies contained power — strong without heaviness, expressive without excess. Its poised silhouette and architectural proportions give it a striking presence from every angle.",
     gallery: [
-      "/images/sculptures/Fouge/Fouge-new2.png",
-      "/images/sculptures/Fouge/Fouge-new1.png",
-      "/images/sculptures/Fouge/Fouge-new3.png",
-      "/images/sculptures/Fouge/Fouge-new4.png",
-      "/images/sculptures/Fouge/horse1.jpg",
-      "/images/sculptures/Fouge/horse2.jpg"
+      "/images/sculptures/Fouge/Fouge-new2.webp",
+      "/images/sculptures/Fouge/Fouge-new1.webp",
+      "/images/sculptures/Fouge/Fouge-new3.webp",
+      "/images/sculptures/Fouge/Fouge-new4.webp",
+      "/images/sculptures/Fouge/horse1.webp",
+      "/images/sculptures/Fouge/horse2.webp"
     ],
     details: [
       {
@@ -1079,12 +1079,12 @@ export const PRODUCTS: Product[] = [
         label: "Craft",
         body:
           "Tonal variations and an intentionally irregular surface texture lend depth and individual character to the piece. Each casting bears a slightly different pattern of light — no two Fougue read exactly the same way.",
-        image: "/images/sculptures/Fouge/Fouge-craft.png"
+        image: "/images/sculptures/Fouge/Fouge-craft.webp"
       }
     ],
     pullQuote:
       "Contained power — strong without heaviness, expressive without excess.",
-    lifestyleImage: "/images/sculptures/Fouge/Fouge-presence.png",
+    lifestyleImage: "/images/sculptures/Fouge/Fouge-presence.webp",
     inspiration: {
       title: "The horse, reduced to line and gesture",
       reasons: [
@@ -1113,20 +1113,20 @@ export const PRODUCTS: Product[] = [
     description:
       "A study of human instinct — what is concealed, what is sought, what is ultimately revealed. A fluid gesture veils the gaze, poised between shadow and awakening.",
     price: { inr: 168000, usd: 2060 },
-    image: "/images/sculptures/Linconnu/Li1.png",
+    image: "/images/sculptures/Linconnu/Li1.webp",
     aspect: "portrait",
     material: "Textured metal with layered detailing, black marble base",
     body:
       "L'INCONNU explores the space between the visible and the unknown. Its raw, fragmented surface is interrupted by a fluid gesture across the gaze — creating a sculptural presence that feels both human and abstract.",
     gallery: [
-      "/images/sculptures/Linconnu/Li1.png",
-      "/images/sculptures/Linconnu/Li2.png",
-      "/images/sculptures/Linconnu/Li3.png",
-      "/images/sculptures/Linconnu/Li4.png",
-       "/images/sculptures/Linconnu/Li5.png",
-      "/images/sculptures/Linconnu/Li6.png",
-      "/images/sculptures/Linconnu/Li7.png",
-      "/images/sculptures/Linconnu/Li8.png",
+      "/images/sculptures/Linconnu/Li1.webp",
+      "/images/sculptures/Linconnu/Li2.webp",
+      "/images/sculptures/Linconnu/Li3.webp",
+      "/images/sculptures/Linconnu/Li4.webp",
+       "/images/sculptures/Linconnu/Li5.webp",
+      "/images/sculptures/Linconnu/Li6.webp",
+      "/images/sculptures/Linconnu/Li7.webp",
+      "/images/sculptures/Linconnu/Li8.webp",
       
     ],
     details: [
@@ -1140,12 +1140,12 @@ export const PRODUCTS: Product[] = [
         label: "Craft",
         body:
           "Monumental in expression, L'Inconnu commands through elegance, texture and restraint — an enigmatic objet d'art conceived as a focal point. The metallic surfaces are layered by hand; every piece bears its own pattern of light.",
-        image: "/images/sculptures/Linconnu/Linconnu-craft.png"
+        image: "/images/sculptures/Linconnu/Linconnu-craft.webp"
       }
     ],
     pullQuote:
       "As instinct yields to consciousness, light becomes revelation.",
-    lifestyleImage: "/images/sculptures/Linconnu/Linconnu-presence.png",
+    lifestyleImage: "/images/sculptures/Linconnu/Linconnu-presence.webp",
     inspiration: {
       title: "The space between the visible and the unknown",
       reasons: [
@@ -1174,17 +1174,17 @@ export const PRODUCTS: Product[] = [
     description:
       "THALASSA reads like a jewel magnified into sculpture. Its clear, crystalline edge catches the light around a richly amber body, while dark striations travel into a sweeping, smoky crest. More than a foot across, the shell has impressive scale, yet its finely defined rim draws you in to look closer.",
     price: { inr: 148000, usd: 1820 },
-    image: "/images/sculptures/Telassa/21.jpg",
+    image: "/images/sculptures/Telassa/21.webp",
     aspect: "landscape",
     material: "Mouth-blown, hand-shaped glass",
     body:
       "Named for the sea, THALASSA calls to mind the Amalfi Coast: the movement of water against sculpted cliffs, the warmth of late sunlight and the glint of light along the shore. Its open spiral holds that sense of movement in glass, revealing new depths of amber and smoke from every angle.",
     gallery: [
-      "/images/sculptures/Telassa/21.jpg",
-      "/images/sculptures/Telassa/22.jpg",
-      "/images/sculptures/Telassa/23.jpg",
-      "/images/sculptures/Telassa/24.jpg",
-      "/images/sculptures/Telassa/25.jpg"
+      "/images/sculptures/Telassa/21.webp",
+      "/images/sculptures/Telassa/22.webp",
+      "/images/sculptures/Telassa/23.webp",
+      "/images/sculptures/Telassa/24.webp",
+      "/images/sculptures/Telassa/25.webp"
     ],
     details: [
       {
@@ -1197,12 +1197,12 @@ export const PRODUCTS: Product[] = [
         label: "Craft",
         body:
           "Selected for its generous scale, layered colour and exceptionally defined, jewel-like edge. Each piece is mouth-blown by hand — the spiral, the striations and the coppered flecks are the maker's decisions in the moment.",
-        image: "/images/sculptures/Telassa/Telassa-craft.png"
+        image: "/images/sculptures/Telassa/Telassa-craft.webp"
       }
     ],
     pullQuote:
       "The sea, held in glass — sunlight along the shore.",
-    lifestyleImage: "/images/sculptures/Telassa/Telassa-presence.png",
+    lifestyleImage: "/images/sculptures/Telassa/Telassa-presence.webp",
     inspiration: {
       title: "Selected for what a machine cannot make",
       reasons: [
@@ -1231,19 +1231,19 @@ export const PRODUCTS: Product[] = [
     description:
       "ALTESSE captures the regal presence of an eagle in a magnificent study of scale and proportion. Its transparent wing rises like an architectural gesture, giving the silhouette striking movement. Free-flowing, seemingly unstoppable curves carry ivory, black, amber and touches of brown through the glass. The finesse lies in its watchful eye, defined beak and talons, and the changing light within the form.",
     price: { inr: 158000, usd: 1940 },
-    image: "/images/sculptures/Altesse/Altesse1.png",
+    image: "/images/sculptures/Altesse/Altesse1.webp",
     aspect: "portrait",
     material: "Glass",
     body:
       "Its scale makes it a focal point, yet its transparency allows the room to breathe. From a distance, the silhouette commands attention; up close, the layers of colour invite discovery.",
     gallery: [
-      "/images/sculptures/Altesse/Altesse1.png",
-      "/images/sculptures/Altesse/Altesse5.png",
-      "/images/sculptures/Altesse/Altesse7.png",
-      "/images/sculptures/Altesse/Altesse2.png",
-      "/images/sculptures/Altesse/Altesse3.png",
-      "/images/sculptures/Altesse/Altesse4.png",
-      "/images/sculptures/Altesse/Altesse6.png"
+      "/images/sculptures/Altesse/Altesse1.webp",
+      "/images/sculptures/Altesse/Altesse5.webp",
+      "/images/sculptures/Altesse/Altesse7.webp",
+      "/images/sculptures/Altesse/Altesse2.webp",
+      "/images/sculptures/Altesse/Altesse3.webp",
+      "/images/sculptures/Altesse/Altesse4.webp",
+      "/images/sculptures/Altesse/Altesse6.webp"
     ],
     details: [
       {
@@ -1256,12 +1256,12 @@ export const PRODUCTS: Product[] = [
         label: "Craft",
         body:
           "Selected for its architectural scale, balanced proportions and fluid layers of colour. The watchful eye, defined beak and talons are worked by hand — the finesse of the piece lives in those small marks against the sweep of the wing.",
-        image: "/images/sculptures/Altesse/Altesse-carft.png"
+        image: "/images/sculptures/Altesse/Altesse-carft.webp"
       }
     ],
     pullQuote:
       "A silhouette from across the room; layers of colour from close up.",
-    lifestyleImage: "/images/sculptures/Altesse/Altesse-presence.png",
+    lifestyleImage: "/images/sculptures/Altesse/Altesse-presence.webp",
     inspiration: {
       title: "Architecture in glass, watched over by an eye",
       reasons: [
@@ -1291,17 +1291,17 @@ export const PRODUCTS: Product[] = [
     description:
       "Named for its association with Helios, the Greek sun god, ELIO evokes light and warmth. A serene facial profile emerges from this sculptural vase, its elongated form complemented by a white marble-effect finish with flowing grey veins — a poetic expression of presence and stillness.",
     price: { inr: 74000, usd: 910 },
-    image: "/images/vases/Elios/Elio.png",
+    image: "/images/vases/Elios/Elio.webp",
     aspect: "portrait",
     material: "Ceramic and glass, white marble-effect finish with grey veining",
     body:
       "ELIO invites contemplation through a face only partly revealed. Its architectural proportions create a distinctive focal point, bringing quiet strength and individuality to a thoughtfully composed space.",
     gallery: [
-      "/images/vases/Elios/Elio.png",
-      "/images/vases/Elios/Elio1.png",
-      "/images/vases/Elios/Elio2.png",
-      "/images/vases/Elios/Elio3.png",
-      "/images/vases/Elios/Elio4.png"
+      "/images/vases/Elios/Elio.webp",
+      "/images/vases/Elios/Elio1.webp",
+      "/images/vases/Elios/Elio2.webp",
+      "/images/vases/Elios/Elio3.webp",
+      "/images/vases/Elios/Elio4.webp"
     ],
     details: [
       {
@@ -1314,11 +1314,11 @@ export const PRODUCTS: Product[] = [
         label: "Craft",
         body:
           "The sculpted facial profile is modelled by hand; the marble veining is drawn across the surface individually, so the pattern of each piece is its own.",
-        image: "/images/vases/Elios/Elios-craft.png"
+        image: "/images/vases/Elios/Elios-craft.webp"
       }
     ],
     pullQuote: "A face only partly revealed — the rest, held in stillness.",
-    lifestyleImage: "/images/vases/Elios/Elio-presence.png",
+    lifestyleImage: "/images/vases/Elios/Elio-presence.webp",
     inspiration: {
       title: "Named for Helios — light and warmth, held in form",
       reasons: [
@@ -1559,7 +1559,7 @@ export const EXCLUSIVE_PIECES: ExclusivePiece[] = [
   //   dimensions: "H 900 · W 1200 · D 45 mm",
   //   leadTime: "12 – 16 weeks",
   //   edition: "Made to order · one of one",
-  //   image: "/images/sculptures/scu6.png",
+  //   image: "/images/sculptures/scu6.webp",
   //   price: { inr: 574000, usd: 6880 }
   // }
 ];
@@ -1777,7 +1777,7 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "AT THE CERAMIC STUDIO",
     excerpt:
       "A sculptural vessel shaped by layered colour and movement — Rivage brings a hand-painted character to quiet, considered interiors.",
-    image: "/images/vases/Vase-rivage/Rivage-Studio.png"
+    image: "/images/vases/Vase-rivage/Rivage-Studio.webp"
   },
   {
     slug: "ON THE SCULPTURAL PLINTH",
@@ -1785,7 +1785,7 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "ON THE SCULPTURAL PLINTH",
     excerpt:
       "A study in contrast and balance — ÉNIGME pairs textured pale gold with charcoal to create an object of quiet visual tension.",
-    image: "/images/sculptures/Engime/Engime-Studio.png"
+    image: "/images/sculptures/Engime/Engime-Studio.webp"
   },
   {
     slug: "IN THE QUIET CORNER",
@@ -1793,7 +1793,7 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "IN THE QUIET CORNER",
     excerpt:
       "Carved from solid wood and marked by a distressed finish, VESTIGE carries the character of an object shaped by time",
-    image: "/images/sculptures/Vestige/Vestige.png"
+    image: "/images/sculptures/Vestige/Vestige.webp"
   },
   {
     slug: "IN THE AMBIENT LIGHT",
@@ -1801,6 +1801,6 @@ export const JOURNAL_ENTRIES: JournalEntry[] = [
     title: "IN THE AMBIENT LIGHT",
     excerpt:
       "Defined by a fluid silhouette and deep teal glass, OBRE turns a simple vessel into a striking sculptural presence.",
-    image: "/images/vases/Obre/Obre-studio.png"
+    image: "/images/vases/Obre/Obre-studio.webp"
   }*/
 ];

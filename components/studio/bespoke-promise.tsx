@@ -21,7 +21,7 @@ export function BespokePromise() {
           className="relative aspect-[4/5] w-full overflow-hidden bg-onyx md:col-span-7"
         >
           <SafeImage
-            src="/images/sculptures/scu3.png"
+            src="/images/sculptures/scu3.webp"
             alt="A sculptural commission in progress at the studio"
             fallbackSeed="bespoke-promise"
             fill

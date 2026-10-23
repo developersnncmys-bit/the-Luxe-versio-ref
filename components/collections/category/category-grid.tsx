@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { SafeImage } from "@/components/ui/safe-image";
 import { productHref, type Product } from "@/lib/content";
 
 // Single-category product grid — no chip toolbar (the current category is
@@ -74,13 +73,16 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
     >
       <Link href={productHref(product)} className="block text-center">
         <div className="relative mb-8 aspect-[4/5] w-full overflow-hidden bg-onyx">
-          <SafeImage
+          {/* Served directly from /public — WebP source is already sized
+              and compressed for a card slot. Bypassing /_next/image
+              avoids multi-second cold AVIF conversion on first paint. */}
+          <img
             src={product.image}
             alt={product.name}
-            fallbackSeed={product.handle}
-            fill
-            sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
-            className="object-cover transition-transform duration-[1600ms] ease-silk group-hover:scale-[1.04]"
+            loading={index < 3 ? "eager" : "lazy"}
+            decoding="async"
+            fetchPriority={index < 3 ? "high" : "auto"}
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1600ms] ease-silk group-hover:scale-[1.04]"
           />
         </div>
 

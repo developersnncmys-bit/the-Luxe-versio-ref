@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { SafeImage } from "@/components/ui/safe-image";
 import { productHref, type Product } from "@/lib/content";
 
 // "Discover Also" — related pieces rail. Kept minimal: image + name only,
@@ -80,14 +79,12 @@ function RelatedCard({
     >
       <Link href={productHref(product)} className="block text-center">
         <div className={`relative mb-8 w-full overflow-hidden bg-onyx ${aspectClass}`}>
-          <SafeImage
+          <img
             src={product.image}
             alt={product.name}
-            fallbackSeed={`${product.handle}-related`}
-            fill
-            sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
-            quality={68}
-            className="object-cover transition-transform duration-[1600ms] ease-silk group-hover:scale-[1.04]"
+            loading="lazy"
+            decoding="async"
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1600ms] ease-silk group-hover:scale-[1.04]"
           />
         </div>
 

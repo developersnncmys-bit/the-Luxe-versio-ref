@@ -17,12 +17,13 @@ const COLUMNS = [
   {
     title: "Online Services",
     links: [
-      { href: "/payment", label: "Payment Methods" },
-      { href: "/shipping", label: "Shipping Options" },
+      { href: "/payment-policy", label: "Payment Policy" },
+      { href: "/shipping-policy", label: "Shipping Policy" },
       { href: "/account", label: "My Account" },
-      { href: "/returns", label: "Returns" },
+      { href: "/returns", label: "Return, Refund & Replacement Policy" },
+      { href: "/cancellation", label: "Cancellation Policy" },
       { href: "/care", label: "Care & Restoration" },
-      { href: "/faq", label: "FAQ" }
+      { href: "/faq", label: "FAQ's" }
     ]
   },
   {
@@ -40,8 +41,7 @@ const COLUMNS = [
       { href: "/house", label: "The House" },
       { href: "/the-studio", label: "The Studio" },
       { href: "/careers", label: "Careers" },
-      // { href: "/press", label: "Press" },
-      { href: "/legal", label: "Legal Statement" },
+      { href: "/terms", label: "Terms & Conditions" },
       { href: "/privacy", label: "Privacy Policy" }
     ]
   }

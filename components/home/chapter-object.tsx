@@ -41,16 +41,16 @@ const HERO_HANDLE_OVERRIDE: Partial<Record<Product["category"], string>> = {
 // Lets us pick a specific in-frame image without mutating the product data
 // (which would also change the collection card, sticky bar, etc.).
 const HERO_IMAGE_OVERRIDE: Partial<Record<Product["category"], string>> = {
-  Sculptures: "/images/sculptures/Linconnu/Linconnu-cover.png",
-  Vases: "/images/vases/Onde/Vase-onde-presence.png"
+  Sculptures: "/images/sculptures/Linconnu/Linconnu-cover.webp",
+  Vases: "/images/vases/Onde/Vase-onde-presence.webp"
 };
 
 // Per-category INSET IMAGE override — same idea, for the "In the Room ·
 // <category>" inset. Path is used verbatim; not tied to any product's own
 // image or lifestyleImage.
 const INSET_IMAGE_OVERRIDE: Partial<Record<Product["category"], string>> = {
-  Sculptures: "/images/sculptures/Telassa/22.jpg",
-  Vases: "/images/sculptures/Altesse/Altesse-home.png"
+  Sculptures: "/images/sculptures/Telassa/22.webp",
+  Vases: "/images/sculptures/Altesse/Altesse-home.webp"
 };
 
 type Beat = { hero: MediaTile; inset: MediaTile };

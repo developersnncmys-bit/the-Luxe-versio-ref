@@ -3,7 +3,6 @@
 import { useRef, useState } from "react";
 import clsx from "clsx";
 import { motion } from "framer-motion";
-import { SafeImage } from "@/components/ui/safe-image";
 import { useStore } from "@/components/store/store-provider";
 import type { Product } from "@/lib/content";
 
@@ -112,14 +111,12 @@ export function ProductHero({ product, ref_ }: Props) {
                     : "opacity-60 hover:opacity-100"
                 )}
               >
-                <SafeImage
+                <img
                   src={src}
                   alt=""
-                  fallbackSeed={`${product.handle}-thumb-${i}`}
-                  fill
-                  sizes="8vw"
-                  quality={55}
-                  className="object-cover"
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
               </button>
             ))}
@@ -169,15 +166,13 @@ export function ProductHero({ product, ref_ }: Props) {
               }
             >
               {mounted.has(i) && (
-                <SafeImage
+                <img
                   src={src}
                   alt={`${product.name} — view ${i + 1}`}
-                  fallbackSeed={`${product.handle}-${i}`}
-                  fill
-                  priority={i === 0}
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  quality={i === 0 ? 78 : 74}
-                  className="object-cover"
+                  loading={i === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                  fetchPriority={i === 0 ? "high" : "auto"}
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
               )}
             </div>
@@ -212,14 +207,12 @@ export function ProductHero({ product, ref_ }: Props) {
                   : "opacity-60"
               )}
             >
-              <SafeImage
+              <img
                 src={src}
                 alt=""
-                fallbackSeed={`${product.handle}-thumb-mobile-${i}`}
-                fill
-                sizes="64px"
-                quality={50}
-                className="object-cover"
+                loading="lazy"
+                decoding="async"
+                className="absolute inset-0 h-full w-full object-cover"
               />
             </button>
           ))}
